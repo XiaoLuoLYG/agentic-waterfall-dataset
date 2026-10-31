@@ -1,0 +1,9 @@
+# Private data and releases
+
+Git stores only code, schemas, docs and synthetic fixtures. Production exports, identity mappings, cookies, API credentials, downloaded source material and human labels belong in private storage outside this checkout. Ignore rules are defense in depth and do not authorize committing sensitive data.
+
+A participant/session ID may identify a person; private-export identifiers are not anonymization. Actual model prompts/responses and natural text can contain personal information. The formatter removes known secret key names, authorization/cookie headers and bearer-token patterns; it does not guarantee arbitrary free-text secrets or personal identities have been removed. Inspect export consent, privacy, source licenses and redaction before any distribution. Large original media and binary data are outside the format.
+
+MIT covers original code/documentation and fictional fixture authored in this repository. No license is granted here for third-party source material or future human exports. `manifest.data_license` remains `pending`. Future data publication needs a distinct release approval with a data license, consent/provenance and privacy checks, content/version hashes, source coverage, eligibility boundaries, and access terms. Initial manifests may list only synthetic test assets.
+
+Download/import refuse overwrite. HTTP is accepted only for localhost QA; remote downloads require HTTPS, and redirects across origins are rejected to protect environment-supplied authentication. Import validates the complete transport before atomically renaming a new directory. It never automatically resolves external artifact URLs or uploads a private export. Do not use a private transport as a public CI fixture.

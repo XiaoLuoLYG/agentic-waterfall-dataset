@@ -1,0 +1,1911 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/schemas/dataset.schema.json",
+  "title": "Agentic Waterfall dataset transport 1.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "manifest",
+    "tables",
+    "artifact_refs"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "awf-dataset/1.0"
+    },
+    "manifest": {
+      "type": "object",
+      "required": [
+        "dataset_id",
+        "data_origin",
+        "eligible_for_analysis",
+        "data_license",
+        "code_license",
+        "table_files",
+        "table_counts"
+      ],
+      "properties": {
+        "dataset_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data_origin": {
+          "enum": [
+            "human",
+            "synthetic",
+            "test_only",
+            "unknown",
+            "mixed"
+          ]
+        },
+        "eligible_for_analysis": {
+          "type": "boolean"
+        },
+        "data_license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "code_license": {
+          "const": "MIT"
+        },
+        "table_files": {
+          "type": "object",
+          "required": [
+            "contents",
+            "participants",
+            "profiles",
+            "sessions",
+            "events",
+            "contexts",
+            "runs",
+            "slates",
+            "studies",
+            "questions",
+            "presentations",
+            "ratings",
+            "blind_choices",
+            "model_calls",
+            "tool_calls"
+          ],
+          "properties": {
+            "contents": {
+              "const": "contents.jsonl.gz"
+            },
+            "participants": {
+              "const": "participants.jsonl.gz"
+            },
+            "profiles": {
+              "const": "profiles.jsonl.gz"
+            },
+            "sessions": {
+              "const": "sessions.jsonl.gz"
+            },
+            "events": {
+              "const": "events.jsonl.gz"
+            },
+            "contexts": {
+              "const": "contexts.jsonl.gz"
+            },
+            "runs": {
+              "const": "runs.jsonl.gz"
+            },
+            "slates": {
+              "const": "slates.jsonl.gz"
+            },
+            "studies": {
+              "const": "studies.jsonl.gz"
+            },
+            "questions": {
+              "const": "questions.jsonl.gz"
+            },
+            "presentations": {
+              "const": "presentations.jsonl.gz"
+            },
+            "ratings": {
+              "const": "ratings.jsonl.gz"
+            },
+            "blind_choices": {
+              "const": "blind_choices.jsonl.gz"
+            },
+            "model_calls": {
+              "const": "model_calls.jsonl.gz"
+            },
+            "tool_calls": {
+              "const": "tool_calls.jsonl.gz"
+            }
+          },
+          "additionalProperties": false
+        },
+        "table_counts": {
+          "type": "object",
+          "required": [
+            "contents",
+            "participants",
+            "profiles",
+            "sessions",
+            "events",
+            "contexts",
+            "runs",
+            "slates",
+            "studies",
+            "questions",
+            "presentations",
+            "ratings",
+            "blind_choices",
+            "model_calls",
+            "tool_calls"
+          ],
+          "properties": {
+            "contents": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "participants": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "profiles": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "sessions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "events": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "contexts": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "runs": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "slates": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "studies": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "questions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "presentations": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ratings": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "blind_choices": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "model_calls": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "tool_calls": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": true
+    },
+    "tables": {
+      "type": "object",
+      "required": [
+        "contents",
+        "participants",
+        "profiles",
+        "sessions",
+        "events",
+        "contexts",
+        "runs",
+        "slates",
+        "studies",
+        "questions",
+        "presentations",
+        "ratings",
+        "blind_choices",
+        "model_calls",
+        "tool_calls"
+      ],
+      "properties": {
+        "contents": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contents"
+          }
+        },
+        "participants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/participants"
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/profiles"
+          }
+        },
+        "sessions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sessions"
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/events"
+          }
+        },
+        "contexts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/contexts"
+          }
+        },
+        "runs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/runs"
+          }
+        },
+        "slates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/slates"
+          }
+        },
+        "studies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/studies"
+          }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/questions"
+          }
+        },
+        "presentations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/presentations"
+          }
+        },
+        "ratings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ratings"
+          }
+        },
+        "blind_choices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/blind_choices"
+          }
+        },
+        "model_calls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/model_calls"
+          }
+        },
+        "tool_calls": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/tool_calls"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": [
+          "object",
+          "string"
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "contents": {
+      "type": "object",
+      "required": [
+        "content_version_id",
+        "content_id",
+        "source",
+        "title",
+        "summary",
+        "text",
+        "metadata",
+        "capture_scope",
+        "text_status",
+        "text_original_length",
+        "summary_original_length"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": "string",
+          "pattern": "^content:[a-f0-9]{64}$"
+        },
+        "content_version_id": {
+          "type": "string",
+          "pattern": "^version:[a-f0-9]{64}$"
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "canonical_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 100000
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 100000
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "capture_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "text_status": {
+          "enum": [
+            "stored",
+            "truncated",
+            "not_returned"
+          ]
+        },
+        "text_original_length": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "summary_original_length": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "additionalProperties": true
+    },
+    "participants": {
+      "type": "object",
+      "required": [
+        "participant_id",
+        "data_origin"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "data_origin": {
+          "enum": [
+            "human",
+            "synthetic",
+            "test_only",
+            "unknown"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "profiles": {
+      "type": "object",
+      "required": [
+        "profile_id",
+        "participant_id",
+        "profile_origin",
+        "profile"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "profile_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile_origin": {
+          "enum": [
+            "provided",
+            "inferred"
+          ]
+        },
+        "profile": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "sessions": {
+      "type": "object",
+      "required": [
+        "session_id",
+        "participant_id",
+        "data_origin"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "data_origin": {
+          "enum": [
+            "human",
+            "synthetic",
+            "test_only",
+            "unknown"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "events": {
+      "type": "object",
+      "required": [
+        "event_id",
+        "type",
+        "annotation_policy"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "event_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payload": {
+          "type": "object"
+        },
+        "annotation_policy": {
+          "enum": [
+            "natural",
+            "evaluation_only"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "contexts": {
+      "type": "object",
+      "required": [
+        "context_id",
+        "participant_id",
+        "source_input_snapshot",
+        "cutoff_at",
+        "provided_profile_id"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cutoff_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_input_snapshot": {
+          "type": "object"
+        },
+        "history_completeness": {
+          "const": "referenced_snapshots_only"
+        }
+      },
+      "additionalProperties": true
+    },
+    "runs": {
+      "type": "object",
+      "required": [
+        "run_id",
+        "status",
+        "method_id"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    },
+    "slates": {
+      "type": "object",
+      "required": [
+        "slate_id",
+        "run_id",
+        "items"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "slate_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "content_id",
+              "content_version_id",
+              "original_item_id",
+              "material_status"
+            ],
+            "properties": {
+              "participant_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "session_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "provided_profile_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "inferred_profile_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "context_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "run_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "study_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "question_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "content_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "content_version_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "original_item_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "material_status": {
+                "enum": [
+                  "stored",
+                  "version_ambiguous",
+                  "unavailable"
+                ]
+              },
+              "rank": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "studies": {
+      "type": "object",
+      "required": [
+        "study_id",
+        "annotation_policy"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "annotation_policy": {
+          "const": "evaluation_only"
+        }
+      },
+      "additionalProperties": true
+    },
+    "questions": {
+      "type": "object",
+      "required": [
+        "question_id",
+        "study_id",
+        "kind",
+        "annotation_policy"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "content_rating",
+            "blind_choice"
+          ]
+        },
+        "annotation_policy": {
+          "const": "evaluation_only"
+        }
+      },
+      "additionalProperties": true
+    },
+    "presentations": {
+      "type": "object",
+      "required": [
+        "presentation_id",
+        "study_id",
+        "question_id",
+        "annotation_policy"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "presentation_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "annotation_policy": {
+          "const": "evaluation_only"
+        }
+      },
+      "additionalProperties": true
+    },
+    "ratings": {
+      "type": "object",
+      "required": [
+        "rating_id",
+        "study_id",
+        "question_id",
+        "rating_value",
+        "grade_status",
+        "data_origin",
+        "annotation_policy"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rating_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rating_value": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 3
+        },
+        "grade_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data_origin": {
+          "enum": [
+            "human",
+            "synthetic",
+            "test_only",
+            "unknown"
+          ]
+        },
+        "annotation_policy": {
+          "const": "evaluation_only"
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "grade_status": {
+                "const": "rated"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "rating_value": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 3
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "rating_value": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "blind_choices": {
+      "type": "object",
+      "required": [
+        "blind_choice_id",
+        "study_id",
+        "question_id",
+        "annotation_policy"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "blind_choice_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "choice": {
+          "type": "string"
+        },
+        "data_origin": {
+          "enum": [
+            "human",
+            "synthetic",
+            "test_only",
+            "unknown"
+          ]
+        },
+        "annotation_policy": {
+          "const": "evaluation_only"
+        }
+      },
+      "additionalProperties": true
+    },
+    "model_calls": {
+      "type": "object",
+      "required": [
+        "model_call_id",
+        "run_id",
+        "request",
+        "status",
+        "retry_of"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model_call_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "request": {
+          "type": "object"
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retry_of": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "tool_calls": {
+      "type": "object",
+      "required": [
+        "tool_call_id",
+        "results",
+        "status"
+      ],
+      "properties": {
+        "participant_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provided_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "inferred_profile_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "study_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "content_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_item_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tool_call_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "content_id",
+              "content_version_id",
+              "original_item_id",
+              "material_status"
+            ],
+            "properties": {
+              "participant_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "session_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "provided_profile_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "inferred_profile_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "context_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "run_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "study_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "question_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "content_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "content_version_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "original_item_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "material_status": {
+                "enum": [
+                  "stored",
+                  "version_ambiguous",
+                  "unavailable"
+                ]
+              },
+              "rank": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dependency_origin": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

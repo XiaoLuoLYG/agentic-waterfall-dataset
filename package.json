@@ -1,0 +1,1 @@
+{"name":"agentic-waterfall-dataset","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test tests/format.test.mjs && python3 -m unittest discover -s tests -p 'test_*.py'"},"engines":{"node":">=18"}}

@@ -1,0 +1,9 @@
+# Common input and sparse evaluation
+
+`tools/build_input.py DIRECTORY --context CONTEXT_ID` uses that context's exact stored source snapshot. It emits only `provided_profile` and natural `evidence`. Provided profile contains profile text, declared interests and user-edit entries. Inferred memory/context, evaluation grades/list choices, model traces, admin origin and labels never enter this projection.
+
+Natural events are command, feedback (like/dislike/save/unsave/comment), open, return and completed exposure records from the feed. A supplied event must have a valid timestamp, belong to the participant, and have both recorded availability/event time no later than the context cutoff. Future events and evaluator-track events are excluded. An invalid context cutoff fails; missing event timing is excluded. The tool never appends all exported prior events that were not in the exact supplied snapshot.
+
+`tools/evaluate.py DIRECTORY` joins a method slate to its study's content question IDs. It reports delivered count, judged count, unknown/unable count, unanswered count and coverage. An observed zero remains a judged zero. If every delivered item has a grade, DCG is the sum of `rating / log2(rank + 1)`; gain is linear 0–3, matching the recorded demo rubric. Otherwise point DCG is null and lower/upper bounds use missing grade range 0–3. Those are bounds, not imputed judgments. No delivery yields null coverage/DCG and `insufficient_labels`.
+
+The tool does not compute NDCG: each system's own delivered list is not a valid shared ideal pool. Comparing normalized scores requires a common completely rated candidate pool and a separately specified protocol. Blind choices are reported separately as recorded choice counts; they are not converted into per-item scores. Sparse fixture output tests the pipeline and cannot demonstrate effectiveness.

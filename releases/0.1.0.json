@@ -1,0 +1,72 @@
+{
+  "release_version": "0.1.0",
+  "schema_version": "awf-dataset/1.0",
+  "released_at": "2026-10-31",
+  "release_scope": "code_documentation_schema_and_fictional_fixture_only",
+  "code_license": "MIT",
+  "data_license": "pending",
+  "human_data_released": false,
+  "remote_publication_status": "not_verified_by_local_manifest",
+  "artifacts": [
+    {
+      "path": "src/format.mjs",
+      "bytes": 20637,
+      "sha256": "1ed0c4a1bc064f8d8ecb35ab88f4846b5ebc1ecf5f7e53efb283ffbab342b802",
+      "data_origin": "code_or_schema"
+    },
+    {
+      "path": "schemas/dataset.schema.json",
+      "bytes": 39194,
+      "sha256": "1e6c9051eae35d9ac82d2e1198bc894801b84a22f6ada53244d6b5d1fa48ae3d",
+      "data_origin": "code_or_schema"
+    },
+    {
+      "path": "fixtures/tiny/episode.json",
+      "bytes": 3486,
+      "sha256": "09666001ad005b162f3e2a4f0cc9ecde703aa151abdf6b6d2e26fcbf5a111805",
+      "data_origin": "test_only"
+    },
+    {
+      "path": "fixtures/tiny/transport.json.gz",
+      "bytes": 2467,
+      "sha256": "337e0d1cb51c467ad321b427b45f11ce155289df9d0862aa55b676ddba86bcbc",
+      "data_origin": "test_only"
+    },
+    {
+      "path": "tools/build_input.py",
+      "bytes": 2959,
+      "sha256": "898e1a2c91301893981715eb34aa2e553af0d573815b38f729c29957e9f88ea8",
+      "data_origin": "code_or_schema"
+    },
+    {
+      "path": "tools/common.py",
+      "bytes": 5410,
+      "sha256": "b16f034fa9cbc81a4fe93cdb2e62009b31027db708241823a201696a12268f21",
+      "data_origin": "code_or_schema"
+    },
+    {
+      "path": "tools/download.py",
+      "bytes": 2608,
+      "sha256": "739e54bc29e31a1d25291d65acf6c9fae1e3bdaa1bb11a82bb54a3d6316366d3",
+      "data_origin": "code_or_schema"
+    },
+    {
+      "path": "tools/evaluate.py",
+      "bytes": 2367,
+      "sha256": "99c0ad7f6e976c587a68a4fee23a181e84ac0b5ee3981ec487668cd71103fd60",
+      "data_origin": "code_or_schema"
+    },
+    {
+      "path": "tools/import_demo.py",
+      "bytes": 3759,
+      "sha256": "1611ebfb2141a92ec092b1b3a75e80cde88a29efe019090dae878dc6e79df0ac",
+      "data_origin": "code_or_schema"
+    },
+    {
+      "path": "tools/validate.py",
+      "bytes": 527,
+      "sha256": "1f968f0e90166d683c9e4f435e92c116b03cbd99038b279ae5bb2109687590d2",
+      "data_origin": "code_or_schema"
+    }
+  ]
+}
