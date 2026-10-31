@@ -20,9 +20,13 @@ def build(data, context_id):
     if context is None: raise ValueError('Unknown context')
     cutoff=timestamp(context['cutoff_at']);snapshot=context['source_input_snapshot'];events={}
     profile=next(row['profile'] for row in data['tables']['profiles'] if row['profile_id']==context['provided_profile_id'])
-    candidates=list(snapshot.get('behavior',[]))
-    candidates += [{**row,'kind':'command','text':row.get('command',row.get('text',''))} for row in snapshot.get('recent_commands',[])]
-    if snapshot.get('command'): candidates.append({'id':snapshot.get('command_event_id',snapshot.get('id')),'kind':'command','text':snapshot['command'],'available_at':context['cutoff_at']})
+    public_input=context.get('environment',{}).get('public_input')
+    if public_input is not None:
+        candidates=list(public_input['evidence'])
+    else:
+        candidates=list(snapshot.get('behavior',[]))
+        candidates += [{**row,'kind':'command','text':row.get('command',row.get('text',''))} for row in snapshot.get('recent_commands',[])]
+        if snapshot.get('command'): candidates.append({'id':snapshot.get('command_event_id',snapshot.get('id')),'kind':'command','text':snapshot['command'],'available_at':context['cutoff_at']})
     # Source snapshot is the exact supplied context; do not add unrelated export history.
     for row in candidates:
         kind=row.get('kind',row.get('type'))

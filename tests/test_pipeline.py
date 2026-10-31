@@ -107,4 +107,22 @@ class Pipeline(unittest.TestCase):
                 self.assertFalse((tmp/'bad.gz').exists());self.run_tool('download.py',url,out,ok=False)
             finally: server.shutdown();server.server_close();thread.join()
 
+    def test_live_input_and_provenance_survive_import_without_evaluator_leakage(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp=Path(tmp)
+            code="import {buildDataset} from './src/format.mjs';import {liveEpisode} from './tests/live-fixture.mjs';console.log(JSON.stringify(buildDataset(liveEpisode())));"
+            result=subprocess.run(['node','--input-type=module','-e',code],cwd=ROOT,text=True,capture_output=True,check=True)
+            data=json.loads(result.stdout);context=data['tables']['contexts'][0]
+            transport=tmp/'live.gz';transport.write_bytes(gzip.compress(result.stdout.encode()))
+            out=tmp/'dataset';self.run_tool('import_demo.py',transport,out)
+            self.assertTrue(json.loads(self.run_tool('validate.py',out).stdout)['valid'])
+            projected=json.loads(self.run_tool('build_input.py',out,'--context',context['context_id']).stdout)
+            self.assertEqual(projected,context['environment']['public_input'])
+            evidence=context['environment']['public_input']['evidence']
+            evidence.extend([{'id':'label','type':'command','annotation_policy':'evaluation_only','text':'evaluator secret','available_at':'2026-01-01T00:00:01Z'}, {'id':'future','type':'command','text':'future secret','available_at':'2026-01-01T00:00:05Z'}])
+            transport=tmp/'tampered.gz';transport.write_bytes(gzip.compress(json.dumps(data).encode()))
+            out=tmp/'filtered';self.run_tool('import_demo.py',transport,out)
+            filtered=json.loads(self.run_tool('build_input.py',out,'--context',context['context_id']).stdout)
+            self.assertEqual([row['id'] for row in filtered['evidence']],['prior-command'])
+
 if __name__=='__main__':unittest.main()

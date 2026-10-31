@@ -1,0 +1,18 @@
+// Fictional test_only records shaped like the live runner; no network or model calls.
+export function liveEpisode(){
+ const at='2026-01-01T00:00:03Z',item={id:'feed-one',source:'example',source_item_id:'native-one',url:'https://example.invalid/one',title:'Fictional item',summary:'visible excerpt',author:'Fictional author',content_hash:'feed-hash'};
+ const raw={...item,summary:'uncapped returned excerpt',text:'returned body'},unselected={...raw,id:'raw-only',source_item_id:'native-two',url:'https://example.invalid/two',title:'Unselected returned item'};
+ const {author,source_item_id,...visible}=item;
+ const input={captured_at:at,state:{profile:'snapshot profile'},behavior:[]};
+ const public_input={provided_profile:{profile:'confirmed profile',interests:['fiction'],entries:[]},evidence:[{id:'prior-command',type:'command',text:'fictional prior-session query',session_id:'prior-session',available_at:'2026-01-01T00:00:01Z'}]};
+ const method={method_id:'generic-agent',status:'submitted',method_version:'online-five-method-v1',implementation:'fictional adapted method',protocol:{max_model_calls:20},adapter_protocol:{candidate_cap:20},resources:{model_calls:2,source_requests:2},runtime_source_sha256:'a'.repeat(64),original_ordered_item_ids:['feed-one','raw-only'],slate:[item],content_snapshot:{items:[item]},state_after:'own state',trace:[
+  {phase:'generic-agent',call_id:'model-one',request:{messages:[{role:'user',content:'fictional request'}],max_tokens:8192},receipt:{status:'success',content:'{"ordered_indices":[1]}',usage:{total_tokens:42},requested_model:'fixture-model'},status:'success',started_at:at,completed_at:at},
+  {phase:'generic-agent',call_id:'model-failed',request:{messages:[{role:'user',content:'retry request'}]},receipt:{status:'failed',http_status:429,response_body:'fictional quota failure'},status:'failed',error:'model_http_429',started_at:at,completed_at:at},
+  {phase:'source_call',call_id:'source-one',request:{source:'example',mode:'search',query:'fictional query',limit:1,excludedIds:[]},response:{status:'ok',items:[item],excluded_count:1},status:'success',started_at:at,completed_at:at},
+  {phase:'source_capture',capture:{source:'example',request:{source:'example',mode:'search',query:'fictional query',limit:1},results:[raw,unselected],status:'ok',started_at:at,completed_at:at}},
+  {phase:'source_call',call_id:'source-failed',request:{source:'example',mode:'search',query:'failed query',limit:1},response:{status:'failed',items:[],error:'provider_timeout'},status:'failed',error:'provider_timeout',started_at:at,completed_at:at},
+  {phase:'tool_call',call_id:'python-one',operation:'fixed',payload:{query:'fictional ranking query',catalog:[{id:'feed-one',text:'Fictional item'}]},response:{ordered_item_ids:['feed-one'],catalog_sha256:'b'.repeat(64)},status:'success',started_at:at,completed_at:at},
+  {phase:'unified_runtime',runtime:{run_id:'core-native-id',trace:[{decision:{actions:[]},execution_results:[],state_after:{version:2}}]}}
+ ]};
+ return {metadata:{session_id:'fictional-live',user_id:'fictional-person',record_kind:'test_only'},research_studies:[{id:'study',mode:'rating',input_snapshot:input,public_input,items:[{id:'question',item:visible}],mappings:[{method_id:'generic-agent',rank:1,question_id:'question',item_id:'feed-one'}],result:{run_id:'archived-run',input_snapshot:input,environment:{public_input,protocol:{mode:'acquire'},source_sha256:{runner:'c'.repeat(64)},training:false},methods:[method]}}],content_ratings:[{id:'rating',study_id:'study',question_id:'question',content_id:'feed-one',grade_status:'rated',rating_value:3,origin:'test_only'}]};
+}

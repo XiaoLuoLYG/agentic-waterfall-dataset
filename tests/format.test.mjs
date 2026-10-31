@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
+import {liveEpisode} from './live-fixture.mjs';
 let api;try{api=await import('../src/format.mjs');}catch{}
 const content={id:'post-1',source:'example',url:'https://example.org/a?utm_source=qa',title:'Stored title',summary:'actual excerpt',text:'actual text'};
 test('content versions ignore observation counters, change when stored text changes',()=>{
@@ -127,4 +128,67 @@ test('raw capture feed item and canonical core item share native logical identit
  // A missing feed alias can use an unambiguous recorded source URL.
  const viaUrl=api.buildDataset({metadata:{session_id:'url-only-alias',user_id:'p'},environment_snapshot:{corpus:[{...canonical,id:'another-recorded-alias'}]}},{captureRecords:[{capture_id:'cap',results:[raw]}]});
  assert.equal(new Set(viaUrl.tables.contents.map(row=>row.content_id)).size,1);
+});
+test('live model receipts keep typed requests, responses and actual failure status without counting tools as models',()=>{
+ const d=api.buildDataset(liveEpisode()),calls=d.tables.model_calls;
+ assert.equal(calls.length,2);
+ assert.deepEqual(calls.map(row=>row.status),['success','failed']);
+ assert.equal(calls[0].request.messages[0].content,'fictional request');
+ assert.equal(calls[0].raw_response,'{"ordered_indices":[1]}');
+ assert.equal(calls[0].receipt.usage.total_tokens,42);
+ assert.equal(calls[1].receipt.http_status,429);
+ assert.equal(calls[1].error,'model_http_429');
+ assert.equal(calls[0].source_call_id,'model-one');
+});
+test('live searches, raw captures and Python tools retain requests and all returned material on their method run',()=>{
+ const d=api.buildDataset(liveEpisode()),tools=d.tables.tool_calls;
+ assert.equal(tools.length,4);
+ const search=tools.find(row=>row.source_call_id==='source-one'),failed=tools.find(row=>row.source_call_id==='source-failed'),python=tools.find(row=>row.source_call_id==='python-one'),capture=tools.find(row=>row.kind==='source_capture');
+ assert.equal(search.request.query,'fictional query');assert.equal(search.results.length,1);assert.equal(search.result_metadata.excluded_count,1);
+ assert.equal(failed.status,'failed');assert.equal(failed.error,'provider_timeout');assert.equal(failed.results.length,0);
+ assert.equal(python.operation,'fixed');assert.equal(python.request.query,'fictional ranking query');assert.deepEqual(python.raw_result.ordered_item_ids,['feed-one']);
+ assert.equal(capture.results.length,2);assert.equal(capture.run_id,'study:generic-agent');assert.equal(capture.request.limit,1);
+ assert.ok(d.tables.contents.some(row=>row.source_item_id==='native-two'&&row.text==='returned body'));
+ assert.equal(new Set(d.tables.contents.filter(row=>row.source_item_id==='native-one').map(row=>row.content_id)).size,1);
+ assert.ok(tools.every(row=>row.depends_on===null&&row.dependency_origin==='not_recorded'));
+});
+test('live dataset retains method pins, complete ordering, runtime and exact common public input',()=>{
+ const episode=liveEpisode(),d=api.buildDataset(episode),run=d.tables.runs[0],context=d.tables.contexts[0];
+ assert.equal(run.metadata.method_version,'online-five-method-v1');
+ assert.equal(run.metadata.protocol.max_model_calls,20);assert.equal(run.metadata.adapter_protocol.candidate_cap,20);
+ assert.equal(run.metadata.resources.model_calls,2);assert.equal(run.metadata.runtime_source_sha256,'a'.repeat(64));
+ assert.deepEqual(run.metadata.original_ordered_item_ids,['feed-one','raw-only']);
+ assert.equal(run.metadata.runtime_traces[0].runtime.run_id,'core-native-id');
+ assert.deepEqual(context.environment.public_input,episode.research_studies[0].public_input);
+ assert.equal(context.environment.source_sha256.runner,'c'.repeat(64));
+ assert.equal(d.tables.profiles.find(row=>row.profile_id===context.provided_profile_id).profile.profile,'confirmed profile');
+ assert.equal(d.tables.studies[0].source_metadata.run_id,'archived-run');
+});
+test('visible question fields disambiguate shared feed hashes before linking ratings and blind pairs',()=>{
+ const episode=liveEpisode(),d=api.buildDataset(episode),slate=d.tables.slates[0].items[0];
+ assert.equal(slate.label_link_status,'exact_material');assert.equal(slate.question_id,'study:question');
+ assert.equal(d.tables.ratings[0].content_version_id,slate.content_version_id);
+ const study=episode.research_studies[0],visible=study.items[0].item;study.mode='blind';study.items=[];study.pairs=[{id:'pair',A:[visible],B:[visible],mapping:{A:'generic-agent',B:'other'}}];study.mappings[0].question_id='pair';episode.content_ratings=[];
+ const blind=api.buildDataset(episode);
+ assert.equal(blind.tables.questions[0].A[0].content_version_id,blind.tables.slates[0].items[0].content_version_id);
+ assert.equal(blind.tables.slates[0].items[0].label_link_status,'exact_material');
+});
+test('indistinguishable visible versions stay unlinked instead of choosing hidden metadata',()=>{
+ const episode=liveEpisode(),method=episode.research_studies[0].result.methods[0];
+ method.content_snapshot.items.push({...method.slate[0],author:'different hidden author'});
+ const d=api.buildDataset(episode);
+ assert.equal(d.tables.slates[0].items[0].label_link_status,'question_material_mismatch');
+ assert.equal(d.tables.slates[0].items[0].question_id,null);
+ delete method.slate[0].author;
+ const noHiddenMetadata=api.buildDataset(episode);
+ assert.equal(noHiddenMetadata.tables.questions[0].material_status,'version_ambiguous');
+ assert.equal(noHiddenMetadata.tables.questions[0].content_version_id,null);
+ assert.equal(noHiddenMetadata.tables.slates[0].items[0].question_id,null);
+});
+test('live provenance strips credentials and token text in errors as well as receipts',()=>{
+ const episode=liveEpisode(),trace=episode.research_studies[0].result.methods[0].trace;
+ trace[0].request.headers={Authorization:'Bearer fictional-secret'};
+ trace[1].error='failed with Bearer fictional-secret';
+ trace[1].receipt.credentials={key:'fictional-secret'};
+ assert.ok(!JSON.stringify(api.buildDataset(episode)).includes('fictional-secret'));
 });

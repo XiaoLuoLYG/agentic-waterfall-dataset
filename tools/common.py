@@ -57,7 +57,7 @@ def validate(data):
                     if SECRET.fullmatch(key): errors.append('Credential field in '+name)
                     if key in refs and not (primary and key == KEYS[name]) and item is not None and item not in indices[refs[key]]:
                         errors.append('Dangling '+key+' in '+name+': '+str(item))
-                    if key not in ('raw_record','source_input_snapshot','request','raw_result','payload','profile','normalized_output','parsed_output'):
+                    if key not in ('raw_record','source_input_snapshot','request','raw_result','payload','profile','normalized_output','parsed_output','metadata','environment','source_metadata','receipt','raw_response'):
                         walk(item)
             elif isinstance(value, list):
                 for item in value: walk(item)

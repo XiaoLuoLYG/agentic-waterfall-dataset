@@ -10,14 +10,14 @@
   "artifacts": [
     {
       "path": "src/format.mjs",
-      "bytes": 21803,
-      "sha256": "ebeaaec144762e2e180faa260a54010bc3fcafa9a8608f692583014112ee3b2d",
+      "bytes": 25353,
+      "sha256": "d10d7dfcef89a29903f40841c060c1f7138b977eb59548ca9e9f6b06ae8ab5a8",
       "data_origin": "code_or_schema"
     },
     {
       "path": "schemas/dataset.schema.json",
-      "bytes": 39194,
-      "sha256": "1e6c9051eae35d9ac82d2e1198bc894801b84a22f6ada53244d6b5d1fa48ae3d",
+      "bytes": 41516,
+      "sha256": "deeef5359a87268bb7f09a71d5ea4c47a02e95bd574b5f6dadf8a61cd481744f",
       "data_origin": "code_or_schema"
     },
     {
@@ -34,14 +34,14 @@
     },
     {
       "path": "tools/build_input.py",
-      "bytes": 2959,
-      "sha256": "898e1a2c91301893981715eb34aa2e553af0d573815b38f729c29957e9f88ea8",
+      "bytes": 3131,
+      "sha256": "e603fa6adad1a96eb7c697ad0edd790e55f134cd525fe8d1c1e4814d493cca9a",
       "data_origin": "code_or_schema"
     },
     {
       "path": "tools/common.py",
-      "bytes": 5410,
-      "sha256": "b16f034fa9cbc81a4fe93cdb2e62009b31027db708241823a201696a12268f21",
+      "bytes": 5478,
+      "sha256": "8419f4dfd08754ca92d187ff63493aeef6e4b3940eba8eccb426b2a8bcd19157",
       "data_origin": "code_or_schema"
     },
     {
@@ -67,6 +67,12 @@
       "bytes": 527,
       "sha256": "1f968f0e90166d683c9e4f435e92c116b03cbd99038b279ae5bb2109687590d2",
       "data_origin": "code_or_schema"
+    },
+    {
+      "path": "tests/live-fixture.mjs",
+      "bytes": 3627,
+      "sha256": "46dd287f3bc0ca32d5db2bca3f21af31b692e1b89e6918401840a517a93e2162",
+      "data_origin": "test_only"
     }
   ]
 }

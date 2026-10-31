@@ -892,6 +892,10 @@
         },
         "history_completeness": {
           "const": "referenced_snapshots_only"
+        },
+        "environment": {
+          "type": "object",
+          "description": "Recorded execution environment and authoritative shared public input, without reconstruction from evaluator labels."
         }
       },
       "additionalProperties": true
@@ -975,6 +979,10 @@
         "method_id": {
           "type": "string",
           "minLength": 1
+        },
+        "metadata": {
+          "type": "object",
+          "description": "Recorded method version, implementation, protocol, resource usage, full ordering and execution/runtime provenance."
         }
       },
       "additionalProperties": true
@@ -1722,6 +1730,37 @@
             "string",
             "null"
           ]
+        },
+        "source_call_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "started_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "completed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "error": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "receipt": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Actual provider success/failure receipt, including usage, response model, settings and errors."
         }
       },
       "additionalProperties": true
@@ -1903,6 +1942,69 @@
         "dependency_origin": {
           "type": "string",
           "minLength": 1
+        },
+        "source_call_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "started_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "completed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "error": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retry_of": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "source_call",
+            "source_capture",
+            "tool_call"
+          ]
+        },
+        "operation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "request": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "raw_result": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "description": "Actual non-source tool output such as complete ranking or packet-builder output."
+        },
+        "result_metadata": {
+          "type": [
+            "object",
+            "null"
+          ]
         }
       },
       "additionalProperties": true
