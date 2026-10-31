@@ -200,3 +200,10 @@ test('live provenance strips credentials and token text in errors as well as rec
  trace[1].receipt.credentials={key:'fictional-secret'};
  assert.ok(!JSON.stringify(api.buildDataset(episode)).includes('fictional-secret'));
 });
+
+test('method memory preserves valid falsy JSON states',()=>{
+ for(const state of [0,false,'']){
+  const episode=liveEpisode(),method=episode.research_studies[0].result.methods[0];method.state_after=state;
+  const data=api.buildDataset(episode);assert.equal(data.tables.runs.find(row=>row.method_id===method.method_id).state_after,state);
+ }
+});
