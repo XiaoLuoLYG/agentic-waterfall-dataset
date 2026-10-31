@@ -5,6 +5,15 @@ import {createHash} from 'node:crypto';
 import {liveEpisode} from './live-fixture.mjs';
 let api;try{api=await import('../src/format.mjs');}catch{}
 const content={id:'post-1',source:'example',url:'https://example.org/a?utm_source=qa',title:'Stored title',summary:'actual excerpt',text:'actual text'};
+test('blind slate mappings cannot invent item questions that were never presented',()=>{
+ const study={id:'blind-study',mode:'blind',items:[],pairs:[{id:'actual-pair',A:[content],B:[content]}],mappings:[{method_id:'a',rank:1,item_id:content.id,question_id:'unused-rating-question'}],result:{methods:[{method_id:'a',slate:[content]}]}};
+ const d=api.buildDataset({metadata:{session_id:'s',user_id:'p',data_origin:'synthetic'},research_studies:[study],research_blind_choices:[{id:'choice',study_id:study.id,question_id:'actual-pair',choice:'tie',origin:'synthetic'}]});
+ assert.deepEqual(d.tables.questions.map(q=>q.question_id),['blind-study:actual-pair']);
+ assert.equal(d.tables.slates[0].items[0].question_id,null);
+ assert.equal(d.tables.slates[0].items[0].label_link_status,'question_unavailable');
+ assert.equal(d.tables.slates[0].items[0].content_version_id,d.tables.questions[0].A[0].content_version_id);
+ assert.equal(d.tables.blind_choices[0].question_id,'blind-study:actual-pair');
+});
 test('content versions ignore observation counters, change when stored text changes',()=>{
  assert.ok(api,'formatter exists'); const a=api.normalizeContent(content),b=api.normalizeContent({...content,captured_at:'tomorrow',views:45,rank:7});
  assert.equal(a.content_id,b.content_id);assert.equal(a.content_version_id,b.content_version_id);
