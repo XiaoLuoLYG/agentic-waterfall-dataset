@@ -104,7 +104,8 @@ export function buildDataset(episode,{captureRecords=[]}={}) {
   for(const e of episode.research_blind_choices || [])tables.blind_choices.push({blind_choice_id:e.id,session_id:sid,study_id:e.study_id,question_id:e.study_id+':'+e.question_id,choice:e.choice,data_origin:origin(e.origin || meta.data_origin),available_at:e.available_at || e.evaluated_at || null,annotation_policy:'evaluation_only',raw_record:clean(e)});
   for(const trial of episode.blind_trials || []){
     const s=trial.comparison || {},id=s.id;if(!id)continue;
-    tables.studies.push({study_id:id,session_id:sid,mode:'blind',context_id:null,protocol:s.study_protocol || 'blind-next-v1',status:trial.choice?'answered':'unanswered',annotation_policy:'evaluation_only',raw_record:clean(trial)});
+    const stops=(episode.research_stops || []).filter(stop=>stop.study_id===id);
+    tables.studies.push({study_id:id,session_id:sid,mode:'blind',context_id:null,protocol:s.study_protocol || 'blind-next-v1',status:stops.length?'stopped':trial.choice?'answered':'unanswered',annotation_policy:'evaluation_only',raw_record:clean(trial),...(stops.length?{source_metadata:{research_stops:clean(stops)}}:{})});
     tables.questions.push({question_id:id,study_id:id,kind:'blind_choice',annotation_policy:'evaluation_only'});
     if(trial.presentation)tables.presentations.push({presentation_id:trial.presentation.id,session_id:sid,study_id:id,question_id:id,annotation_policy:'evaluation_only',raw_record:clean(trial.presentation)});
     if(trial.choice)tables.blind_choices.push({blind_choice_id:trial.choice.id,session_id:sid,study_id:id,question_id:id,choice:trial.choice.choice || trial.choice.value,data_origin:origin(trial.choice.origin || meta.data_origin),annotation_policy:'evaluation_only',raw_record:clean(trial.choice)});

@@ -33,6 +33,14 @@ test('legacy episode missing artifacts remains explicit, never fabricated as a c
  assert.ok(!JSON.stringify(d.tables.profiles.find(x=>x.profile_id===d.tables.contexts[0].provided_profile_id)).includes('inferred secret'));
  assert.equal(d.manifest.history_completeness,'referenced_snapshots_only');
 });
+test('stopped legacy blind studies retain the stop receipt without changing their original trial or missing answer',()=>{
+ const stopped={comparison:{id:'legacy-stopped',study_protocol:'blind-next-v1',input_snapshot:{id:'original'}},presentation:{id:'legacy-present'},choice:null};
+ const stop={id:'stop-receipt',kind:'research_stop',study_id:'legacy-stopped',reason:'explicit_stop',available_at:'2026-01-01T00:00:02Z'};
+ const episode={metadata:{session_id:'legacy-session',user_id:'p',data_origin:'human'},blind_trials:[stopped,{comparison:{id:'legacy-unanswered'},choice:null},{comparison:{id:'legacy-answered'},choice:{id:'choice',choice:'tie',origin:'human'}}],research_stops:[stop,{id:'unrelated-stop',study_id:'another-study'}]};
+ const original=structuredClone(episode),d=api.buildDataset(episode),study=d.tables.studies.find(x=>x.study_id==='legacy-stopped');
+ assert.equal(study.status,'stopped');assert.deepEqual(study.source_metadata.research_stops,[stop]);assert.deepEqual(study.raw_record,stopped);assert.deepEqual(episode,original);
+ assert.deepEqual(d.tables.studies.map(x=>x.status),['stopped','unanswered','answered']);assert.deepEqual(d.tables.blind_choices.map(x=>x.blind_choice_id),['choice']);
+});
 test('normalized capture rows survive storage without changing identity or truncation provenance',()=>{
  const a=api.normalizeContent({...content,source_item_id:'native-1',text:'x'.repeat(100003),views:99,topic:'query one',author:'writer'});
  assert.deepEqual(api.normalizeContent(a),a);

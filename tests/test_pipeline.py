@@ -54,6 +54,20 @@ class Pipeline(unittest.TestCase):
             self.run_tool('import_demo.py',path,tmp/'invalid',ok=False)
             self.assertFalse((tmp/'invalid').exists())
 
+    def test_stopped_legacy_blind_receipt_survives_import_and_validation(self):
+        episode={'metadata':{'session_id':'legacy-stop','user_id':'p','data_origin':'human'},'blind_trials':[{'comparison':{'id':'old-study','study_protocol':'blind-next-v1'},'choice':None}],'research_stops':[{'id':'stop','study_id':'old-study','reason':'explicit_stop','available_at':'2026-01-01T00:00:02Z'}]}
+        code="import {buildDataset} from './src/format.mjs';console.log(JSON.stringify(buildDataset(JSON.parse(process.argv[1]))));"
+        result=subprocess.run(['node','--input-type=module','-e',code,json.dumps(episode)],cwd=ROOT,text=True,capture_output=True,check=True)
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp=Path(tmp);transport=tmp/'stopped.gz';transport.write_bytes(gzip.compress(result.stdout.encode()));out=tmp/'dataset'
+            self.run_tool('import_demo.py',transport,out)
+            self.assertTrue(json.loads(self.run_tool('validate.py',out).stdout)['valid'])
+            study=json.loads(gzip.decompress((out/'studies.jsonl.gz').read_bytes()).splitlines()[0])
+            self.assertEqual(study['status'],'stopped')
+            self.assertEqual(study['source_metadata']['research_stops'],episode['research_stops'])
+            self.assertEqual(study['raw_record'],episode['blind_trials'][0])
+            self.assertEqual(gzip.decompress((out/'blind_choices.jsonl.gz').read_bytes()),b'')
+
     def test_same_human_question_scores_two_methods_with_shared_context(self):
         with tempfile.TemporaryDirectory() as tmp:
             tmp=Path(tmp)
