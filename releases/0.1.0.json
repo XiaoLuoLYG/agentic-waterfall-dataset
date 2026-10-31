@@ -10,8 +10,8 @@
   "artifacts": [
     {
       "path": "src/format.mjs",
-      "bytes": 20637,
-      "sha256": "1ed0c4a1bc064f8d8ecb35ab88f4846b5ebc1ecf5f7e53efb283ffbab342b802",
+      "bytes": 21803,
+      "sha256": "ebeaaec144762e2e180faa260a54010bc3fcafa9a8608f692583014112ee3b2d",
       "data_origin": "code_or_schema"
     },
     {

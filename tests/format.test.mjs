@@ -108,3 +108,23 @@ test('failed acquisition receipts retain request and explicit dependencies from 
  const legacy=api.buildDataset({metadata:{session_id:'legacy',user_id:'p',data_origin:'human'},decisions:[{decision_id:'old',failure_id:'f',execution_results:[{action_id:'unknown',status:'failed',error:'timeout'}]}]});
  assert.equal(legacy.tables.tool_calls[0].request,null);assert.equal(legacy.tables.tool_calls[0].depends_on,null);assert.equal(legacy.tables.tool_calls[0].dependency_origin,'not_recorded');
 });
+test('canonical core provider source_id never becomes a native document identity',()=>{
+ const a=api.normalizeContent({source_id:'hackernews',id:'hashed-a',url:'https://news.example/item?id=101',title:'a',abstract:'canonical excerpt a'}),b=api.normalizeContent({source_id:'hackernews',id:'hashed-b',url:'https://news.example/item?id=202',title:'b',abstract:'canonical excerpt b'});
+ assert.equal(a.source,'hackernews');assert.equal(a.source_item_id,'hashed-a');assert.notEqual(a.content_id,b.content_id);assert.equal(a.summary,'canonical excerpt a');
+});
+test('raw capture feed item and canonical core item share native logical identity without discarding material versions',()=>{
+ const raw={source:'hackernews',source_item_id:'101',id:'hashed-a',url:'https://news.example/item?id=101',title:'First',summary:'full provider summary',author:'author'};
+ const feed={...raw,summary:'feed summary'},canonical={source_id:'hackernews',id:'hashed-a',url:raw.url,title:'First',abstract:'canonical summary',content_type:'text'};
+ const raw2={source:'hackernews',source_item_id:'202',id:'hashed-b',url:'https://news.example/item?id=202',title:'Second',summary:'second'};
+ const canonical2={source_id:'hackernews',id:'hashed-b',url:raw2.url,title:'Second',abstract:'canonical second'};
+ const d=api.buildDataset({metadata:{session_id:'source-shape',user_id:'p',data_origin:'test_only'},environment_snapshot:{corpus:[canonical,canonical2]},slates:[{slate_id:'r',item_ids:['hashed-a'],content_snapshot:{items:[feed]}}],decisions:[{decision_id:'dec',run_id:'r',execution_results:[{status:'completed',source:'hackernews',result:{items:[canonical,canonical2]}}]}]}, {captureRecords:[{capture_id:'cap',results:[raw,raw2]}]});
+ assert.equal(new Set(d.tables.contents.map(row=>row.content_id)).size,2);
+ assert.ok(d.tables.contents.every(row=>row.source==='hackernews'));
+ assert.deepEqual(new Set(d.tables.contents.filter(row=>row.source_item_id==='101').map(row=>row.summary)),new Set(['full provider summary','feed summary','canonical summary']));
+ const expected=api.normalizeContent(raw).content_id;
+ assert.ok(d.tables.contents.filter(row=>row.canonical_url===raw.url).every(row=>row.content_id===expected));
+ assert.equal(d.tables.slates[0].items[0].content_version_id,api.normalizeContent(feed).content_version_id);
+ // A missing feed alias can use an unambiguous recorded source URL.
+ const viaUrl=api.buildDataset({metadata:{session_id:'url-only-alias',user_id:'p'},environment_snapshot:{corpus:[{...canonical,id:'another-recorded-alias'}]}},{captureRecords:[{capture_id:'cap',results:[raw]}]});
+ assert.equal(new Set(viaUrl.tables.contents.map(row=>row.content_id)).size,1);
+});
