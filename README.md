@@ -1,30 +1,45 @@
 # Agentic Waterfall Dataset
 
-Versioned lightweight retrieval content, natural interaction histories, exact supplied contexts, system traces, and separate evaluator labels for continual content feeds.
+内容、自然交互轨迹、系统运行记录和独立评价标签的数据格式与工具。
 
-This repository contains **code, documentation, schemas and a fictional synthetic fixture only**. No human dataset is released here. The private online demo retrieves live content; this corpus does not replace its online environment. The format records what actually happened and does not implement a recommendation policy or a simulator.
+**目前只有代码、格式说明和虚构测试样例，尚未发布真人数据。** demo 继续在线搜索，采集记录保存在私有存储，不会自动进入本仓库。代码采用 MIT；数据许可待定。
 
-- Code: MIT, explicitly chosen for the tools and formatter in this repository.
-- Data: license **pending**. Public availability of a source does not grant redistribution rights. Do not publish private exports without consent, privacy review and source-license review.
-- Fixture: fictional `test_only` participant; ineligible for human-effectiveness analysis.
+所有工程文件统一放在一个主目录 [`dataset/`](dataset/)，顶层仅保留项目说明、许可证和引用信息。
 
-Requires Node.js 18+ and Python 3.9+; no third-party dependencies.
+```text
+agentic-waterfall-dataset/
+├── README.md
+├── LICENSE
+├── CITATION.cff
+└── dataset/
+    ├── README.md     # 完整使用说明
+    ├── docs/         # 数据说明、采集和评价约定
+    ├── schemas/      # 数据格式
+    ├── src/          # demo 共用的导出格式实现
+    ├── tools/        # 下载、导入、校验、构造输入、计算指标
+    ├── fixtures/     # 虚构样例
+    ├── tests/
+    ├── releases/     # 版本记录
+    └── package.json
+```
+
+## 开始使用
+
+需要 Node.js 18+、Python 3.9+，无需安装第三方依赖。
 
 ```sh
+cd dataset
 npm test
 python3 tools/import_demo.py fixtures/tiny/transport.json.gz /tmp/awf-tiny
 python3 tools/validate.py /tmp/awf-tiny
-python3 tools/evaluate.py /tmp/awf-tiny
 ```
 
-Choose a context ID from `contexts.jsonl.gz`, then build its common input:
+实际下载的是一个 `.json.gz` 数据包。导入工具会自动生成 `manifest.json`、`artifact_refs.json` 和各表的 `.jsonl.gz` 文件；无需手工整理。表的拆分用于区分内容、行为、系统输出和评价标签，未评分内容不会变成零分。
 
-```sh
-python3 tools/build_input.py /tmp/awf-tiny --context CONTEXT_ID
-```
+- [完整使用说明](dataset/README.md)
+- [数据说明](dataset/docs/dataset-card.md)
+- [字段和文件格式](dataset/docs/format.md)
+- [采集与存储](dataset/docs/collection.md)
+- [评价规则](dataset/docs/evaluation.md)
 
-For a private export, download the current-account authorized gzip transport into a private directory outside this checkout. `download.py URL OUTPUT [--sha256 HASH]` refuses overwrites, cross-origin redirects and non-HTTPS remote URLs. Authentication can use `AWF_SESSION_COOKIE` or `AWF_BEARER_TOKEN` in the environment. Keep those values out of command history, logs and Git. Hash verification is optional when no trusted digest is available; the download receipt always reports bytes and SHA-256.
-
-The export is a single gzip JSON object `{schema_version, manifest, tables, artifact_refs}`. For multiple sessions or participants, use `import_demo.py EXPORT_A.gz EXPORT_B.gz OUTPUT_DIRECTORY`. Identical primary-key rows are deduplicated; conflicting rows are rejected. Output must be a new directory. Offline import validates first and writes an entirely new directory containing `manifest.json`, `artifact_refs.json` and one `<table>.jsonl.gz` file for every table. Import never fetches external artifact references.
-
-Read [the data card](docs/dataset-card.md), [format contract](docs/format.md), [collection boundary](docs/collection.md), [input and evaluation rules](docs/evaluation.md), and [privacy and release policy](docs/privacy.md). Machine-readable transport schema: [schemas/dataset.schema.json](schemas/dataset.schema.json). Initial code/fixture manifest: [releases/0.1.0.json](releases/0.1.0.json).
+目录调整没有改变数据协议或格式代码。既有 demo 固定到旧提交的格式副本继续有效；新版本源码位置为 `dataset/src/format.mjs`。
