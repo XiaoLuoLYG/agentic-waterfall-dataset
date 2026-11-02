@@ -34,7 +34,7 @@ python3 tools/import_demo.py fixtures/tiny/transport.json.gz /tmp/awf-tiny
 python3 tools/validate.py /tmp/awf-tiny
 ```
 
-实际下载的是一个 `.json.gz` 数据包。导入工具会自动生成 `manifest.json`、`artifact_refs.json` 和各表的 `.jsonl.gz` 文件；无需手工整理。表的拆分用于区分内容、行为、系统输出和评价标签，未评分内容不会变成零分。
+网页只提供“我的数据 → 导出”一个入口，下载本账号各会话的已保存数据；未完成评测会保留续答，并暂不进入导出。实际下载的是一个 `.json.gz` 数据包：JSON 是内容，gzip 只是压缩，无需选择格式。导入工具会自动生成 `manifest.json`、`artifact_refs.json` 和各表的 `.jsonl.gz` 文件；无需手工整理。表的拆分用于区分内容、行为、系统输出和评价标签，未评分内容不会变成零分。
 
 - [完整使用说明](dataset/README.md)
 - [数据说明](dataset/docs/dataset-card.md)
