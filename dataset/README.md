@@ -2,7 +2,7 @@
 
 Versioned lightweight retrieval content, natural interaction histories, exact supplied contexts, system traces, and separate evaluator labels for continual content feeds.
 
-This repository contains **code, documentation, schemas and a fictional synthetic fixture only**. No human dataset is released here. The private online demo retrieves live content; this corpus does not replace its online environment. The format records what actually happened and does not implement a recommendation policy or a simulator.
+This private repository contains the interchange format, tools, test fixture, and a metadata-only snapshot of a 50-person synthetic study. The online demo continues to retrieve live content. [Synthetic snapshot and experiment archive](releases/synthetic50-20261107/README.md)
 
 - Code: MIT, explicitly chosen for the tools and formatter in this repository.
 - Data: license **pending**. Public availability of a source does not grant redistribution rights. Do not publish private exports without consent, privacy review and source-license review.

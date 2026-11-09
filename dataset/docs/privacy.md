@@ -1,6 +1,6 @@
 # Private data and releases
 
-Git stores only code, schemas, docs and synthetic fixtures. Production exports, identity mappings, cookies, API credentials, downloaded source material and human labels belong in private storage outside this checkout. Ignore rules are defense in depth and do not authorize committing sensitive data.
+Git stores code, schemas, docs, synthetic fixtures and the metadata-only synthetic snapshot. Production exports, identity mappings, cookies, API credentials, downloaded source material and human labels belong in private storage outside this checkout. The synthetic snapshot stores source links and fingerprints with its simulated profiles, events and labels. Ignore rules are defense in depth and do not authorize committing sensitive data.
 
 A participant/session ID may identify a person; private-export identifiers are not anonymization. Actual model prompts/responses and natural text can contain personal information. The formatter removes known secret key names, authorization/cookie headers and bearer-token patterns; it does not guarantee arbitrary free-text secrets or personal identities have been removed. Inspect export consent, privacy, source licenses and redaction before any distribution. Large original media and binary data are outside the format.
 

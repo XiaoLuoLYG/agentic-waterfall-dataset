@@ -2,7 +2,7 @@
 
 ## Status and intended use
 
-The repository provides the `awf-dataset/1.0` interchange contract, offline tools, and a tiny fictional fixture. There is no public human data release, established benchmark result, formal recruitment, training run, or effectiveness claim. Continuous online collection and release review are separate gates. The collector's original protocol version remains in each manifest/study.
+The repository provides the `awf-dataset/1.0` interchange contract, offline tools, and a tiny fictional fixture. The private 50-person synthetic snapshot contains reference metadata and recorded grades from the simulation. Human collection and publication have separate review requirements. The original protocol version remains in each manifest or study. [Synthetic snapshot](../releases/synthetic50-20261107/README.md)
 
 The unit is a private participant session with referenced past contexts, content versions, recommendation runs/slates, sparse observed events, evaluator questions/answers, and model/tool traces. Adjacent sessions may be only partially represented. `history_completeness: referenced_snapshots_only` explicitly limits reconstruction claims.
 

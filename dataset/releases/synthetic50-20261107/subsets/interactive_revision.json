@@ -1,0 +1,1403 @@
+{
+  "schema_version": "awf-subset-index/1.0",
+  "main": "../main",
+  "subset": "interactive_revision",
+  "members": [
+    {
+      "user_id": "u131",
+      "participant_id": "4af25296-bac4-42fc-9e10-9ebb1cffd05a",
+      "session_id": "8ad8fa6f-4406-4185-a232-765f74c2ea47",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "50a667e9-c4c8-4b55-b9b0-a2f651f2fd31",
+          "context_ids": [
+            "context:5dc5d48683a4a96e4a6b3de73a6f0570c22e24927cdff4331dd5d294a8d431d2",
+            "context:afabe2c515ddc30b26e541dcc450b4ac471ae99908d72a34d9a65938f5ed80dd"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "5e34763e-b678-4f4e-8019-d3ea3f0453fb",
+          "context_ids": [
+            "context:c7447ee7143e6e56a1e31d3caea8b7f05d9e7ac33187f3cd30c0bc8faf12a34f",
+            "context:14fede389ce4816700cf0c90d126d302b4f0c44fb941e4552fd558529a073034"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "57836124-1140-44eb-a806-034695a89b4a",
+          "context_ids": [
+            "context:e32b0f9f5a87612861d92c10d988390cac82ad9ee1b0337eb61631633fcc26bf",
+            "context:d9636ed0cf0505711e4fc34c81e45c18b6c4bf77f3183cfd94a31f7b60cf5549"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "bd3c88cd-ac11-49d0-bef9-cb3dd602cfd5",
+          "context_ids": [
+            "context:aa45c4ddfd2c42eb785b7da92bb39d46a8bc79b861a67c19f9bc9034fc92b5ec",
+            "context:9ed1a5550fa97efd52f2818ef80bd5e6910a62d910469652cf5c16256c830921"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "99268cbe-7534-449c-b2be-54390bf99844",
+          "context_ids": [
+            "context:232ac172d5ca03a89493993559bbfcbf2e6e2765fb09b938d639d3420227e0e5",
+            "context:9c75434df058584d32c6a1cbd992318d8a32e25357b2cc212a16cbae15dcdfb6"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "74758ecf-e834-46ae-853d-96b4290c5088",
+          "context_ids": [
+            "context:5375522abd1c54a24adeaaa5f024d1ae11e63327f9807aac21d7f0fc6c1eeaf8",
+            "context:9ae86e988b53d1d7b47660de75087c18a77085f84a97ed1c34468db3d6238413"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "4b55ed26-65cf-4718-96e8-77358c1d09d6",
+          "context_ids": [
+            "context:68442dfc67f65a6e82d945c35ecbba2a6cdfcd274be7da2708d69518bcf20b96",
+            "context:31aa4f789e4b562f5bf2b037b655c7388d9c2cb63e05f232fba6c46236f18b7d"
+          ]
+        },
+        {
+          "round": 17,
+          "snapshot_id": "66b9642f-ab5f-4ad4-bf9f-b802bc13176f",
+          "context_ids": [
+            "context:f1b2e81c4c1e6c71acf3acc4dc572113d97325a667d11596c0f689532b5fb2bf",
+            "context:403b82edc3d95aa59d1bd02ffcba06f32294d402d19f6f9af53add86eb49e4bd"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u132",
+      "participant_id": "d35de5b0-4322-48cf-bc17-caabd6e85468",
+      "session_id": "22cac584-5830-4f2b-be1c-986dc26c6df0",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "87bee391-25f2-46cb-9641-245f6e577a0c",
+          "context_ids": [
+            "context:2504184b94433d69e612d204f3125557db2fbf04578e3fa2c71acc4297d92b74",
+            "context:a7bc4657f2b04aab7d3a0e3ef8e7363399838e93b1cd295515b53ce7ffefe030"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "43082591-a732-42d7-aa04-b2657227ee96",
+          "context_ids": [
+            "context:01ffc409fd95dfd405a30e5be12f7894c5b4fd4ebe38ebbf91dd06b1b22592a3",
+            "context:e96329d7719e84e72ca936a8bbde797c5ab5400cf3c22bf08bfd2fae7bec46dc"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "86a79bbe-271b-4cc7-8eb6-2a44588f226d",
+          "context_ids": [
+            "context:d349af8e4ac6810049319e1741f56548c1406a6cabf4bcefe6c33617c2096aea",
+            "context:bc08ffea62a9735fc6a315d38580a44f310d2194788fe19da62ee38993867677"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "e262019e-3331-4032-9bed-415d1534eb75",
+          "context_ids": [
+            "context:81bb876e0cc76830897573ea0a67148a5aebab0d5b05b61b00d9c6e1b52a19d0",
+            "context:05d57a96c30417edbdea1e83544b28d92058697cc4180104852fa93bf2b6ac49"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "95685eee-4639-42a1-b5d6-fbb04df2a559",
+          "context_ids": [
+            "context:3b898557b8b2ade4d643b41a681723ab3259da7d4190fe692e79921f94bc7321",
+            "context:bfac930f4fc879a43db8b2755bdc1dd92d09b642819078cfcaa3acb9291641b6"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "c1e11a98-0fbe-4d6e-bc8e-01573be032cc",
+          "context_ids": [
+            "context:7f87efa967c76277f7f33f6f401ae0df501c62b5acf8abfa6bd1ba7be357277c",
+            "context:152b69b8da06a299a9d94a276da19744e0af02d7298f760457275ad1a73b4a0f"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "037c1f63-c593-4c0a-b38f-c94658caa5ea",
+          "context_ids": [
+            "context:d1b823aa93ad35868ab4c467e8b8901c13a35743f39a6d58b1ab33414ee6df6f",
+            "context:56eaed1c6edef8503096c5943b38180842705852fcf103a20fdabaf9f6a74efb"
+          ]
+        },
+        {
+          "round": 17,
+          "snapshot_id": "36b7ed3f-7e51-4ce3-9041-5f4ef5007460",
+          "context_ids": [
+            "context:a7d5c93986321320f38ac12b46fd6d8d885b9555bd19140b89073177a889e98f",
+            "context:103120486625461cf5dcedd5569c9e6fd49348a24457c303ed359b0c9600a959"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u133",
+      "participant_id": "82968e48-3909-408a-a366-9dd2d5ffa3e4",
+      "session_id": "cad42e9a-e1d4-4544-b72e-03b077065b4b",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "2ab659fc-c5fc-41a7-ba5b-7ad211498cfd",
+          "context_ids": [
+            "context:d16159ece8eaf7446bfc85861fa124854b5fe871ae786404400a431296eaa53e",
+            "context:a90b260e78b4f5472c9e24d307446d2b4477d25e7488963ce52e1cb0f2e38e7b"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "0ec3252c-a932-4d34-b267-acec2b9a89c6",
+          "context_ids": [
+            "context:e590070e03afc340555b16bc56f2e3f22ca1a8debaa2b2718c52a3d3e82a3aa4",
+            "context:17982ac9b1c910f9b0063445cf7caac367c5382ddda82ec66dc3ed66bc634de1"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "d920af08-874a-4f72-8ab1-da50d102ceb0",
+          "context_ids": [
+            "context:9b314585e2447f2bcd0e9c033f64f1f90e90eaed1bfc17b943347db61a24a5dd",
+            "context:87fa6bfc955c90bc975f047a66c199884b9848e9a8ed02a10c3ec9c9261051a4"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "3ba1720f-d883-4d49-9319-ea018b4724f8",
+          "context_ids": [
+            "context:2d9a444f681e460ce634d90a449e9d55309962d70ced848000605bebbc5ecddb",
+            "context:f8539ae9dd56731d65595515e99418b10072f82895923c35575bd05437d1d74f"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "80eff410-8077-491b-a473-b42131b292d3",
+          "context_ids": [
+            "context:0df4718ff6eee251cd4bbee41b189f2f4b9adc5f93677b22a478a95c2214a1b5",
+            "context:6abead88175ef7cee50f72d291c6df7b2b6efa8d2170a46b3d5c64d97484d213"
+          ]
+        },
+        {
+          "round": 12,
+          "snapshot_id": "2900d9d8-edbf-4f9f-a56d-aa6f17a83046",
+          "context_ids": [
+            "context:d9193a87169b8ad7d6502f5b043fee7cbde65777c871c7bd92f42b369f2754cf",
+            "context:890f1e3addc9293b42c1c9c3136a1743f598468fdd1d5f13a47ff07bb453193c"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "dede36d0-c79c-4c0d-b546-b03368755deb",
+          "context_ids": [
+            "context:6529608fdbe5b3772ef663386a478e1ce8914b31779850f3ca10866bd86c24e9",
+            "context:bd67cd65d3ac334be613378fef6231b6e10d4ef31f26b5603a2d171c36f2ede5"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u134",
+      "participant_id": "64690490-d661-4810-8ad0-531c3a3ee0c1",
+      "session_id": "c83fd5aa-bb1c-456d-be45-1b7447831ee5",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "a8088f84-5ecd-43b9-8674-ffacee30cf15",
+          "context_ids": [
+            "context:56838b7ee0c24f36394a101564800a6a6cf4fff204d2e56c37d80d40ccaacc1f",
+            "context:0162a6e57351c75c9f6cb27e9a24fdae5a33be4499357b31b6540fd76badecfa"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "bcea6bd4-929f-4cd2-978c-b198f101720c",
+          "context_ids": [
+            "context:2bbbd24edb2839885d754cbaeef08fb26c96ba5073e302e39a85a597db152440",
+            "context:174347f6917b1f3dd3d7ef5ace9f2eaa9946ebdbb78413e518de758a03c536df"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "cf211b9e-4d03-4def-99a1-103a4bc04bbc",
+          "context_ids": [
+            "context:109b5601896defd36b7f5c556f8fe4493fe6bce2bf30a1dd1732ec56d7bd6753",
+            "context:3dce86a6d3f2c99092cd94d1d98952ec3738196951f7a62e87badc7b6c113de4"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "56f9cabd-be0a-459e-9bcf-50180b2897d2",
+          "context_ids": [
+            "context:2b65afeaae1e89a7132085e7188b91321e5e0cafa17882c3d5d2cf73c397163c",
+            "context:158cf3690f7e1a5df4c5a72026a8836e2c7e137ed9c8926080dfbd4c9e9a5c9e"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "044a6d47-8783-41e1-bc28-2d492cfbbaf6",
+          "context_ids": [
+            "context:536501e4de6a5d12a41e4aac03ab56978ce9e8940d86aebf57379db30605d43a",
+            "context:1da49a4fc04227ac0c7d38bdd58935b7707f691b5953418140eaa524e2566926"
+          ]
+        },
+        {
+          "round": 12,
+          "snapshot_id": "9931262f-386a-4d1a-8e2e-ad4c3d34b35b",
+          "context_ids": [
+            "context:bb1f2f0f640741f6a2a8dbf9097049f96edd2960e9697fc32038433232bca91f",
+            "context:3278c177d4b6dc348cd72f5a01e2b6ecc459e871ea00db737763274cd6aa94cc"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "7fc40d50-b654-4aca-a42f-580ffea345b3",
+          "context_ids": [
+            "context:53a52eae4aa9d9a9013e69f017b09b576ce50075b5c9090049882393e3d63323",
+            "context:74203708e400c0f5e06aca6cc366a4d3c79a9f57d32ab61b46a66897e8f86cb6"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u135",
+      "participant_id": "ce50d495-90cd-4531-b308-028c9256118d",
+      "session_id": "7a42ee31-21cb-4f3c-acd9-cd3f46d52e65",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 2,
+          "snapshot_id": "472efeb3-31f7-40e9-b006-3e9326adaf0d",
+          "context_ids": [
+            "context:817da34b9c060f336d9f5d79a9b332df420cbbfa3526f1ab7882983d808cca5c",
+            "context:bdd6c4552b3451fac89e058a174def677b9800614864011191b60cc7405bdeb0"
+          ]
+        },
+        {
+          "round": 3,
+          "snapshot_id": "196118cc-5d94-4b17-9b9a-c8dfd4956311",
+          "context_ids": [
+            "context:08d2dac79ec0f490961026d38d9a24998142c04076ec859e2c63c458fd9ada69",
+            "context:c080c7d46bd6ffdd531095ed856f8f0d77fedffa088d3a506fbb9990afe31dad"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "b4036c51-cc17-4efa-a1b7-ab0547a32ca8",
+          "context_ids": [
+            "context:8fb0b0c64f165d6d9e541f49d8c8c34ba55363b2d4f2b168d570659a1ed0cf44",
+            "context:6642ee4bfde69f4e73876ffaaf6d954e050c40d6a28d2e5ef732213d6305c301"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "334dbfe2-760e-46f8-b32f-8a26cbc5e71b",
+          "context_ids": [
+            "context:56cc258218983f9fcb23d9d410a10ce45de651da8dcb1afec24a464c4f649f37",
+            "context:8bf9008c718dc91757f71dea0bbecc2a8842925051f1f686fa3098a625925f47"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "4bda59e0-fda7-46ae-a160-b508a612ac92",
+          "context_ids": [
+            "context:6fc3869fa3f5b41e41e3fde248f5822fce3c1da251c7043ce2da5b85a9860f34",
+            "context:7909e54e3e2791a2f8d60b78c19f176e0fd292eca3f3cc978b3f9d2b069fecaa"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "e098504b-4206-4570-9a7e-250e5d722295",
+          "context_ids": [
+            "context:f89594e426ba94a95e8fdac0caad4388200e77bde2e2f32461f587c172f0e308",
+            "context:775a731c54e2b4c3694bfa8c92befcf0393a83ea69e3153134da480e407373ed"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "7495d6b7-c88f-4e2c-8cee-7165344144e3",
+          "context_ids": [
+            "context:ee21301be535f9b1ced8408cab2ee0172790d0d3243233ba5f15ac9f8c0d9b34",
+            "context:7587a50e55a3284732b304af7ff7868d21f2190803b1fa11c72c73c4e0958175"
+          ]
+        },
+        {
+          "round": 12,
+          "snapshot_id": "6925b8eb-754e-40d2-b1ec-4732513974f6",
+          "context_ids": [
+            "context:4b938d6844e0e10612dc0a5a0eef65b7809ca83f0d730a986656c22f5dd6a6bf",
+            "context:8b5bb58b909a8c2419bc941f317eb6567d103e4e0c1d7e700e925fc0fcd428bd"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u136",
+      "participant_id": "a7c4a7d9-c61e-4b33-84eb-062143beb925",
+      "session_id": "0a43e8bf-3a50-41bd-8cf3-a29976df988e",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 2,
+          "snapshot_id": "331ec83a-4dd8-4aa9-bd63-6539e2bbbd01",
+          "context_ids": [
+            "context:7b417454cd72dba6738ecd0cd6ff5bcede8e5cba6a136e44c9af2e4fa46b7e40",
+            "context:19f524d59ad5f0bca64942f0538457137bbc550e70b901efa9e91b643fe17457"
+          ]
+        },
+        {
+          "round": 3,
+          "snapshot_id": "28d0e57f-f3e8-4df5-9539-43f8f0d8001e",
+          "context_ids": [
+            "context:83573de82f24e94e57d586ccb663993e6836de0223fce7b3031618e35acf257b",
+            "context:80c544e8c2baa92b5ef2a01a66d0b4bc7be497ac7f9357ae9a884550602cddd0"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "03227990-00fb-42da-bc47-8caea367d291",
+          "context_ids": [
+            "context:5de5499272c5f0b42a6b4deff1750e89ab28ad2922e861956e8d408faae127ff",
+            "context:ff3e8d35edac4162d0528e46f357a30b3e50bc7e0d631cffaeed3311b081be7b"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "f005099d-71c0-4ab2-8f56-2e8efb540998",
+          "context_ids": [
+            "context:bc9c2cc4e595ebb06d4e9a3b6597ab671da60ae7b41479751681ba18d0d2ab44",
+            "context:b7ac16ad4bd5713cd6ec8380a8caf45c6d4f6afccbfcb157615edfd205d571c6"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "de81d3c6-8e24-4879-a665-669f724df824",
+          "context_ids": [
+            "context:268aadced69c3ca16fa3aab03ad965fd68cd56fa8243809dbaa597a32fe174a2",
+            "context:a61cd8fd75e34687968ce9b6e965f531dadeceb9d9e00693f821d82a6a54c381"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "69ab1338-3b8e-4114-8e56-968411ac8efe",
+          "context_ids": [
+            "context:e493237c82640360dfa19eae8d645d603c688b056ffb3a7c1970c9bc3ed03e90",
+            "context:ed587a07223f44778a83882435bc43ae3c5ca8a731f08fc7c4487f1eac90f21e"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "ac91a9fc-9e0f-439f-b941-f4811963e9c5",
+          "context_ids": [
+            "context:c28b12853fb4a922e361f60f1e9fb43a5f2731558f592ec0107af9ed077a4fb9",
+            "context:1e723c4ca9bdffd84f7a60d8fad00de1164a3c52879c5b492199833b24973c28"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "b644a938-5bfa-46f9-9adb-d982cb7c9493",
+          "context_ids": [
+            "context:67e028834fb668105162ee428bfe46e0f92bad076a828312e2715e65745dbe05",
+            "context:cdb9de764689bf0ec3055a10637c30ac12785638165a4d9019f8ddd95165cc71"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u137",
+      "participant_id": "a7f2895b-53e9-4f3f-abac-60251c7048bd",
+      "session_id": "f4fd7920-6c51-49be-8018-ac12f6730c8d",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 2,
+          "snapshot_id": "ed2edf93-5176-4134-b840-349f13be2729",
+          "context_ids": [
+            "context:45ff6d6dd1c3948d7d47ebe030c6a37cfd1c4e2a0b0aba6e54ddde0d43d021b5",
+            "context:867baf5ed4b5f15fc0419416b84a1d63693deb3c3806f35b4ccbe7d900afab1a"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "5af970dd-c461-467f-a645-d8a877cee62d",
+          "context_ids": [
+            "context:ba4b7a873ce57c4b5e7503e623708978b94f6d6fbb1001a0dbc2412392512c6e",
+            "context:c3ce06014e465664f085c806cca8f4c9a378476e8f4106b435781d6242af8dad"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "4b75db38-01f2-45b0-9758-3a8d27e62db4",
+          "context_ids": [
+            "context:e5b5fe2a9eb3c21ca24d4c55654d06ce8d66ff64cabfce3668c4f8e88bd4fba2",
+            "context:8fa2883b2af0a751984d47d65e0c27e754ebb07ec0407ce152ca53691cef7669"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "16636ac8-bef2-4b4b-af9e-7fb2ea1da6c8",
+          "context_ids": [
+            "context:e36b73df8ecad89c8fd57597bbfd4fb588f352ec2e3258771b8def8692f53c0a",
+            "context:e131d0a10de7e2a7262e2949b97be1d9cd5ca13c39687cc76ac2055975d039ab"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "c64d5773-2c60-4893-b60e-438efee0f4b5",
+          "context_ids": [
+            "context:b5a477467eb79ffec9f25f6906952fd692ff9910a949010cf757b0dd6d25dfbb",
+            "context:a76f93a84a7ab743a1213f6aff85bcb211bd78737aca5092837075ff84604e8a"
+          ]
+        },
+        {
+          "round": 12,
+          "snapshot_id": "7c61bb1f-e27f-4adf-9fd7-91c4f634a324",
+          "context_ids": [
+            "context:6765961d23fcd9f6a4fc64430694667aeb4123a78858ad747ce6067e0182cfa9",
+            "context:70a6134f739c1dbab38e6247be1124ae218f983d3bbbb75902307dcba7d9a64c"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "1a957fc3-a449-4f8d-ac82-b83afb27d8fa",
+          "context_ids": [
+            "context:10300e5b5fdd15a6d198733d5f630b4fe1c9559256f204a9c39e2eeeed98ada1",
+            "context:f86dfb1fbb16731e501832df37246b386adbe26f7285bece55faf3c0d8caa293"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "91e3186c-8a4a-4d59-9d85-6f93d65e8f21",
+          "context_ids": [
+            "context:01c026747047e25cba09dbd3c8f399639a7da4c7e800fa0d2fa4154994e92ff8",
+            "context:edaa2118231ba2b6d7b7f230eed67b735338e68cc71cb75bc8962fcc678c4c64"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u138",
+      "participant_id": "897f7e82-8702-4e11-bb4c-dac5626def2f",
+      "session_id": "1edaf23c-e97a-4090-b440-e184e4f6a6c3",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 2,
+          "snapshot_id": "14658c59-9786-4694-ab61-00dd2dbd5ad9",
+          "context_ids": [
+            "context:6d0858f2862af62ea6d1093812980107352d7afc5e27324ff624cf20f0ae1ffd",
+            "context:d1cafcb4064447e101024c1c5eeafdaf7226564c3689891451b541b79c4ce210"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "d96b4b18-30e3-4723-b781-90911dd0b5d0",
+          "context_ids": [
+            "context:8d178fa1950f666751939aba041c1e4d4891c2a264859b6d75a2a4b2d044d335",
+            "context:73ad78648c64b23c20e4d5a7053e513d8f736c4c5b4bc27b678df8a77e8f552d"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "d542a358-f7eb-47e7-9ff5-235b08ef2296",
+          "context_ids": [
+            "context:7ee83ca8a4183e5933da58e02180c9a828ffcc5799f8424f4071f05e4e0eceb0",
+            "context:297ac22a4069cfefe3ab1a66d29ed57eb63bd7ff4cd9b5658a48aa2ad4449a09"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "96f6f43d-8cc6-4474-adeb-18dd7c839553",
+          "context_ids": [
+            "context:6179cba86ea0b78ef407f7b4ea4ba7a9ba0cc4ab96512bfd4264f03bb23b75bc",
+            "context:8d5122fe002c4644e8c16fa0c4ffe1d76e13af4c9498c55e058cf612330b073d"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "177b523f-4435-4a99-92de-466054c68fa9",
+          "context_ids": [
+            "context:2dece69c1af9d4f4d706f75b79cfac029334f90b5745fcd0bc534597d38dddb8",
+            "context:a929868c5af09ca599f696579433e6c7947fdc3b5912d272e092e33be74739b0"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "19d87396-b7b9-4167-bb6a-1f9b64c26b44",
+          "context_ids": [
+            "context:a8d649f77804829f1b77de5864e29543cbaa4e3c8094db137163e60c35f85ae2",
+            "context:c5d9f07bb35b1a676d1a5f5cc68762688f4d4a8640c94c58df96056f974fa39a"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "dd7724b4-5379-448d-b9d6-1d6806b9f089",
+          "context_ids": [
+            "context:7fd5af0bfc76c8fe834d28b16ef7d51b003249e10015e705a455fa2e7ee0c612",
+            "context:288c0b0ace824b8c434d9eb8de2df1c440793c52d9db5f66154c91d69cbcede8"
+          ]
+        },
+        {
+          "round": 17,
+          "snapshot_id": "36a02e21-7b36-412c-bf90-c854b9f6e8fc",
+          "context_ids": [
+            "context:a236f408d14871e2fa79e2073085701ac68f17754ef6e807ca5142be1bb93edf",
+            "context:aacedca042b4235c3802d30ca68ad596d6105a9a0269ced9c210b09a63315297"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u139",
+      "participant_id": "0c24516e-a8e3-46a9-99cb-2f649531af56",
+      "session_id": "59991228-7c68-436d-82f7-d5c739cd5fce",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 4,
+          "snapshot_id": "37a326ab-2ea5-4132-b4fa-e34b6c59c597",
+          "context_ids": [
+            "context:1e540bb68ce081b8518448414f761f2f9b6a1f3d177fc51346d61c9ed3557c23",
+            "context:da300479d8f59d813c30864b68c169e10105df480ff7c6400af0ec7d2d11ea61"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "e821f1d6-8f48-4e2b-adde-afe4de659944",
+          "context_ids": [
+            "context:07145b65d61e79b6dff11b24acd2e00eccfec45365b531da518c795f1a1bb555",
+            "context:416ba34c7bc4ae3b1131025771dccc347a6c9a7e9a07b8d6b05f6f4e1fc03627"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "4e380a3a-42ae-4c2c-8862-9feecdf0ffe6",
+          "context_ids": [
+            "context:4a55e4be2f952ccecf3806f70f13c8a9578525c59c125f4c38a2e29df824461e",
+            "context:655a47b1be811c7cc2b7f9b2f5fee2c3d63e0b92c6ff91be4d65e15f59f69fbe"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "f8f9024c-58f0-4988-9fde-2d6f5a05f972",
+          "context_ids": [
+            "context:fab30e1f1fa9e6aad7e60e9d16fa7f76f3d21f21be1b546fc067c4c6e3ca3479",
+            "context:921008dcb749aca862b1cfd611551fcb0ac216b9f046f54b0950105e72c7beee"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "21ba32f5-48d3-4c3d-9338-c8f7a31420bc",
+          "context_ids": [
+            "context:a3a1451b58030f85f42cd93102a1d772b2f1c3afa00db5cff0f0735cbe56f0ec",
+            "context:c7a8b388c4f7d21caac615f0f31c276ee4d8def87aaece3e3aa6f2f0ef855cca"
+          ]
+        },
+        {
+          "round": 19,
+          "snapshot_id": "c92ea67a-fed2-4778-84b5-a9840d16c002",
+          "context_ids": [
+            "context:59aacbaf6794551cc80c5aa43b2f43c0d8c6a8364c8ac42a54057cc6c33a01d6",
+            "context:0017c40e4730acbc2c632f8569bcb66d79c1f154300f9c477585bcc1922e4972"
+          ]
+        },
+        {
+          "round": 20,
+          "snapshot_id": "f5ff3720-8441-46a2-a4f1-e3107e4404db",
+          "context_ids": [
+            "context:2ae8ef1792be3908b892ea727c913f713d41fd57a864e35426433df1a75807ec",
+            "context:e1a7cccd5826f1c0b69da2035f982de503637ef7202221c5cd3e348f1dd38010"
+          ]
+        },
+        {
+          "round": 21,
+          "snapshot_id": "18a90fdc-1b2e-41b5-a01e-d8670d0328d5",
+          "context_ids": [
+            "context:58d7120153c9c0735ddf4d1ad73f26e915a14898441bc548fc7a8d7f7588439e",
+            "context:4db24177dde0b6e60b6e2f75119cbca8fd8fa0f3fd9035b9b47fc851ca768d47"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u140",
+      "participant_id": "cbc5a927-8288-401a-ab37-f8b02cf977ac",
+      "session_id": "28998d13-513b-47c7-99c8-4c2dd78301a6",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 4,
+          "snapshot_id": "5685455b-cfa6-4502-954f-ffd78043cebb",
+          "context_ids": [
+            "context:8b7a8d865ece94ba3fb9abed3e45198f4ee2fc8f2b8681031b40f2a4ec1302c4",
+            "context:755c4f352a7bd2393cbfd366ca1d6bba089d581db2d09adcd5a9e7d5edf74c0f"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "9680b0ff-db57-48c8-9045-433acc30d515",
+          "context_ids": [
+            "context:fac611cbf1c5e90c8dafdc2637972983abaa7e3933e777d2fad908069139f244",
+            "context:fbc8169a30b3d4137893a9adcc51b77026caf533eb468e5bcbc1662e99821cd0"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "b5dbc797-41f6-4fa4-bc8b-e5905c0d14d6",
+          "context_ids": [
+            "context:fa8ee04e7bdde5bd91e505558c54b9f4c1a8b713e2ba4c330ee5f4abb41c4168",
+            "context:7730c089d4008d1b72fc2e22d10d90959586dafbc9d9aef71ef9e90e30af249e"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "ad93732b-6c48-4192-a3cb-7e539946f440",
+          "context_ids": [
+            "context:d0f7e70589b357a64ea8212943da7cf1d2e114ed2fd6e82694e276ba0c5414e1",
+            "context:12ecc3a28ae3c20b8374007a170c067c6911791f9c1efe8a25888907b0368cea"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "28129910-e7bd-4a1d-98a2-26ceec5d0781",
+          "context_ids": [
+            "context:1a70a9a99317224318562527f46ab23a840b61e0bd99903b60d4bf6b87fef3b0",
+            "context:fd006a4b9ff416a7fbbd4f3b34da7f4b8ba647eb1f0bcbabeaf53320a3989c47"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "b55cee06-635f-4039-9e33-1f3714276869",
+          "context_ids": [
+            "context:45dc4921934e49dcac5a7f8f0929a9067adac92402d0064d4806407bfbb0b59f",
+            "context:e947b2e9f2b19fa048877f19535dd4861eeba3efb6abbc0123dff2ac0c817759"
+          ]
+        },
+        {
+          "round": 18,
+          "snapshot_id": "17844222-bd8c-406c-ac2b-5fd66a9e430f",
+          "context_ids": [
+            "context:658cc3e1b19ce066e40fcd5aa587d948998e854c5a85803435ab711a30e91dd2",
+            "context:59266f99889f42603c8883c04b42c24ef3783719fa9c8ac3ecd52c4deba98336"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u141",
+      "participant_id": "13951652-50b7-4df6-8b6b-a21457130a2f",
+      "session_id": "e578971a-f609-4270-9652-e9127b579548",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "47f1def4-3519-4cdb-8f76-c4e3d07b6970",
+          "context_ids": [
+            "context:8c94af13344ff3b1580b9d683c3e3400b3188a254bc18a8b526ab26cb2d06313",
+            "context:f39ab1d78de938176768ad234a79144fc648dd3945277752066784740d29856f"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "587d589d-bb45-49b2-a7c4-46ebcae377f1",
+          "context_ids": [
+            "context:9d22921762ba5fc61776138a09b61a3dd9d92b6765c91fb2d702dc99a67d3870",
+            "context:061b27f2c774378db743984f43ed71ba8f49f2dce1d95a97574530a233411509"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "3ae1ff22-2e60-4359-9fed-5e4fd1db8276",
+          "context_ids": [
+            "context:456212f5518756d52aec49497ae06cd5ca6809490bffd5e484a3201216a23e8c",
+            "context:cd76746613d6353336193cb9649b8ff0c948ea3b68a5e26572413529f829dd71"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "c4ff522c-e233-4787-a436-506537c16152",
+          "context_ids": [
+            "context:707268fad0ae92b8e7407858dfd03b9a530621f20e25c17f0ad8bb0072de6ed8",
+            "context:dfa9f009e3e5a341699b493eb112e04e0f68f3894d9396dfe8f5c1c43175c744"
+          ]
+        },
+        {
+          "round": 12,
+          "snapshot_id": "6ae0b111-120d-44cf-986b-d8f51033bcd6",
+          "context_ids": [
+            "context:79cb8aef97b3b4e7d1d8950e88f039e90fa0534880897b25272631b7648ea915",
+            "context:5f2ebc885086cbdd81f0566eb44a3b4396ca8fb624a157bab7735b5989dae729"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "9e258bf6-f72a-4ec4-a372-0e9eb82e396e",
+          "context_ids": [
+            "context:573f96e6a51ead8a224bd8b68488142357db35e99b35a1301ebfc214c8cf82c4",
+            "context:6746e73f2c590cea0964d85a07b55d1d5d78c6d3e6f02ddd2eaa6f6b4ef0a688"
+          ]
+        },
+        {
+          "round": 16,
+          "snapshot_id": "8503b410-32c8-4d2a-abd1-b3e80d3eba16",
+          "context_ids": [
+            "context:5fc05f21eaf87a9b6011addec9d8da1fbe19289281eae0df49bf3481922b442c",
+            "context:a1b34b0e4834136189270db15c90ec2d71d4c369c4deb7a7eb48d37182a6a3ba"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u142",
+      "participant_id": "1ca2b46b-df96-4e80-97ac-5f2125e8f396",
+      "session_id": "b66ad72d-5fb1-4aa8-940a-d9cb8ec1aa5e",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "40c799cf-c0f0-47ab-a1fc-29c57de3a731",
+          "context_ids": [
+            "context:f3e1982ba69cd9acf5812f34575cdd7b4302dec16672b440266bf9e94c866417",
+            "context:03656f8bb581aba8392453edd80be9984016d613356928a51b135dcf78db5055"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "03d633d0-e636-4c98-bb87-7d5786695319",
+          "context_ids": [
+            "context:2cb2c226fc928f5cc761f9efda6b36af0d46cc9d4364d2c0a5ec48b55b94a875",
+            "context:713631d5fc634c9a558998a095447479d6094aacca622e23b948e9713f65934d"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "123c3b0a-e976-4d16-9c25-21b65ae0d2a4",
+          "context_ids": [
+            "context:5c0733e96040592dfe7296df1c5290c50f9b815749c69857724d03913677fa7a",
+            "context:02184c8bd773c023cad28cc530845359901d59d10d58c420c1030453ea7f2c85"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "ac167a51-07e8-42c3-8bd4-7e86a7ac896a",
+          "context_ids": [
+            "context:7e802a79c76e341608463e313dae3cc3930fe2fa0ba3aa2775e3f05beba53d7a",
+            "context:dd78f1dbf9624155859e17c0acc4de0bf9d2e5f235df29686c131316a42670b0"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "d1690483-2f3a-46db-970b-6bdc5c4cd7c5",
+          "context_ids": [
+            "context:1213aa140e4992aeddd81391a2d88e2a0b417bac35d01ba9b3eb56fe3f739ab8",
+            "context:6f71d0219343631c1d70904af693d101cedad2c941c0277a1d95109b2ceaec0a"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "981c1587-4623-4b0a-b183-5153d60aa315",
+          "context_ids": [
+            "context:779ea73dab91326ac5a781aada466dc3e6b43b7e4e0a13b61d1360df0f7d41cc",
+            "context:169cad635f4cbe293c9885b8730473f200bb87e53e990990353e2120bd499037"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "7f81064e-2836-4cc8-b744-39647d7b9a63",
+          "context_ids": [
+            "context:455ed4a3a6ae3ab893b113694c33fce26e856a3189ef5fc3fa9dab9202fb974a",
+            "context:f00e98cac3d17a6182ac967ef4464768ea27b9f449c8c19e201e8ced60c86ec7"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u143",
+      "participant_id": "26739a0e-d6aa-4a88-ab4e-5d8cf7d45920",
+      "session_id": "c3e7bb3e-5f61-4f9f-96b9-d1a89c81f072",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "70500cb9-2038-4969-85fc-e4f54b78663a",
+          "context_ids": [
+            "context:6e08aa9d208f734109539b59673e74818082d2b445b39a56ead145228303301b",
+            "context:4e560637265394e0a999fcd76ff214bf14d18cdb44008e2cf0f1edf2bacdeefa"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "6468c8f0-7d3e-43ff-a461-0c0f57ed7d33",
+          "context_ids": [
+            "context:6a800825ccc762e70625a8cc14f52093042f00791926f03c61015217e274cac4",
+            "context:fe111599adfda03fbe24120b8a771bef86647dffd68cd473609fd9678039c7e3"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "5172c62a-07bf-415c-92f6-f8d115d4fe71",
+          "context_ids": [
+            "context:13ec78ac17ee6cdebd1e3a00cd9c47fb119ed7572a78917e487c73a26c37168d",
+            "context:eec266fee77151e84b90617a101961594893382592c223f4011994756224e8dd"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "6f85bdbe-e9ce-440c-917b-e659ae64d89c",
+          "context_ids": [
+            "context:c263c26ab5203b850b9bd240d22b35653a80126c848e9baf1a7dc9dce70d63ee",
+            "context:fe82d88114f2b134db4ac250ce8e07c294510944018abb5d94e7a3e9eb8caa43"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "3ae9c51f-cd77-46cb-9e2c-313facae1261",
+          "context_ids": [
+            "context:dc09f8a4f36061b7b8a660cc8aac7436b672802bd2b10f1ff35aa05a9a241ac7",
+            "context:2eced67db8b0d3c445ec2e2702ae4eda90e5f968e4221faf3704b69b94c49e19"
+          ]
+        },
+        {
+          "round": 12,
+          "snapshot_id": "16935210-fd6b-414b-a62c-a59aa0b16e7f",
+          "context_ids": [
+            "context:3e336a9b84f804ff4f996f7c36a348dec23583060efa7b8cd2f5b0f716961e5a",
+            "context:dc510fd77b3acf7ea57f88d1506adc4decf7c522041207f3297c0772269055e5"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "710b8adc-e033-42a8-8b8a-469ddaafb964",
+          "context_ids": [
+            "context:487cf9bcc78c671e530ed7b135b1210218f800bb77b7b695db4e8fa47263abf7",
+            "context:8e4e627d2c8d749391eda8c82b1976524e6528cc927d9835cc94c9d4a326c99d"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u144",
+      "participant_id": "0480de76-bb0c-45f7-bd83-35d0cd0edb90",
+      "session_id": "b4be291a-1c0e-4585-9fd8-9c8b713b192e",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 4,
+          "snapshot_id": "24160742-e513-4dc8-a787-5e55eb2d434e",
+          "context_ids": [
+            "context:b3642ee663c0de4162af9fb4c2f3b91608942576c4558bec6ac7a7080871609a",
+            "context:5ecfd57d493cb0dca2bfd4246f85e29eb03f8fcd63798505b6029738fa4ac511"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "49091291-d5d1-4983-b58c-d08e48f080a1",
+          "context_ids": [
+            "context:d9a96d1352c2f686798472ea9396930d89575e134b74dc909312f1dbd576335e",
+            "context:145916d5f28cd5d3d06757f610278c22759a55eb3eebb98c746c763d9b473eef"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "455cf376-7f87-47d1-93eb-d2a669b891f2",
+          "context_ids": [
+            "context:b31f4e956f6f1c603b76f922532486bc336d8a47fe0d47a400c16d8b0271d543",
+            "context:f30c9be563457ec67b99918325bc7501e1f2bb41ea420d185fbb04de0498b799"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "b1e936fa-340b-45ec-8e71-c0051bb62b1c",
+          "context_ids": [
+            "context:0ba9254576783ed8735068ce6db1bf2c582bb1fe338cc12fbf3e2db929e78172",
+            "context:69b1d876c6d3bf5788f6ab7c7283ac9f297bc1647f50506e483caf428b9bc4aa"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "b76e26a2-f708-4078-97c5-b8954b2079c9",
+          "context_ids": [
+            "context:af94558cc2553c22a78330c954743b138b9406d2ab84533569ef8a0e75f31dbc",
+            "context:3a7a4d01fd2412e987a57c1e35cb872f0029ba1be70f345903e1784d5a3cd978"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "8272b02f-dbe4-4b97-bfe0-7bdbc7215b55",
+          "context_ids": [
+            "context:4b8fcfd3668b8674a7bea9b28eccf2763317c879d9ecb38767273a12af10eb5d",
+            "context:f11d2edb249201eb624e48b5d25ab81c57e85c00cb311b6f6fb232ab75919956"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "6ae2a926-6d1d-47f1-b5ee-ef1abb46d6ae",
+          "context_ids": [
+            "context:b845ef9b1c42370976149be07acdc779ea3be4b87066b0069d3c34d2c7caf1f0",
+            "context:f4141d0a2febcdd09fde37ad5167fe364e25caf45ca17da30b530dd897ed84f9"
+          ]
+        },
+        {
+          "round": 17,
+          "snapshot_id": "918da154-921f-4f51-85d2-7bbfadcbc7df",
+          "context_ids": [
+            "context:55abf62acd37b0361bc238f89e3078743c2abe6357a1ce75bb2526aadc8b1036",
+            "context:512b76a343742b7b82274931a7fa660ea8506b0e1ee0c58a91a299f93711653c"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u145",
+      "participant_id": "74ba4a09-fb2f-4afe-85b3-d514d91434e6",
+      "session_id": "572cf1ba-5a83-4538-ad7c-1f37e55ced49",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 2,
+          "snapshot_id": "bc63b997-c250-4432-b5bb-870702c9aaf8",
+          "context_ids": [
+            "context:4763b7237fb3a0fbbf7a6457c1924c7fe50d0725a421e75f6a0df16f10cb5089",
+            "context:2a612d2adf91caa0ba2ed332b997d9608a467d6b56e4ea4b4e3822386e2fd2c4"
+          ]
+        },
+        {
+          "round": 3,
+          "snapshot_id": "a304918a-f7b6-4fa0-bf56-30b9623d88fa",
+          "context_ids": [
+            "context:1efdf4f982151cc45b840884f8ba5a8c36f9a1502aad8ec3464f96579f602793",
+            "context:f15f03157a5211fd94ca215f9df984fca4ffcdd26ebb6188d675762d0d0dfb70"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "58b6ac49-c89b-4431-ae45-5918768e9a42",
+          "context_ids": [
+            "context:9ab96559d5f7dadd47f0fb9711cb89f48a9f7c169f926c9b28eb4b1c109639ce",
+            "context:c48e8f1742f8fa0e23f1c47b766bef70c09a9a6c96fd00072b2eb8c6f55512e9"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "99611a36-7b37-4908-9434-b56cf65e92a3",
+          "context_ids": [
+            "context:30cbbe7396ed07482d9010f2d556c052120699a51286c522634079222f5fb32c",
+            "context:16a26f90f1ddcea4deb713194731146ed51acf8a4ca9f8041d0fc58bc9ecfa90"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "07c463a2-09d2-4584-a71f-69eb6eeceea5",
+          "context_ids": [
+            "context:ede16e228b3635e72caff0e5e5f8ccf63a3ee27b75113ad3241615affe12cc32",
+            "context:984758bce71ce053c31e20c7528acd025c260c9bb00fcfff3a39c4cedb0d36d4"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "5270146e-cce5-444d-b5b5-09d41fa3af58",
+          "context_ids": [
+            "context:c426196cbc57cfc4367ddcda94ef302344e4a7e86522b7e88dba733e8af40a20",
+            "context:b0280c45d9bd57bde95a285d0def2275603b46f438fd4a2cdd182f0cba51351a"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "a20a6f1c-9dd2-415a-be65-b6bd81df8fa4",
+          "context_ids": [
+            "context:270cb53f3c3605712f1d58d0a333cbad788334c1f63f707e5d20eaad86a6c819",
+            "context:8bb35cc83154ba2383384e29c544da987872fce4f6ba1a93e0632ccaad16e6ff"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "e582debd-be30-41e7-ac68-5c3bf4b78e01",
+          "context_ids": [
+            "context:c2a481dc5939426d968005692f399de83b6952bd4ca283d21da6d1aa6be15f10",
+            "context:6f6374e39e8311fea938b63c79414bda590ccf1404d139418f8a0f6e7ccdf1d4"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u146",
+      "participant_id": "9e8295fc-d4e4-4ba9-9090-357bbab9b831",
+      "session_id": "6c61fa06-96f0-46dc-986f-e7ebb48fa710",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 4,
+          "snapshot_id": "53943a54-add6-4148-b4cd-41855c88bbad",
+          "context_ids": [
+            "context:21ab4c6f87f9bbe326163639239e7d326502349e3ae324c83751e62e82f67adf",
+            "context:82899357da2c6c002874aac0913c3ae13442717d5ccaecce366227715f04e629"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "5948fcb5-b2cd-404a-acec-4354c1bc5ef2",
+          "context_ids": [
+            "context:d35ab28d4dfbf95c062e48a70e18463123c73bc6997eeb2c8e14399e91c660c0",
+            "context:36c262691be595095c85dbd865b3590396e2732b747ee012aaeff90bd432ba16"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "ac26ef9f-76e6-404f-b6b4-b3e2a84ae471",
+          "context_ids": [
+            "context:ee626e694cf5be9d6d35390e9d747d0efca79f6549c03dd739e2865cd82de034",
+            "context:08ffc23f4c14578403bb13f91149d61dc1ec5857cca8142636d729ac6cec8761"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "4b63fb4b-3e9d-4334-a0fe-74ed68545b33",
+          "context_ids": [
+            "context:731517f9411cfb767f87fa625115a1119d598df578711b6a8c2036f99f91bbc0",
+            "context:cc042189ec5ed3b9722c2f4bde10f061a297990e0e82f6f3fc765d54e3389d5f"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "82f2bd32-3d10-4ccb-a161-5cf9eead9b4a",
+          "context_ids": [
+            "context:923d56c9b48c958eb38a0b34982e03aaac22f9cad5bf2670ba9cda0245259394",
+            "context:1d9e8e313ac4d6faf8fc87ebd6562a42847b0958958e8abc158d65ab6d4d592c"
+          ]
+        },
+        {
+          "round": 16,
+          "snapshot_id": "50eff856-6e7d-4515-a5de-2950c97885b1",
+          "context_ids": [
+            "context:dbadc75abfece6a85bbc3c331cb4a0250289fae746d0a0d6a0237f1edd85fd71",
+            "context:79bf1c35275f126d64d0f1709a4869683063b76dfd1d517a99db735d033076f3"
+          ]
+        },
+        {
+          "round": 21,
+          "snapshot_id": "d2f0773e-b4f0-454e-8554-ecf814209452",
+          "context_ids": [
+            "context:2b66bf61b1bfe6627f8fb29bb2a115723ef6fb465d1aae9669516bf701a0e191",
+            "context:be6573e5a4efe1ca9fbf8f00914098e1ed04a91a2d4c36370eea9c16444afe83"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u147",
+      "participant_id": "92e2d311-1587-4985-8daf-5c86a8c9d8da",
+      "session_id": "487b4607-89b9-48f1-b147-6fe2eb46a09b",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 3,
+          "snapshot_id": "d46abadf-793f-4e24-9a7a-315ab7f46344",
+          "context_ids": [
+            "context:570202a02efb8aa3f3100040b87617da315f126ce8ff600612729569b41ad329",
+            "context:b3591f21a3f4ed4d979d46f6481d5c79fbe9315b0b8291d90666086d84ff912a"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "5be6c97d-174c-44ae-b81b-ad886da0f9ec",
+          "context_ids": [
+            "context:1468e43a17b3541f66174763ecc2032cadf3edc9fd57ba017f90ad17a68e50d1",
+            "context:75a0598b42343b8b2614f577e109f851092b7318b94efce8ba34a13b96834509"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "de53fe07-7dba-4c38-b667-29fafd96dc84",
+          "context_ids": [
+            "context:925fbdb4607ba0fc1e629ca55320b071c52c3ad8d1984ffffdc58d9acab0b030",
+            "context:ddb4f299e73a2bbc6b5ddd8c6f5da9ca082d309d4d7eecfc66b9f83e445eb825"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "51ab561c-1d16-4071-8a1e-50c8397fd346",
+          "context_ids": [
+            "context:6c08e8219ffe8e9971b906d872cad0f7ff390fee7afe951957e19b7e8fa6ccff",
+            "context:3bd5fdda2e4045b48a61b3a451dcd5cbc37d06f91bce45929ac96c1f794514dd"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "d7bcc166-7920-4132-8ff9-78a6cb01eeab",
+          "context_ids": [
+            "context:d6788b9e49adaff6f336dd957dadae6962f8b6e884a930a49f58d014afce7d77",
+            "context:107f9d79f10c5ac925733b211844333e04b4402a54be4fb038236aeedbfb8c4e"
+          ]
+        },
+        {
+          "round": 12,
+          "snapshot_id": "e6fdefe2-a70a-41ec-ba08-0fbd219e25e7",
+          "context_ids": [
+            "context:aa99c8391eea0965638a4b184cf2569b4ec80c3baa45771bbd47cf5b143a99ad",
+            "context:f42e64f5a97a3961387daa96a36596be2ee0d93d4a97e7d1b81c890dab874c49"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "8e7409fb-e806-4db1-af00-e2a00cd8b668",
+          "context_ids": [
+            "context:bcdfc4647add29c1946477b1453e35bb3c21b9c2f30eae175004836c54aa34f0",
+            "context:c8fb70612f811b54945163d861a567ef583414bf5b703a979ceff4dc049a8e52"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u148",
+      "participant_id": "b2ac7977-4c3e-4b05-a838-d2fecc57d0a6",
+      "session_id": "b24fd058-45f1-4275-89ed-be98ec8591c2",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 2,
+          "snapshot_id": "f0f26a5e-300d-43f6-b94a-183cc9518e6b",
+          "context_ids": [
+            "context:37793d49826bc9717703229558483cc2ae5131d76312f201aef169f1c9a5aebe",
+            "context:f6355303b275b1a84b89884e9ad2a7be4d67620dab2f99c24e0a3848b5170d0d"
+          ]
+        },
+        {
+          "round": 3,
+          "snapshot_id": "510937fd-cce7-4be1-984c-28fafc0abb9b",
+          "context_ids": [
+            "context:c3f4dcc1b0fe7568b65da3c1b76768c49639763471a4a7020674169086860ff5",
+            "context:feb4e3ccf7f08732a067a694e45fa1662aecb2d5a8528cfdb2a6df691b6ff25e"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "2382db1b-dbcd-416f-96b3-b749d80f53d6",
+          "context_ids": [
+            "context:f97887a6af0e113f14d650ec01afe3e7e40f548d6a09748c397b72831458709d",
+            "context:b1a86f87251d02dc5ae74fbbc54bca1ad36f84c414d820233041431ddefebd7b"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "be5eee5d-091d-4b7b-a997-b3eab0d28a67",
+          "context_ids": [
+            "context:cc75e4ab91212afe2f518c2477c9398f22970866b85d7dc06b957db14675bdc2",
+            "context:8d43389aba80124d7a522a71420d3405e85b8257c6e71cc065e7066abb574ae5"
+          ]
+        },
+        {
+          "round": 7,
+          "snapshot_id": "f4c393e0-f7d3-4488-8851-44c3b7fbe0db",
+          "context_ids": [
+            "context:a3162bbd80c9b7da0991bc06b36ce97044d82bc2348fcc11648f12d5275b710c",
+            "context:8da9f777fbfd0edda9b5a9e2965db3840af589dc55f7615a0e6c95b30868b3e9"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "201f791a-efc0-4ea2-8dd2-3892d6ff440a",
+          "context_ids": [
+            "context:3254724c21369aaf260d803e073c06b1f1315562be1e50b5e030345c12482841",
+            "context:a49da9b931196b474b777dd7b4569f7de6ca105e62bbbe30c16acd1d9d292c51"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "5643bc30-72be-46d8-a053-4b20cc08b95e",
+          "context_ids": [
+            "context:c0bd0a64a4d8a32b774b8cab569a7f4006fdc2dc371adc94ab1ff448b633ecc3",
+            "context:95ab5fbb6fe10590bd6d2a6066f44bae3fd522d42d3f82cdd2237c0d1bef85bc"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "8bd28086-314c-46c2-9cfa-bccd55dbb64e",
+          "context_ids": [
+            "context:3428467cc8898d06698f841edb342587675b7a0be9109fcc39b1fb22ac45de5c",
+            "context:5815b523893fae799ec0298cfc2dd8426bdcb36078b108c3fc025653f8d90d2e"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u149",
+      "participant_id": "8839489c-ceb9-4672-b384-afae78e95d20",
+      "session_id": "74a6221c-da27-4ac7-bee1-665a8871fb9f",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 4,
+          "snapshot_id": "9adc1587-81ad-453a-b9e2-6f31099eb000",
+          "context_ids": [
+            "context:eb352267a9609ccb99bb4f659f72959f5a93c1cdc205d2abd707be35a1dfd689",
+            "context:8bafa2955db5ad0ad7abe71b9b61873af43f1144f41188788ec62c9adbf4e6ef"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "8530f3d1-1b93-4f3f-a82b-1e720638a844",
+          "context_ids": [
+            "context:540ae24c7bad68588c0160834383f377d80302dda29d6bcb367ef04fa0349871",
+            "context:3d86ca61f99133fec07e1ceffd8bedb22692a6b06e09e99a0636fc87956c3a5b"
+          ]
+        },
+        {
+          "round": 6,
+          "snapshot_id": "f5e147e2-04e0-4143-bc7e-bac22a58b2d1",
+          "context_ids": [
+            "context:2b4d0bcd0acb81b37f3fdba3c7d39c621937d6d36af1bd1fd49a9941a14bf0c0",
+            "context:232e4a79eb939f0df13380ac3b5287b21165febd6bdd64f6e35e4a62cecc035f"
+          ]
+        },
+        {
+          "round": 10,
+          "snapshot_id": "87f8a90e-1eab-4a64-83e9-f7a9a08737f4",
+          "context_ids": [
+            "context:f35acdbd229e403a9375d1920d093a31f4d91d4a0ba27506bd5b4a3fdb503511",
+            "context:3a3c115316d4217153aec846e5122ee650a075f87841253449b6606eb282b5e3"
+          ]
+        },
+        {
+          "round": 11,
+          "snapshot_id": "2e63ac92-cd12-4c3e-bbaa-42ed5a3ed19d",
+          "context_ids": [
+            "context:6dea8fa2284b3232e88108ff3d54f6e53e6443190c33fc7439c2a9c14b6821a2",
+            "context:089483dfa6ee5116daecbcbe5f0fc733c0433ed1fc838101b9e6d6977f09d117"
+          ]
+        },
+        {
+          "round": 15,
+          "snapshot_id": "30e0f207-99ed-420f-97cc-86d00984f41a",
+          "context_ids": [
+            "context:08d06e324ca417e92cba43d0c79e8265b7f3696d0b1933cdcbd2a118d9c109fd",
+            "context:1681023ae4cea24a7448beb62610a5be2d10a020814d4c9f4d8b10ab331e4272"
+          ]
+        },
+        {
+          "round": 16,
+          "snapshot_id": "92bdd5e6-3284-489f-a48d-e77e6b66d76e",
+          "context_ids": [
+            "context:466713bab5126d63a9eb11114fb414d51dda290d5ea29c5dd1986505a18aeb99",
+            "context:d1e245be6e0d540465f8db15aff2af5ad503addb39e3e04f60d7ce71d54c77a5"
+          ]
+        },
+        {
+          "round": 19,
+          "snapshot_id": "8d4bb12a-48b8-4ea5-b758-63cb2db0a85e",
+          "context_ids": [
+            "context:a935173958577060ee266a6aba52eb8072dbace5170b5b28b4c030daac8374f4",
+            "context:a9ce36df82ade1d79dda8077718c5fec30a935925f9b049b047f77ac6b8d935c"
+          ]
+        }
+      ]
+    },
+    {
+      "user_id": "u150",
+      "participant_id": "f7fc5775-ca6c-4a4f-b87d-892671f366d9",
+      "session_id": "a3c2aa91-b6a4-4b96-a566-ee52d654d9b0",
+      "pair": null,
+      "accepted": true,
+      "checkpoints": [
+        {
+          "round": 2,
+          "snapshot_id": "365aa934-84d2-4b08-aec2-cbef2b5f6ea8",
+          "context_ids": [
+            "context:53ce7bdbf7d7cc91fed19e80d025b9066ce1ae2832011e2227b253be2756271a",
+            "context:b4093fef391f4ff1c7d8791bf77e0f1b1684423b55d13b71bc7cdc79550650cd"
+          ]
+        },
+        {
+          "round": 4,
+          "snapshot_id": "47ab5e4f-6733-4f4c-9e54-5927a38b19a9",
+          "context_ids": [
+            "context:a9d4f6945a9efb5745c1d8d9084cf829cb48f35f01311aee8d2b6eb1e39ef7b3",
+            "context:d7ec1a2550e650aeb95776c33aa90eed706900834e142b011cca7a049b56d3a7"
+          ]
+        },
+        {
+          "round": 5,
+          "snapshot_id": "f3662689-c907-47ba-9857-f83e6a45917a",
+          "context_ids": [
+            "context:f1e4e9c061c298c8ae20a0a83a37ea6e1cda87b76f5c5de5500b3749fcc2e9e3",
+            "context:9eadc329466267e815d51f068eba510de3343827074d722df7a9d8515c3a2162"
+          ]
+        },
+        {
+          "round": 8,
+          "snapshot_id": "8f60033c-d5aa-43cd-99bc-02c3d2a35f5e",
+          "context_ids": [
+            "context:159689d482c8a79c0021520e942d5e7d870361414dd87ba504bb5f1ad2c7d074",
+            "context:cd92dabae44e01b60825dadd03ddc0aeef2a1c8d99a5ed8b0f54fe3b27edebaf"
+          ]
+        },
+        {
+          "round": 9,
+          "snapshot_id": "e1272f70-07b8-4474-849b-024d45187ca0",
+          "context_ids": [
+            "context:56d4decd2fff1ab562f0e4b7c5d9207cee26ad398de96c9410e06b20106e425e",
+            "context:5b03e4382216b3c9e13b5c106038c03d700ea643a09c61a874fd58d0261eff9e"
+          ]
+        },
+        {
+          "round": 13,
+          "snapshot_id": "5d82b261-bd18-4571-9d5f-f8776be5428b",
+          "context_ids": [
+            "context:13481cdd67dc1ae73f3fb412d4d6b7a505b7a08d189c6ee7a0982abc57e5777d",
+            "context:8c9491dd7a1d245e35446a8a6da2fc34e0805818a817bfe864cdc65abc74ab8e"
+          ]
+        },
+        {
+          "round": 14,
+          "snapshot_id": "b0f14566-59b4-4845-b086-c413ac84d497",
+          "context_ids": [
+            "context:471111c209ea59d551487ef6176ae7b3ce0025dec9ba4fe87444a21d6a03f8f7",
+            "context:191f3412ae8e90d9aa0cb83268e7d6cdba6a5376af056ef325e7340ccbef5125"
+          ]
+        },
+        {
+          "round": 17,
+          "snapshot_id": "77316631-042b-4be5-b3bb-0bb8a6afa040",
+          "context_ids": [
+            "context:89cb55d959b5117f3f9d58081958a90a8e3dd5587704adba45ddccea8c1329d4",
+            "context:7eeda469c82f7c0e582381a9fa55f7316d224693294efbf6f82853daa80f7596"
+          ]
+        }
+      ]
+    }
+  ]
+}

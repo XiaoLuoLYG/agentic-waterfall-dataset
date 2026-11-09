@@ -1,0 +1,20 @@
+[
+  {
+    "slate_id": "d2f0773e-b4f0-454e-8554-ecf814209452-ratings:waterfall",
+    "rank": 3,
+    "question_id": "d2f0773e-b4f0-454e-8554-ecf814209452-ratings:3d778aee93529e8b4e42216a3332878777a483d93f024914896277bf2bb3dc76",
+    "material_sha256": "6e3e5c8723edfe98c0478e11662d969eb323793aed5a448e09531c8f71d67d3a"
+  },
+  {
+    "slate_id": "bd68d12d-3e09-449c-9850-69362d447702-ratings:clawrec",
+    "rank": 5,
+    "question_id": "bd68d12d-3e09-449c-9850-69362d447702-ratings:54b73a4ad3cc21095d82bba0e157210e37e3cc5d050f656028b5d5762acc91e3",
+    "material_sha256": "6e3e5c8723edfe98c0478e11662d969eb323793aed5a448e09531c8f71d67d3a"
+  },
+  {
+    "slate_id": "a1d9587e-3212-41d1-8224-33ea902b3ebd-ratings:waterfall",
+    "rank": 2,
+    "question_id": "a1d9587e-3212-41d1-8224-33ea902b3ebd-ratings:7ed9951ee83c3f16e19da46437ceff4ec5d9c4315bd64bb329b3af7cab0ead81",
+    "material_sha256": "6e3e5c8723edfe98c0478e11662d969eb323793aed5a448e09531c8f71d67d3a"
+  }
+]

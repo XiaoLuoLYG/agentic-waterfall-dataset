@@ -1,0 +1,87 @@
+{
+  "dataset_id": "merged:fa3c0d3ab888c5cacde798bce295e20f83c97b94946500cef1f6442babecbb0e",
+  "source_schema_version": "multiple",
+  "exported_at": "2026-11-07T15:24:41.030Z",
+  "data_origin": "synthetic",
+  "eligible_for_analysis": false,
+  "analysis_eligibility_reason": "synthetic_pilot_requires_human_calibration",
+  "history_completeness": "referenced_snapshots_only",
+  "data_license": "pending",
+  "code_license": "MIT",
+  "source_record_provenance": "normalized_available_fields_only_original_episodes_not_duplicated",
+  "table_files": {
+    "contents": "contents.jsonl.gz",
+    "participants": "participants.jsonl.gz",
+    "profiles": "profiles.jsonl.gz",
+    "sessions": "sessions.jsonl.gz",
+    "events": "events.jsonl.gz",
+    "contexts": "contexts.jsonl.gz",
+    "runs": "runs.jsonl.gz",
+    "slates": "slates.jsonl.gz",
+    "studies": "studies.jsonl.gz",
+    "questions": "questions.jsonl.gz",
+    "presentations": "presentations.jsonl.gz",
+    "ratings": "ratings.jsonl.gz",
+    "blind_choices": "blind_choices.jsonl.gz",
+    "model_calls": "model_calls.jsonl.gz",
+    "tool_calls": "tool_calls.jsonl.gz"
+  },
+  "table_counts": {
+    "contents": 59933,
+    "participants": 50,
+    "profiles": 2150,
+    "sessions": 50,
+    "events": 10504,
+    "contexts": 600,
+    "runs": 2337,
+    "slates": 2337,
+    "studies": 600,
+    "questions": 7352,
+    "presentations": 0,
+    "ratings": 5852,
+    "blind_choices": 1300,
+    "model_calls": 4117,
+    "tool_calls": 8129
+  },
+  "schema_version": "awf-dataset/1.0",
+  "collection_protocol": "synthetic-collection/1",
+  "trajectory_source": "controlled_exposure_of_archived_real_source_cards",
+  "collection_stage": "with_evaluation",
+  "evaluation_coverage": {
+    "participants_with_studies": 50,
+    "participants_without_studies": 0
+  },
+  "projection": {
+    "kind": "metadata_only_synthetic_snapshot",
+    "source_manifest_sha256": "326080b6b7ecfcc9bd9bdb609dd3e2044e366aa346f9c21bab445cb5ffdb6699",
+    "content_version_ids_and_snapshot_hashes": "refer_to_original_private_payloads",
+    "synthetic_personas": "../cohort.jsonl.gz"
+  },
+  "content_pool": {
+    "file": "contents.jsonl.gz",
+    "sha256": "0dd67e14c0bc377561c67856760257a457f0b43d2b983846ce243b42d2e75e2b",
+    "content_versions": 59933
+  },
+  "evaluation_candidate_pool": {
+    "cards_count": 1000,
+    "selected_sources": [
+      "applepodcasts",
+      "bilibili",
+      "cnnews",
+      "github",
+      "globalnews",
+      "hackernews",
+      "reddit",
+      "twitch",
+      "wikipedia",
+      "x",
+      "youtube",
+      "zhihu"
+    ],
+    "selection_sha256": null,
+    "candidate_policy": "same public-evidence lexical shortlist of 20 plus a held-out neutral contrast for i2Agent",
+    "path": "../evaluation-candidates.jsonl.gz",
+    "sha256": "ff0ddc41cb677c0a2dac9261eef74f415fcdb361d69d91a2c6c2dad0c35f46f7",
+    "original_archive_sha256": "69090ea55beca10683bbab2d34f9a79851b73bfbee5f44df5054525ec70776bf"
+  }
+}
