@@ -1,0 +1,909 @@
+{
+  "status": "review_proposal_only",
+  "original_draft": {
+    "path": "/Users/luoyige/Documents/ChatGPT/waterfall/output/agentic-waterfall/synthetic-readiness-20261106/cohort-50.json",
+    "sha256": "69d5c449474834753b20b730596fb87a7b7af2d75d92990fac8ba644ccefd4bc",
+    "reference": "/Users/luoyige/Documents/ChatGPT/waterfall/output/agentic-waterfall/synthetic-readiness-20261106/reference-50.jsonl.gz",
+    "reference_sha256": "74d715766ef3b7156b8f17a56f55985ed674b47931ddef21c8824b0b4fad5325"
+  },
+  "excluded_from_review": [
+    "u131",
+    "u133",
+    "u138",
+    "u139"
+  ],
+  "proposed_formats": {
+    "text": 8,
+    "video": 8,
+    "includes_u143_read_only_alternative": true
+  },
+  "interpretation": [
+    "四条按初始任务、改任务、限制格式、恢复双格式的顺序排列。轮次由新的 cohort 决定。",
+    "第三阶段只增加一种格式硬条件。第四阶段沿用第二阶段目标，允许两种格式。",
+    "支持计数来自旧稿的标注和原始媒体元数据。实际采用前核对每个关键轮的两张同主题正反卡。",
+    "u143 的命令只提供替代写法。试跑版本以 cohort 负责人冻结内容为准。"
+  ],
+  "participants": {
+    "u132": {
+      "format": "video",
+      "commands": [
+        "出门拍照想少背一件设备，给我看看几款手机的拍摄体验，有实拍对照就更好了。",
+        "借到一台微单，手机评测先放一放。帮我找构图、曝光和相机参数怎么调的入门内容。",
+        "相机就在手边，想跟着试一遍。构图、曝光和参数设置这部分先只发视频。",
+        "实操完想把参数记下来。讲得清楚的图解和文章也发我，演示视频还是可以看。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "phone_buy",
+        "camera_skill",
+        "camera_skill",
+        "camera_skill"
+      ],
+      "goal_sequence": [
+        "了解出门携带的手机设备。",
+        "学习相机拍摄时的构图、曝光与参数调整。",
+        "学习相机拍摄时的构图、曝光与参数调整。",
+        "学习相机拍摄时的构图、曝光与参数调整。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 6,
+          "video": 84
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 0,
+          "video": 32
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 0,
+            "video": 2
+          },
+          "15": {
+            "text": 0,
+            "video": 2
+          },
+          "16": {
+            "text": 0,
+            "video": 2
+          }
+        },
+        "needs_deck_reallocation": true
+      },
+      "review_note": "原 R11、15、16 都是视频。需加入同主题图文作反例，优先相机 M 档、曝光或构图图解。"
+    },
+    "u134": {
+      "format": "text",
+      "commands": [
+        "最近电脑办公有点慢，想看看哪些小技巧真能省事。",
+        "报名表要做成账本了。电脑技巧先放一放，我想学 Excel 里怎么查找记录、按条件计算和分类合计。",
+        "我得把公式抄进表里对照着改。Excel 这块先只发图文教程，视频等我空了再看。",
+        "有边填表边讲公式的视频也发来吧，写得清楚的图文我也想留着查。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "office",
+        "excel_formula",
+        "excel_formula",
+        "excel_formula"
+      ],
+      "goal_sequence": [
+        "浏览电脑和办公效率技巧。",
+        "学会用 Excel 查找、条件计算和汇总。",
+        "学会用 Excel 查找、条件计算和汇总。",
+        "学会用 Excel 查找、条件计算和汇总。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 9,
+          "video": 58
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 0,
+          "video": 32
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 0,
+            "video": 2
+          },
+          "15": {
+            "text": 0,
+            "video": 2
+          },
+          "16": {
+            "text": 0,
+            "video": 2
+          }
+        },
+        "needs_deck_reallocation": true
+      },
+      "review_note": "原关键轮全为视频。归档有真实公式图文，剔除“零函数”和只展示 AI 效果的内容。"
+    },
+    "u135": {
+      "format": "video",
+      "commands": [
+        "以前没正经跑过步，想看看新手第一次慢跑怎么准备。",
+        "我和朋友约好了跑五公里。入门装备先不看，想了解怎么配速、怎么呼吸和怎么安排训练。",
+        "准备开跑前先照着试一下。五公里的配速、呼吸和训练先只发视频。",
+        "我想把这周怎么跑写到备忘录。配速表、图文课表也可以和视频一起发。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "running_intro",
+        "running_plan",
+        "running_plan",
+        "running_plan"
+      ],
+      "goal_sequence": [
+        "了解新手跑步的入门准备。",
+        "了解五公里的配速、呼吸和训练安排。",
+        "了解五公里的配速、呼吸和训练安排。",
+        "了解五公里的配速、呼吸和训练安排。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 6,
+          "video": 70
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 0,
+          "video": 32
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 0,
+            "video": 2
+          },
+          "15": {
+            "text": 0,
+            "video": 2
+          },
+          "16": {
+            "text": 0,
+            "video": 2
+          }
+        },
+        "needs_deck_reallocation": true
+      },
+      "review_note": "同主题图文最薄。已有标签多为全马或高阶训练，需补初跑、五公里或明确可用于新手五公里的图文，勿以全马训练顶替。"
+    },
+    "u136": {
+      "format": "video",
+      "commands": [
+        "想把跑步固定下来，找些从轻松跑开始的训练安排给我看看。",
+        "计划大致定了。接下来想弄清跑前怎么热身、跑后怎么拉伸，跑起来怎么减少膝盖负担。",
+        "出门前要跟着活动一下，热身、拉伸和跑姿这几块先只发视频，我得看清动作。",
+        "动作大致记住了。有图解能让我回头查也发来吧，演示视频照样看。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "running_plan",
+        "running_knee",
+        "running_knee",
+        "running_knee"
+      ],
+      "goal_sequence": [
+        "了解常见的跑步训练安排。",
+        "了解跑前热身、跑后拉伸和跑步时减轻膝盖负担的做法。",
+        "了解跑前热身、跑后拉伸和跑步时减轻膝盖负担的做法。",
+        "了解跑前热身、跑后拉伸和跑步时减轻膝盖负担的做法。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 3,
+          "video": 28
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 0,
+          "video": 23
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 0,
+            "video": 2
+          },
+          "15": {
+            "text": 0,
+            "video": 2
+          },
+          "16": {
+            "text": 0,
+            "video": 2
+          }
+        },
+        "needs_deck_reallocation": true
+      },
+      "review_note": "旧稿同焦点图文只有 3 张，偏跑步膝盖负担和恢复。建议用视频当正例，图文逐张验题，勿补泛健康内容。"
+    },
+    "u137": {
+      "format": "text",
+      "commands": [
+        "桌子不大，想看看别人怎么布置小桌面，先找些实际案例。",
+        "桌面布局想好了，卡在外接屏怎么放。帮我看看显示器、双屏摆放和支架方案。",
+        "我在桌边量尺寸，想开着页面随时对照。显示器和支架方案这会儿只发图文。",
+        "有些摆法光看文字不太明白。能看清装好效果的视频也给我，原来的图文照常。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "desk",
+        "desk_display",
+        "desk_display",
+        "desk_display"
+      ],
+      "goal_sequence": [
+        "了解小桌面的布局。",
+        "比较显示器、双屏和支架的桌面方案。",
+        "比较显示器、双屏和支架的桌面方案。",
+        "比较显示器、双屏和支架的桌面方案。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 31,
+          "video": 47
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 1,
+          "video": 22
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 0,
+            "video": 2
+          },
+          "15": {
+            "text": 0,
+            "video": 2
+          },
+          "16": {
+            "text": 0,
+            "video": 2
+          }
+        },
+        "needs_deck_reallocation": true
+      },
+      "review_note": "原关键轮全视频。图文库存较足，仍需替换双屏相机或泛显示器产品文等误标内容。"
+    },
+    "u140": {
+      "format": "video",
+      "commands": [
+        "两台电脑来回用，想看看几种代码编辑器平时改文件分别顺不顺手。",
+        "我想先试试 Vim。帮我找 Vim 或 Neovim 的配置，还有常用按键怎么操作。",
+        "我老跟不上按键顺序，先只看有人实际敲给我看的 Vim 配置和操作视频。",
+        "现在想存份能随时查的配置说明。Vim 的图文也可以发，操作视频还是有用。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "editors",
+        "vim",
+        "vim",
+        "vim"
+      ],
+      "goal_sequence": [
+        "比较不同编辑器的基础体验。",
+        "学习 Vim 或 Neovim 的日常配置和键盘操作。",
+        "学习 Vim 或 Neovim 的日常配置和键盘操作。",
+        "学习 Vim 或 Neovim 的日常配置和键盘操作。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 13,
+          "video": 65
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 1,
+          "video": 31
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 0,
+            "video": 2
+          },
+          "15": {
+            "text": 0,
+            "video": 2
+          },
+          "16": {
+            "text": 0,
+            "video": 2
+          }
+        },
+        "needs_deck_reallocation": true
+      },
+      "review_note": "原关键轮全为视频。可补 Vim/Neovim 的图文配置教程，单有仓库名的卡片无法证明图文说明足够。"
+    },
+    "u141": {
+      "format": "text",
+      "commands": [
+        "想周末带家里人出去转转，浙江周边有哪些走得轻松点的路线？",
+        "这回不打算开车，也不住一晚。找些公共交通能当天往返的线路，我想看看在哪下车、每站待多久。",
+        "要把车站和时间发给爸妈，先只给写得清楚的图文路线，视频等会儿再看。",
+        "爸妈还想看看车站出来怎么走，有沿途的实拍视频也发来吧。图文路线还是要。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "travel_route",
+        "travel_rail",
+        "travel_rail",
+        "travel_rail"
+      ],
+      "goal_sequence": [
+        "看看浙江周边城市的出游路线。",
+        "找公共交通可到的短途和一日路线，留意停留时间。",
+        "找公共交通可到的短途和一日路线，留意停留时间。",
+        "找公共交通可到的短途和一日路线，留意停留时间。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 35,
+          "video": 31
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 13,
+          "video": 19
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮两种格式都有。注意“一日往返”和公交地铁或高铁可达，三日游与纯风景不算。"
+    },
+    "u142": {
+      "format": "video",
+      "commands": [
+        "还没定去哪儿，想翻翻小城周末都怎么玩，逛街吃饭或者走走都行。",
+        "地方就挑浙江小城吧。想知道交通怎么接，先去哪一站、再去哪一站。",
+        "我想顺着镜头看一遍那条路线。浙江小城的周末攻略先只给路线视频。",
+        "开始记行程了，有路线图或者交通说明的图文也可以发来对照，视频继续。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "travel_common",
+        "travel_route",
+        "travel_route",
+        "travel_route"
+      ],
+      "goal_sequence": [
+        "看看小城旅行的各种玩法。",
+        "规划浙江小城的周末路线、交通和停留顺序。",
+        "规划浙江小城的周末路线、交通和停留顺序。",
+        "规划浙江小城的周末路线、交通和停留顺序。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 56,
+          "video": 32
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 17,
+          "video": 15
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮两种格式都有，翻转为视频限制即可，仍要核对浙江地域与交通线路。"
+    },
+    "u143": {
+      "format": "text",
+      "commands": [
+        "桌上准备放一块外接屏，想看看常见摆法和支架怎么选。",
+        "支架已经装好了。现在更想解决桌面杂物和线材，尤其是怎么收好还方便换线。",
+        "我想对着桌脚和插座量一量。桌面收纳、走线先只发图文，让我边看边记。",
+        "尺寸记好了，也可以看看别人怎么绕线和固定。图文留着，有实际操作的视频也发来。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "desk_display",
+        "desk_cable",
+        "desk_cable",
+        "desk_cable"
+      ],
+      "goal_sequence": [
+        "比较显示器摆放和支架。",
+        "整理桌面物品和线材，保留便于换线的空间。",
+        "整理桌面物品和线材，保留便于换线的空间。",
+        "整理桌面物品和线材，保留便于换线的空间。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 26,
+          "video": 89
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 14,
+          "video": 18
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "read_only_alternative": true,
+      "review_note": "仅供复核，u143 的试跑用指令由 cohort 负责人另行确定。原关键轮两种格式都有。"
+    },
+    "u144": {
+      "format": "text",
+      "commands": [
+        "开会时总觉得我的声音收得不清楚，先看看大家家里用什么麦，实际听起来怎么样。",
+        "先不换设备了。帮我找怎么调会议麦克风的输入音量和降噪，特别是键盘声老被收进去。",
+        "我这会儿在别人旁边，不好放声音。会议收音和降噪先只发图文步骤。",
+        "回家能开声音了，有调整前后能听出区别的视频也发来吧。写得清楚的图文也可以。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "audio_mic",
+        "audio_tune",
+        "audio_tune",
+        "audio_tune"
+      ],
+      "goal_sequence": [
+        "了解常见麦克风和收音演示。",
+        "找到会议麦克风的收音、增益和降噪设置方法。",
+        "找到会议麦克风的收音、增益和降噪设置方法。",
+        "找到会议麦克风的收音、增益和降噪设置方法。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 31,
+          "video": 88
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 9,
+          "video": 23
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮格式齐，但 R15/R16 文本曾偏选购。优先会议音频设置、降噪和回声排查图文。"
+    },
+    "u145": {
+      "format": "video",
+      "commands": [
+        "线上开会时别人说我声音忽大忽小，先看看会议收音可以从哪里调。",
+        "收音弄好了。现在要装外接屏，想看显示器支架怎么放、双屏怎么设。",
+        "得看清楚手怎么夹支架。外接屏安装和双屏设置这部分先只发视频。",
+        "装法看明白了，讲支架摆放和双屏设置的图文也可以拿来对照，视频照常。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "audio_tune",
+        "desk_display_install",
+        "desk_display_install",
+        "desk_display_install"
+      ],
+      "goal_sequence": [
+        "先学会议收音设置。",
+        "看外接显示器的安装、支架摆放和双屏设置。",
+        "看外接显示器的安装、支架摆放和双屏设置。",
+        "看外接显示器的安装、支架摆放和双屏设置。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 12,
+          "video": 11
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 12,
+          "video": 11
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮格式齐，但本焦点库存仅 23 张，支架纯选购与实际安装区分开。"
+    },
+    "u146": {
+      "format": "text",
+      "commands": [
+        "手头在看几种代码编辑器，想了解平时改项目、跳文件的时候用起来有什么差别。",
+        "团队确定用 VS Code 了。帮我找它的常用插件、快捷键和项目配置。",
+        "我要把设置逐项记到项目笔记里。VS Code 这块只发图文教程，先不看视频。",
+        "有从头配置一遍的演示视频也发我。要查快捷键的话，我还是会翻图文。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "editors",
+        "vscode_setup",
+        "vscode_setup",
+        "vscode_setup"
+      ],
+      "goal_sequence": [
+        "了解几种编辑器的工作方式。",
+        "配置 VS Code 插件、快捷键和日常工作流。",
+        "配置 VS Code 插件、快捷键和日常工作流。",
+        "配置 VS Code 插件、快捷键和日常工作流。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 27,
+          "video": 37
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 15,
+          "video": 17
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮格式齐，区分 VS Code 通用操作与仅谈 AI 插件价格或噱头的材料。"
+    },
+    "u147": {
+      "format": "video",
+      "commands": [
+        "听说跑个 Python 小脚本能省点事，先看看环境怎么装、脚本怎么跑。",
+        "这份表还得让同事接着维护。换成直接在 Excel 里合并登记表、找出重复记录的做法。",
+        "登记表已经打开了，我想一边暂停一边跟着点。Excel 合并和去重只发操作视频。",
+        "步骤弄明白了，也想留份能转给同事的图文。视频有好用的也可以继续发。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "script_setup",
+        "excel_native_clean",
+        "excel_native_clean",
+        "excel_native_clean"
+      ],
+      "goal_sequence": [
+        "了解用 Python 跑基础脚本。",
+        "用表格整理、合并并去除重复登记。",
+        "用表格整理、合并并去除重复登记。",
+        "用表格整理、合并并去除重复登记。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 12,
+          "video": 36
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 12,
+          "video": 20
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮两种格式都有。保持 Excel 内完成，纯 Python 或只有拆分演示的卡不算。"
+    },
+    "u148": {
+      "format": "video",
+      "commands": [
+        "最近老刷到 AI 编程工具，想看看别人实际拿它做什么。",
+        "我先不研究 AI 工具了。朋友给了个整理照片的脚本，帮我找电脑上装 Python 到跑起来的步骤。",
+        "我正对着安装界面，怕漏点选项。这部分只看装 Python、运行现成脚本的视频。",
+        "现在想把要敲的命令保存下来。写清楚命令的图文也发来吧，视频还可以看。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "video"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "ai_dev",
+        "script_setup",
+        "script_setup",
+        "script_setup"
+      ],
+      "goal_sequence": [
+        "浏览 AI 辅助编程工具的操作体验。",
+        "从安装 Python 到本地运行现成脚本。",
+        "从安装 Python 到本地运行现成脚本。",
+        "从安装 Python 到本地运行现成脚本。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 24,
+          "video": 62
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 17,
+          "video": 15
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮格式齐。泛 Python 语法课与安装解释器、运行现成脚本的具体步骤要区分。"
+    },
+    "u149": {
+      "format": "text",
+      "commands": [
+        "这周想从书单里挑本能读下去的，给我看看别人的读书分享。",
+        "书先放进清单了，家里约了周末带娃出门。现在想找景点顺序、步行和休息都交代清楚的亲子路线。",
+        "要发给家里人一起挑，亲子路线先只发图文攻略，方便几个人对着看。",
+        "小朋友也想看看景点。带路线的实拍视频一起发来吧，图文攻略我也留着。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "reading",
+        "travel_family",
+        "travel_family",
+        "travel_family"
+      ],
+      "goal_sequence": [
+        "从书单和读书分享里挑一本。",
+        "规划带孩子出游的景点顺序和休息安排。",
+        "规划带孩子出游的景点顺序和休息安排。",
+        "规划带孩子出游的景点顺序和休息安排。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 40,
+          "video": 40
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 22,
+          "video": 10
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮格式齐。单纯遛娃 vlog 若缺少出行路线或景点安排，不能当作同任务对照。"
+    },
+    "u150": {
+      "format": "text",
+      "commands": [
+        "周末偶尔拍家人，拿不准入门相机值不值得买，想看看选购参考。",
+        "相机先不买，想把手头手机用好。帮我找拍照、拍视频的设置和实拍效果。",
+        "我在手机设置里来回切页面，只想看能对着菜单查的拍摄图文，视频先别推。",
+        "几个设置已经找到了。有调前调后能看出效果的视频也发来吧，图文我会留着查。"
+      ],
+      "recommended_hard": [
+        {},
+        {},
+        {
+          "modality": "text"
+        },
+        {}
+      ],
+      "focus_sequence": [
+        "camera_buy",
+        "phone_photo",
+        "phone_photo",
+        "phone_photo"
+      ],
+      "goal_sequence": [
+        "了解入门相机的购买考虑。",
+        "了解手机拍照、拍视频时的设置和成像效果。",
+        "了解手机拍照、拍视频时的设置和成像效果。",
+        "了解手机拍照、拍视频时的设置和成像效果。"
+      ],
+      "draft_support": {
+        "distinct_tagged_cards_across_draft": {
+          "text": 10,
+          "video": 42
+        },
+        "tagged_cards_in_this_draft_deck": {
+          "text": 7,
+          "video": 16
+        },
+        "old_contrast_rounds": {
+          "11": {
+            "text": 1,
+            "video": 1
+          },
+          "15": {
+            "text": 1,
+            "video": 1
+          },
+          "16": {
+            "text": 1,
+            "video": 1
+          }
+        },
+        "needs_deck_reallocation": false
+      },
+      "review_note": "原关键轮格式齐，实质图文偏少。优先实拍设置（如 Pixel 或华为相机参数），剔除购机、扫描合同和私拍故事。"
+    }
+  }
+}

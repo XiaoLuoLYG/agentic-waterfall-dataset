@@ -1,0 +1,1190 @@
+{
+  "status": "completed",
+  "data_origin": "synthetic",
+  "method_ids": [
+    "waterfall",
+    "clawrec",
+    "i2agent",
+    "recagent",
+    "fixed-retrieval"
+  ],
+  "config_sha256": "95275987ff48cd369eed299436dfee49dcd6279ee17a721ea8876993dde4ac54",
+  "coverage": {
+    "done": 1500,
+    "total": 1500,
+    "labels_done": 7352,
+    "labels_total": 7352,
+    "contexts_done": 300,
+    "contexts_total": 300,
+    "reused_runs": 1210,
+    "reused_labels": 5886,
+    "recovered_unicode_runs": 0,
+    "label_failures": 0,
+    "label_answers": 7152,
+    "label_protocol_unavailable": 200
+  },
+  "integrity": {
+    "passed": true,
+    "validated_method_runs": 1500,
+    "shared_public_projection": true,
+    "method_state_scope": "per user per method",
+    "duration_adapter": "online-method-v4-waterfall-bilibili-duration-v1",
+    "history_order": "oldest_to_newest_by_availability",
+    "blind_protocol": "synthetic-blind/same-rank-5-v1",
+    "dcg": "sum(interest / log2(rank + 1)) when all five cards are rated"
+  },
+  "by_subset": {
+    "all": {
+      "users": 50,
+      "checkpoints": 300,
+      "methods": {
+        "waterfall": {
+          "checkpoints": 300,
+          "complete_lists": 295,
+          "method_status": {
+            "submitted": 295,
+            "failed": 5,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 1500,
+          "delivered_cards": 1475,
+          "rated_cards": 1475,
+          "missing_card_slots": 25,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.5328813559322034,
+          "dcg_at_5_denominator": 295,
+          "mean_dcg_at_5": 7.542865790648665,
+          "hard_compliance": {
+            "pass": 195,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 1280
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 195,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 1280
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 1475
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 195,
+            "pass_and_relevant": 193,
+            "pass_below_threshold": 2,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 1092,
+          "source_requests": 1191,
+          "source_failures": 58
+        },
+        "clawrec": {
+          "checkpoints": 300,
+          "complete_lists": 282,
+          "method_status": {
+            "submitted": 282,
+            "failed": 18,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 1500,
+          "delivered_cards": 1410,
+          "rated_cards": 1410,
+          "missing_card_slots": 90,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.4390070921985814,
+          "dcg_at_5_denominator": 282,
+          "mean_dcg_at_5": 7.246028609914101,
+          "hard_compliance": {
+            "pass": 182,
+            "fail": 3,
+            "unknown": 0,
+            "not_applicable": 1225
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 182,
+              "fail": 3,
+              "unknown": 0,
+              "not_applicable": 1225
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 1410
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 185,
+            "pass_and_relevant": 181,
+            "pass_below_threshold": 1,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 922,
+          "source_requests": 2282,
+          "source_failures": 157
+        },
+        "i2agent": {
+          "checkpoints": 300,
+          "complete_lists": 285,
+          "method_status": {
+            "submitted": 285,
+            "failed": 2,
+            "not_applicable": 13,
+            "missing": 0
+          },
+          "expected_card_slots": 1500,
+          "delivered_cards": 1425,
+          "rated_cards": 1425,
+          "missing_card_slots": 75,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.1719298245614036,
+          "dcg_at_5_denominator": 285,
+          "mean_dcg_at_5": 6.565676820919864,
+          "hard_compliance": {
+            "pass": 131,
+            "fail": 64,
+            "unknown": 0,
+            "not_applicable": 1230
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 131,
+              "fail": 64,
+              "unknown": 0,
+              "not_applicable": 1230
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 1425
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 195,
+            "pass_and_relevant": 113,
+            "pass_below_threshold": 18,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 1436,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "recagent": {
+          "checkpoints": 300,
+          "complete_lists": 296,
+          "method_status": {
+            "submitted": 296,
+            "failed": 4,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 1500,
+          "delivered_cards": 1480,
+          "rated_cards": 1480,
+          "missing_card_slots": 20,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.1682432432432432,
+          "dcg_at_5_denominator": 296,
+          "mean_dcg_at_5": 6.585644381893336,
+          "hard_compliance": {
+            "pass": 149,
+            "fail": 51,
+            "unknown": 0,
+            "not_applicable": 1280
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 149,
+              "fail": 51,
+              "unknown": 0,
+              "not_applicable": 1280
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 1480
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 200,
+            "pass_and_relevant": 122,
+            "pass_below_threshold": 27,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 667,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "fixed-retrieval": {
+          "checkpoints": 300,
+          "complete_lists": 300,
+          "method_status": {
+            "submitted": 300,
+            "failed": 0,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 1500,
+          "delivered_cards": 1500,
+          "rated_cards": 1500,
+          "missing_card_slots": 0,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 1.6486666666666667,
+          "dcg_at_5_denominator": 300,
+          "mean_dcg_at_5": 4.97027384247801,
+          "hard_compliance": {
+            "pass": 118,
+            "fail": 82,
+            "unknown": 0,
+            "not_applicable": 1300
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 118,
+              "fail": 82,
+              "unknown": 0,
+              "not_applicable": 1300
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 1500
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 200,
+            "pass_and_relevant": 95,
+            "pass_below_threshold": 23,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 0,
+          "source_requests": 0,
+          "source_failures": 0
+        }
+      },
+      "blind": {
+        "expected_choices": 1500,
+        "available_choices": 1300,
+        "answered_choices": 1300,
+        "unavailable_choices": 200,
+        "missing_choices": 0,
+        "outcomes": {
+          "selected": 1300,
+          "tie": 0,
+          "neither": 0,
+          "insufficient": 0,
+          "missing": 0,
+          "unavailable": 200
+        },
+        "votes_by_method": {
+          "waterfall": 473.5,
+          "clawrec": 370.5,
+          "i2agent": 187.83333333333334,
+          "recagent": 171.33333333333331,
+          "fixed-retrieval": 96.83333333333334
+        }
+      }
+    },
+    "general": {
+      "users": 10,
+      "checkpoints": 46,
+      "methods": {
+        "waterfall": {
+          "checkpoints": 46,
+          "complete_lists": 46,
+          "method_status": {
+            "submitted": 46,
+            "failed": 0,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 230,
+          "delivered_cards": 230,
+          "rated_cards": 230,
+          "missing_card_slots": 0,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.360869565217391,
+          "dcg_at_5_denominator": 46,
+          "mean_dcg_at_5": 7.083502420793011,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 230
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 230
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 230
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 155,
+          "source_requests": 190,
+          "source_failures": 8
+        },
+        "clawrec": {
+          "checkpoints": 46,
+          "complete_lists": 45,
+          "method_status": {
+            "submitted": 45,
+            "failed": 1,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 230,
+          "delivered_cards": 225,
+          "rated_cards": 225,
+          "missing_card_slots": 5,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.1422222222222222,
+          "dcg_at_5_denominator": 45,
+          "mean_dcg_at_5": 6.358093849400259,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 225
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 225
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 225
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 140,
+          "source_requests": 346,
+          "source_failures": 26
+        },
+        "i2agent": {
+          "checkpoints": 46,
+          "complete_lists": 41,
+          "method_status": {
+            "submitted": 41,
+            "failed": 0,
+            "not_applicable": 5,
+            "missing": 0
+          },
+          "expected_card_slots": 230,
+          "delivered_cards": 205,
+          "rated_cards": 205,
+          "missing_card_slots": 25,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.1951219512195124,
+          "dcg_at_5_denominator": 41,
+          "mean_dcg_at_5": 6.561566538932428,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 205
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 205
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 205
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 206,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "recagent": {
+          "checkpoints": 46,
+          "complete_lists": 46,
+          "method_status": {
+            "submitted": 46,
+            "failed": 0,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 230,
+          "delivered_cards": 230,
+          "rated_cards": 230,
+          "missing_card_slots": 0,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.217391304347826,
+          "dcg_at_5_denominator": 46,
+          "mean_dcg_at_5": 6.669252138117786,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 230
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 230
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 230
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 96,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "fixed-retrieval": {
+          "checkpoints": 46,
+          "complete_lists": 46,
+          "method_status": {
+            "submitted": 46,
+            "failed": 0,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 230,
+          "delivered_cards": 230,
+          "rated_cards": 230,
+          "missing_card_slots": 0,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 1.4956521739130435,
+          "dcg_at_5_denominator": 46,
+          "mean_dcg_at_5": 4.648374321838139,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 230
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 230
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 230
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 0,
+          "source_requests": 0,
+          "source_failures": 0
+        }
+      },
+      "blind": {
+        "expected_choices": 230,
+        "available_choices": 200,
+        "answered_choices": 200,
+        "unavailable_choices": 30,
+        "missing_choices": 0,
+        "outcomes": {
+          "selected": 200,
+          "tie": 0,
+          "neither": 0,
+          "insufficient": 0,
+          "missing": 0,
+          "unavailable": 30
+        },
+        "votes_by_method": {
+          "waterfall": 56.5,
+          "clawrec": 47.5,
+          "i2agent": 39,
+          "recagent": 45,
+          "fixed-retrieval": 12
+        }
+      }
+    },
+    "behavior_ambiguity": {
+      "users": 20,
+      "checkpoints": 102,
+      "methods": {
+        "waterfall": {
+          "checkpoints": 102,
+          "complete_lists": 100,
+          "method_status": {
+            "submitted": 100,
+            "failed": 2,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 510,
+          "delivered_cards": 500,
+          "rated_cards": 500,
+          "missing_card_slots": 10,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.18,
+          "dcg_at_5_denominator": 100,
+          "mean_dcg_at_5": 6.508197852486444,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 500
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 500
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 500
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 363,
+          "source_requests": 405,
+          "source_failures": 28
+        },
+        "clawrec": {
+          "checkpoints": 102,
+          "complete_lists": 98,
+          "method_status": {
+            "submitted": 98,
+            "failed": 4,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 510,
+          "delivered_cards": 490,
+          "rated_cards": 490,
+          "missing_card_slots": 20,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.126530612244898,
+          "dcg_at_5_denominator": 98,
+          "mean_dcg_at_5": 6.350958271145996,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 490
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 490
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 490
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 314,
+          "source_requests": 753,
+          "source_failures": 52
+        },
+        "i2agent": {
+          "checkpoints": 102,
+          "complete_lists": 94,
+          "method_status": {
+            "submitted": 94,
+            "failed": 0,
+            "not_applicable": 8,
+            "missing": 0
+          },
+          "expected_card_slots": 510,
+          "delivered_cards": 470,
+          "rated_cards": 470,
+          "missing_card_slots": 40,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 1.9680851063829787,
+          "dcg_at_5_denominator": 94,
+          "mean_dcg_at_5": 5.950513082942494,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 470
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 470
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 470
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 470,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "recagent": {
+          "checkpoints": 102,
+          "complete_lists": 101,
+          "method_status": {
+            "submitted": 101,
+            "failed": 1,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 510,
+          "delivered_cards": 505,
+          "rated_cards": 505,
+          "missing_card_slots": 5,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 1.9346534653465346,
+          "dcg_at_5_denominator": 101,
+          "mean_dcg_at_5": 5.814349535998942,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 505
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 505
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 505
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 209,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "fixed-retrieval": {
+          "checkpoints": 102,
+          "complete_lists": 102,
+          "method_status": {
+            "submitted": 102,
+            "failed": 0,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 510,
+          "delivered_cards": 510,
+          "rated_cards": 510,
+          "missing_card_slots": 0,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 1.1352941176470588,
+          "dcg_at_5_denominator": 102,
+          "mean_dcg_at_5": 3.337557614403049,
+          "hard_compliance": {
+            "pass": 0,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 510
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 510
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 510
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 0,
+            "pass_and_relevant": 0,
+            "pass_below_threshold": 0,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 0,
+          "source_requests": 0,
+          "source_failures": 0
+        }
+      },
+      "blind": {
+        "expected_choices": 510,
+        "available_choices": 440,
+        "answered_choices": 440,
+        "unavailable_choices": 70,
+        "missing_choices": 0,
+        "outcomes": {
+          "selected": 440,
+          "tie": 0,
+          "neither": 0,
+          "insufficient": 0,
+          "missing": 0,
+          "unavailable": 70
+        },
+        "votes_by_method": {
+          "waterfall": 156.5,
+          "clawrec": 106.5,
+          "i2agent": 76.5,
+          "recagent": 60.5,
+          "fixed-retrieval": 40
+        }
+      }
+    },
+    "interactive_revision": {
+      "users": 20,
+      "checkpoints": 152,
+      "methods": {
+        "waterfall": {
+          "checkpoints": 152,
+          "complete_lists": 149,
+          "method_status": {
+            "submitted": 149,
+            "failed": 3,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 760,
+          "delivered_cards": 745,
+          "rated_cards": 745,
+          "missing_card_slots": 15,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.822818791946309,
+          "dcg_at_5_denominator": 149,
+          "mean_dcg_at_5": 8.379090682122374,
+          "hard_compliance": {
+            "pass": 195,
+            "fail": 0,
+            "unknown": 0,
+            "not_applicable": 550
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 195,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 550
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 745
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 195,
+            "pass_and_relevant": 193,
+            "pass_below_threshold": 2,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 574,
+          "source_requests": 596,
+          "source_failures": 22
+        },
+        "clawrec": {
+          "checkpoints": 152,
+          "complete_lists": 139,
+          "method_status": {
+            "submitted": 139,
+            "failed": 13,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 760,
+          "delivered_cards": 695,
+          "rated_cards": 695,
+          "missing_card_slots": 65,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.7553956834532376,
+          "dcg_at_5_denominator": 139,
+          "mean_dcg_at_5": 8.16454628921191,
+          "hard_compliance": {
+            "pass": 182,
+            "fail": 3,
+            "unknown": 0,
+            "not_applicable": 510
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 182,
+              "fail": 3,
+              "unknown": 0,
+              "not_applicable": 510
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 695
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 185,
+            "pass_and_relevant": 181,
+            "pass_below_threshold": 1,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 468,
+          "source_requests": 1183,
+          "source_failures": 79
+        },
+        "i2agent": {
+          "checkpoints": 152,
+          "complete_lists": 150,
+          "method_status": {
+            "submitted": 150,
+            "failed": 2,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 760,
+          "delivered_cards": 750,
+          "rated_cards": 750,
+          "missing_card_slots": 10,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.2933333333333334,
+          "dcg_at_5_denominator": 150,
+          "mean_dcg_at_5": 6.952302907128913,
+          "hard_compliance": {
+            "pass": 131,
+            "fail": 64,
+            "unknown": 0,
+            "not_applicable": 555
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 131,
+              "fail": 64,
+              "unknown": 0,
+              "not_applicable": 555
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 750
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 195,
+            "pass_and_relevant": 113,
+            "pass_below_threshold": 18,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 760,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "recagent": {
+          "checkpoints": 152,
+          "complete_lists": 149,
+          "method_status": {
+            "submitted": 149,
+            "failed": 3,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 760,
+          "delivered_cards": 745,
+          "rated_cards": 745,
+          "missing_card_slots": 15,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.3114093959731545,
+          "dcg_at_5_denominator": 149,
+          "mean_dcg_at_5": 7.082656614437009,
+          "hard_compliance": {
+            "pass": 149,
+            "fail": 51,
+            "unknown": 0,
+            "not_applicable": 545
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 149,
+              "fail": 51,
+              "unknown": 0,
+              "not_applicable": 545
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 745
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 200,
+            "pass_and_relevant": 122,
+            "pass_below_threshold": 27,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 362,
+          "source_requests": 0,
+          "source_failures": 0
+        },
+        "fixed-retrieval": {
+          "checkpoints": 152,
+          "complete_lists": 152,
+          "method_status": {
+            "submitted": 152,
+            "failed": 0,
+            "not_applicable": 0,
+            "missing": 0
+          },
+          "expected_card_slots": 760,
+          "delivered_cards": 760,
+          "rated_cards": 760,
+          "missing_card_slots": 0,
+          "unable_cards": 0,
+          "missing_card_labels": 0,
+          "mean_card_interest": 2.039473684210526,
+          "dcg_at_5_denominator": 152,
+          "mean_dcg_at_5": 6.163329324143002,
+          "hard_compliance": {
+            "pass": 118,
+            "fail": 82,
+            "unknown": 0,
+            "not_applicable": 560
+          },
+          "hard_by_requirement": {
+            "modality": {
+              "pass": 118,
+              "fail": 82,
+              "unknown": 0,
+              "not_applicable": 560
+            },
+            "max_duration_seconds": {
+              "pass": 0,
+              "fail": 0,
+              "unknown": 0,
+              "not_applicable": 760
+            }
+          },
+          "hard_relevance": {
+            "minimum_interest": 2,
+            "constrained_delivered_cards": 200,
+            "pass_and_relevant": 95,
+            "pass_below_threshold": 23,
+            "pass_unrated": 0,
+            "unknown_constraint": 0,
+            "unable_interest": 0,
+            "missing_interest": 0
+          },
+          "model_calls": 0,
+          "source_requests": 0,
+          "source_failures": 0
+        }
+      },
+      "blind": {
+        "expected_choices": 760,
+        "available_choices": 660,
+        "answered_choices": 660,
+        "unavailable_choices": 100,
+        "missing_choices": 0,
+        "outcomes": {
+          "selected": 660,
+          "tie": 0,
+          "neither": 0,
+          "insufficient": 0,
+          "missing": 0,
+          "unavailable": 100
+        },
+        "votes_by_method": {
+          "waterfall": 260.5,
+          "clawrec": 216.5,
+          "i2agent": 72.33333333333334,
+          "recagent": 65.83333333333334,
+          "fixed-retrieval": 44.83333333333333
+        }
+      }
+    }
+  }
+}
