@@ -4,7 +4,7 @@ These are the five public benchmarks used in the Agentic Waterfall report. Keep 
 
 ## Download files
 
-The public source files are available from the links below. The Waterfall replay ZIP is still pending publication. Sizes are compressed download sizes unless the file is a CSV.
+The public source files are available from the links below. The [Waterfall release](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1) contains the saved benchmark predictions and score inputs. Sizes are compressed download sizes unless the file is a CSV.
 
 | Dataset | Files used in this work |
 | --- | --- |

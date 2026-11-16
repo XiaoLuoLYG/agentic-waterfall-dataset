@@ -54,4 +54,4 @@ The page uses plain HTML, CSS, and JavaScript. It needs no package install or bu
 python3 -m http.server 4198 --bind 127.0.0.1 --directory docs
 ```
 
-Open `http://127.0.0.1:4198`. `docs/results.json` stores the scores and track descriptions; `docs/leaderboard.mjs` renders them; `docs/leaderboard.css` styles the page. On GitHub, Pages serves `main` from `/docs`. Publishing the data release and enabling Pages are separate repository settings. Remove the pending-release notice only after the listed release files are downloadable.
+Open `http://127.0.0.1:4198`. `docs/results.json` stores the scores and track descriptions; `docs/leaderboard.mjs` renders them; `docs/leaderboard.css` styles the page. On GitHub, Pages serves `main` from `/docs`. Publishing the data release and enabling Pages are separate repository settings. Verify the release file checksums after uploading new data.

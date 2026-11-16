@@ -8,11 +8,11 @@ Waterfall Dataset records 50 simulated users browsing a feed. Each trajectory fo
 
 ## Get the data
 
-- The paper release is being prepared. `waterfall-dataset-v1` is not published yet. See [the file list](dataset/releases/waterfall-dataset-v1/README.md) for the full dataset and replay packages.
+- [Download Waterfall Dataset v1](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1): the full dataset, saved predictions, and score replay packages. [File list and checksums](dataset/releases/waterfall-dataset-v1/README.md).
 - [Public benchmark downloads](dataset/docs/public-benchmarks.md) links to the original sources for AgentRecBench, KuaiRand-1K, KuaiRec, ClawRec-SimBench, and MIND-small.
 - [Results and replay](dataset/releases/waterfall-dataset-v1/README.md) shows how to recalculate scores from the saved outputs.
 
-The full Waterfall Dataset package contains the 50 trajectories, 300 checkpoints, both frozen catalogs (60,674 cards), saved rankings, and model judgments. Cards include archived titles, summaries, and source URLs. Source videos and full article bodies are outside the dataset. Cloning this repository downloads the tools and an older snapshot; get the paper dataset from its release package once published.
+The full Waterfall Dataset package contains the 50 trajectories, 300 checkpoints, both frozen catalogs (60,674 cards), saved rankings, and model judgments. Cards include archived titles, summaries, and source URLs. Source videos and full article bodies are outside the dataset. Cloning this repository downloads the tools and an older snapshot; download the paper dataset from its release package.
 
 ### Recalculate the Waterfall Dataset scores
 
