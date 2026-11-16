@@ -1,12 +1,6 @@
 # Agentic Waterfall Dataset
 
-Versioned lightweight retrieval content, natural interaction histories, exact supplied contexts, system traces, and separate evaluator labels for continual content feeds.
-
-This private repository contains the interchange format, tools, test fixture, and a metadata-only snapshot of a 50-person synthetic study. The online demo continues to retrieve live content. [Synthetic snapshot and experiment archive](releases/synthetic50-20261107/README.md)
-
-- Code: MIT, explicitly chosen for the tools and formatter in this repository.
-- Data: license **pending**. Public availability of a source does not grant redistribution rights. Do not publish private exports without consent, privacy review and source-license review.
-- Fixture: fictional `test_only` participant; ineligible for human-effectiveness analysis.
+The formatter, schema, and Python tools exchange feed records between the browser demo and the evaluation scripts. The tiny fixture gives you one fictional export to try. See the [main README](../README.md) for the Waterfall Dataset release and benchmark downloads.
 
 Requires Node.js 18+ and Python 3.9+; no third-party dependencies.
 

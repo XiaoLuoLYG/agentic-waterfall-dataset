@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waterfall Dataset results</title>
+<style>
+:root { color-scheme: light; font-family: Inter, system-ui, sans-serif; color: #142725; background: #f6f8f5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 82rem; margin: auto; padding: clamp(1rem, 4vw, 3rem); }
+h1 { margin: 1rem 0 .5rem; font-size: clamp(2.2rem, 5vw, 4.1rem); letter-spacing: -.055em; line-height: 1.08; }
+h2 { margin: 0 0 .5rem; letter-spacing: -.03em; }
+p { max-width: 74ch; line-height: 1.6; }
+a { color: #146759; text-underline-offset: .2em; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem 1.35rem; }
+section { margin-top: 2.9rem; scroll-margin-top: 1rem; }
+.scroll { overflow-x: auto; background: white; border: 1px solid #d4dfd9; border-radius: .6rem; }
+table { border-collapse: collapse; width: 100%; font-size: .9rem; font-variant-numeric: tabular-nums; }
+th, td { padding: .7rem .8rem; text-align: right; border-bottom: 1px solid #e3ebe5; }
+th:first-child { text-align: left; white-space: nowrap; }
+thead { background: #eaf3ed; }
+thead th { vertical-align: bottom; }
+tbody th { font-weight: 600; }
+tbody tr:last-child > * { border-bottom: 0; }
+.scroll:focus-visible { outline: 2px solid #146759; outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+<header>
+<nav aria-label="Repositories">
+<a href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset">Dataset and downloads</a>
+<a href="https://github.com/XiaoLuoLYG/waterfall-anything">Code and demo</a>
+</nav>
+<h1>Waterfall Dataset results</h1>
+<p>50 simulated users. 300 checkpoints. A model judge rates each returned card and casts blind votes at checkpoints with complete lists.</p>
+<nav aria-label="Results">
+<a href="#shared">Shared shortlist</a>
+<a href="#independent">Independent recall</a>
+<a href="#public">Public benchmarks</a>
+<a href="#ablation">Ablations</a>
+</nav>
+</header>
+<section id="shared">
+<h2>Shared shortlist</h2>
+<p>The paper's main comparison starts methods with 20 candidates. Waterfall and ClawRec can also search the expansion catalog. Behavior ambiguity has 102 scheduled checkpoints. Interactive revision has 152.</p>
+<div class="scroll" tabindex="0" role="region" aria-label="Shared-shortlist results"><table><thead><tr><th scope="col">Method</th><th scope="col">Mean interest</th><th scope="col">DCG@5</th><th scope="col">Votes</th><th scope="col">Ambiguity DCG@5</th><th scope="col">Ambiguity votes</th><th scope="col">Revision DCG@5</th><th scope="col">Revision votes</th><th scope="col">Scored lists</th></tr></thead><tbody>
+<tr><th scope="row">Waterfall</th><td>2.64</td><td>7.86</td><td>419.58</td><td>7.20</td><td>134.50</td><td>8.40</td><td>229.75</td><td>299/300</td></tr>
+<tr><th scope="row">ClawRec</th><td>2.55</td><td>7.53</td><td>361.33</td><td>6.92</td><td>109.08</td><td>8.04</td><td>189.75</td><td>290/300</td></tr>
+<tr><th scope="row">i²Agent</th><td>2.51</td><td>7.42</td><td>232.92</td><td>7.03</td><td>95.83</td><td>7.71</td><td>101.92</td><td>294/300</td></tr>
+<tr><th scope="row">RecAgent</th><td>2.47</td><td>7.33</td><td>201.92</td><td>6.53</td><td>75.33</td><td>7.98</td><td>94.25</td><td>290/300</td></tr>
+<tr><th scope="row">BM25+BGE</th><td>2.16</td><td>6.42</td><td>144.25</td><td>5.80</td><td>47.25</td><td>6.91</td><td>72.33</td><td>300/300</td></tr>
+</tbody></table></div>
+</section>
+<section id="independent">
+<h2>Independent recall</h2>
+<p>Waterfall and ClawRec search the base catalog before using the expansion catalog. BM25+BGE searches the eligible base catalog. RecAgent and i²Agent use the prepared shortlist. Six i²Agent checkpoints lack the two earlier positive interactions its adapter requires.</p>
+<div class="scroll" tabindex="0" role="region" aria-label="Independent-recall results"><table><thead><tr><th scope="col">Method</th><th scope="col">DCG@5</th><th scope="col">Votes</th><th scope="col">Scored lists</th><th scope="col">Complete lists</th></tr></thead><tbody>
+<tr><th scope="row">Waterfall</th><td>7.576</td><td>349.08</td><td>300/300</td><td>300/300</td></tr>
+<tr><th scope="row">ClawRec</th><td>7.401</td><td>320.25</td><td>300/300</td><td>300/300</td></tr>
+<tr><th scope="row">i²Agent</th><td>7.374</td><td>315.83</td><td>294/300</td><td>294/300</td></tr>
+<tr><th scope="row">RecAgent</th><td>7.330</td><td>304.08</td><td>300/300</td><td>300/300</td></tr>
+<tr><th scope="row">BM25+BGE</th><td>5.597</td><td>173.75</td><td>300/300</td><td>300/300</td></tr>
+</tbody></table></div>
+</section>
+<section id="public">
+<h2>Public benchmarks</h2>
+<p>Scores come from the paper. The benchmark guide links to the original data and describes which scores you can recalculate from archived predictions.</p>
+<div class="scroll" tabindex="0" role="region" aria-label="Public benchmark results"><table><thead><tr><th scope="col">Method</th><th scope="col">AgentRecBench Hit@5 (%)</th><th scope="col">KuaiRand Hit@10 (%)</th><th scope="col">KuaiRand nDCG@10</th><th scope="col">KuaiRec P@10 (%)</th><th scope="col">KuaiRec nDCG@10</th><th scope="col">SimBench nDCG@20</th><th scope="col">MIND AUC</th><th scope="col">MIND MRR</th><th scope="col">MIND nDCG@5</th><th scope="col">MIND nDCG@10</th></tr></thead><tbody>
+<tr><th scope="row">Waterfall</th><td>63.67</td><td>27.39</td><td>0.1597</td><td>9.30</td><td>0.1092</td><td>0.7790</td><td>0.6592</td><td>0.3298</td><td>0.3630</td><td>0.4214</td></tr>
+<tr><th scope="row">Generic agent</th><td>64.33</td><td>28.04</td><td>0.1461</td><td>7.73</td><td>0.0778</td><td>0.7084</td><td>0.6500</td><td>0.3195</td><td>0.3517</td><td>0.4110</td></tr>
+<tr><th scope="row">ClawRec</th><td>64.00</td><td>30.47</td><td>0.1595</td><td>4.98</td><td>0.0503</td><td>0.3450</td><td>0.6391</td><td>0.3112</td><td>0.3427</td><td>0.4015</td></tr>
+<tr><th scope="row">RecAgent</th><td>64.00</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td>0.6182</td><td>0.3098</td><td>0.3385</td><td>0.3948</td></tr>
+<tr><th scope="row">i²Agent</th><td>54.00</td><td>20.42</td><td>0.1056</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td>0.5985</td><td>0.2789</td><td>0.3005</td><td>0.3621</td></tr>
+<tr><th scope="row">MARS</th><td>57.33</td><td>32.58</td><td>0.1799</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td>0.6370</td><td>0.3070</td><td>0.3370</td><td>0.3967</td></tr>
+<tr><th scope="row">RecBot (semantic)</th><td aria-label="Unreported">&ndash;</td><td>11.18</td><td>0.0542</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td></tr>
+<tr><th scope="row">BM25+BGE</th><td>39.67</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td>5.46</td><td>0.0537</td><td>0.6226</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td></tr>
+<tr><th scope="row">TF-IDF</th><td>37.33</td><td>10.53</td><td>0.0522</td><td>4.84</td><td>0.0500</td><td>0.5040</td><td>0.5646</td><td>0.2681</td><td>0.2845</td><td>0.3438</td></tr>
+<tr><th scope="row">NRMS</th><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td aria-label="Unreported">&ndash;</td><td>0.6636</td><td>0.3202</td><td>0.4156</td><td>0.3522</td></tr>
+</tbody></table></div>
+<p><a href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md">Benchmark datasets and scoring instructions</a></p>
+</section>
+<section id="ablation">
+<h2>Ablations</h2>
+<p>The paper reports mean, median, and standard deviation of DCG@5. Full uses 299 scored lists overall, 101 in behavior ambiguity, and 152 in interactive revision. Full carried state across checkpoints. The five variants rebuilt state and candidates from the allowed history at each checkpoint.</p>
+<div class="scroll" tabindex="0" role="region" aria-label="Ablation results"><table><thead><tr><th scope="col">Variant</th><th scope="col">Overall mean</th><th scope="col">Overall median</th><th scope="col">Overall SD</th><th scope="col">Ambiguity mean</th><th scope="col">Ambiguity median</th><th scope="col">Ambiguity SD</th><th scope="col">Revision mean</th><th scope="col">Revision median</th><th scope="col">Revision SD</th></tr></thead><tbody>
+<tr><th scope="row">Full Waterfall</th><td>7.856</td><td>8.415</td><td>1.542</td><td>7.198</td><td>7.984</td><td>2.056</td><td>8.396</td><td>8.845</td><td>0.794</td></tr>
+<tr><th scope="row">no_expression</th><td>6.786</td><td>7.528</td><td>2.171</td><td>6.259</td><td>7.169</td><td>2.342</td><td>6.959</td><td>7.678</td><td>2.127</td></tr>
+<tr><th scope="row">no_behavior</th><td>6.467</td><td>7.528</td><td>2.447</td><td>4.414</td><td>3.722</td><td>2.269</td><td>8.345</td><td>8.459</td><td>0.826</td></tr>
+<tr><th scope="row">fixed_workflow</th><td>7.313</td><td>8.214</td><td>2.050</td><td>5.952</td><td>6.828</td><td>2.609</td><td>8.231</td><td>8.845</td><td>0.976</td></tr>
+<tr><th scope="row">no_acquire</th><td>7.511</td><td>8.214</td><td>1.753</td><td>6.539</td><td>7.349</td><td>2.215</td><td>8.313</td><td>8.459</td><td>0.777</td></tr>
+<tr><th scope="row">frozen_state</th><td>7.434</td><td>8.072</td><td>1.820</td><td>6.250</td><td>6.997</td><td>2.267</td><td>8.325</td><td>8.459</td><td>0.789</td></tr>
+</tbody></table></div>
+</section>
+</main>
+</body>
+</html>
