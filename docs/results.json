@@ -1,0 +1,959 @@
+{
+  "boards": [
+    {
+      "id": "shared",
+      "group": "waterfall",
+      "title": "Shared shortlist",
+      "version": "waterfall-dataset-v1/shared-shortlist",
+      "primary": "dcg",
+      "source": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1",
+      "cohort": "50 trajectories · 300 checkpoints",
+      "description": "Each method starts with 20 candidates. Waterfall and ClawRec can search the expansion catalog. Ratings and blind choices come from a model judge.",
+      "protocol": "DCG@5 uses linear gains on fully rated top-five lists. Scored-list coverage is shown separately. Blind votes are fractional credits from this five-method comparison, so a new set of opponents needs a new vote table. Behavior ambiguity has 102 scheduled checkpoints; interactive revision has 152.",
+      "evidence": "Saved rankings and judgments are in the score replay archive. Run python3 replay.py for this protocol.",
+      "columns": [
+        {
+          "key": "interest",
+          "label": "Mean interest",
+          "digits": 2,
+          "maximum": 3
+        },
+        {
+          "key": "dcg",
+          "label": "DCG@5",
+          "digits": 2,
+          "maximum": 8.85
+        },
+        {
+          "key": "votes",
+          "label": "Vote credit",
+          "digits": 2
+        },
+        {
+          "key": "ambiguity_dcg",
+          "label": "DCG@5",
+          "digits": 2,
+          "maximum": 8.85
+        },
+        {
+          "key": "ambiguity_votes",
+          "label": "Vote credit",
+          "digits": 2
+        },
+        {
+          "key": "revision_dcg",
+          "label": "DCG@5",
+          "digits": 2,
+          "maximum": 8.85
+        },
+        {
+          "key": "revision_votes",
+          "label": "Vote credit",
+          "digits": 2
+        },
+        {
+          "key": "scored",
+          "label": "Scored lists",
+          "digits": 0,
+          "maximum": 300,
+          "total": 300
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "dcg",
+            "interest",
+            "votes",
+            "scored"
+          ]
+        },
+        {
+          "id": "ambiguity",
+          "label": "Behavior ambiguity",
+          "columns": [
+            "ambiguity_dcg",
+            "ambiguity_votes"
+          ]
+        },
+        {
+          "id": "revision",
+          "label": "Interactive revision",
+          "columns": [
+            "revision_dcg",
+            "revision_votes"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-waterfall",
+          "method": "Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "interest": 2.64,
+            "dcg": 7.86,
+            "votes": 419.58,
+            "ambiguity_dcg": 7.2,
+            "ambiguity_votes": 134.5,
+            "revision_dcg": 8.4,
+            "revision_votes": 229.75,
+            "scored": 299.0
+          }
+        },
+        {
+          "id": "paper-clawrec",
+          "method": "ClawRec",
+          "origin": "reference",
+          "metrics": {
+            "interest": 2.55,
+            "dcg": 7.53,
+            "votes": 361.33,
+            "ambiguity_dcg": 6.92,
+            "ambiguity_votes": 109.08,
+            "revision_dcg": 8.04,
+            "revision_votes": 189.75,
+            "scored": 290.0
+          }
+        },
+        {
+          "id": "paper-i2agent",
+          "method": "i²Agent",
+          "origin": "reference",
+          "metrics": {
+            "interest": 2.51,
+            "dcg": 7.42,
+            "votes": 232.92,
+            "ambiguity_dcg": 7.03,
+            "ambiguity_votes": 95.83,
+            "revision_dcg": 7.71,
+            "revision_votes": 101.92,
+            "scored": 294.0
+          }
+        },
+        {
+          "id": "paper-recagent",
+          "method": "RecAgent",
+          "origin": "reference",
+          "metrics": {
+            "interest": 2.47,
+            "dcg": 7.33,
+            "votes": 201.92,
+            "ambiguity_dcg": 6.53,
+            "ambiguity_votes": 75.33,
+            "revision_dcg": 7.98,
+            "revision_votes": 94.25,
+            "scored": 290.0
+          }
+        },
+        {
+          "id": "paper-bm25-bge",
+          "method": "BM25+BGE",
+          "origin": "reference",
+          "metrics": {
+            "interest": 2.16,
+            "dcg": 6.42,
+            "votes": 144.25,
+            "ambiguity_dcg": 5.8,
+            "ambiguity_votes": 47.25,
+            "revision_dcg": 6.91,
+            "revision_votes": 72.33,
+            "scored": 300.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "independent",
+      "group": "waterfall",
+      "title": "Independent recall",
+      "version": "waterfall-dataset-v1/independent-recall",
+      "primary": "dcg",
+      "source": "https://github.com/XiaoLuoLYG/waterfall-anything/blob/cf8695c7a7dfddbe9ce2fa713ae93e50193c1023/docs/research/agentic-waterfall/synthetic-independent-recall/README.md",
+      "cohort": "50 trajectories · 300 checkpoints",
+      "description": "Waterfall and ClawRec search the base catalog before using the expansion catalog. BM25+BGE searches the eligible base catalog. RecAgent and i²Agent use the prepared shortlist.",
+      "protocol": "Retrieval access differs by method. Six i²Agent checkpoints lack the two earlier positive interactions its adapter requires. DCG@5 is computed on scored lists; vote credits belong to the archived comparison and cannot be reused with new opponents.",
+      "evidence": "Saved rankings and judgments are in the score replay archive. Run python3 replay.py --protocol independent-recall.",
+      "columns": [
+        {
+          "key": "dcg",
+          "label": "DCG@5",
+          "digits": 3,
+          "maximum": 8.85
+        },
+        {
+          "key": "votes",
+          "label": "Vote credit",
+          "digits": 2
+        },
+        {
+          "key": "scored",
+          "label": "Scored lists",
+          "digits": 0,
+          "maximum": 300,
+          "total": 300
+        },
+        {
+          "key": "complete",
+          "label": "Complete lists",
+          "digits": 0,
+          "maximum": 300,
+          "total": 300
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "dcg",
+            "votes",
+            "scored",
+            "complete"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-waterfall",
+          "method": "Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "dcg": 7.576,
+            "votes": 349.08,
+            "scored": 300.0,
+            "complete": 300.0
+          }
+        },
+        {
+          "id": "paper-clawrec",
+          "method": "ClawRec",
+          "origin": "reference",
+          "metrics": {
+            "dcg": 7.401,
+            "votes": 320.25,
+            "scored": 300.0,
+            "complete": 300.0
+          }
+        },
+        {
+          "id": "paper-i2agent",
+          "method": "i²Agent",
+          "origin": "reference",
+          "metrics": {
+            "dcg": 7.374,
+            "votes": 315.83,
+            "scored": 294.0,
+            "complete": 294.0
+          }
+        },
+        {
+          "id": "paper-recagent",
+          "method": "RecAgent",
+          "origin": "reference",
+          "metrics": {
+            "dcg": 7.33,
+            "votes": 304.08,
+            "scored": 300.0,
+            "complete": 300.0
+          }
+        },
+        {
+          "id": "paper-bm25-bge",
+          "method": "BM25+BGE",
+          "origin": "reference",
+          "metrics": {
+            "dcg": 5.597,
+            "votes": 173.75,
+            "scored": 300.0,
+            "complete": 300.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "agentrecbench",
+      "group": "public",
+      "title": "AgentRecBench",
+      "version": "288f7f0/short-term-300",
+      "primary": "hit5",
+      "source": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md#agentrecbench",
+      "cohort": "300 short-term tasks",
+      "description": "Tasks 0 to 99 for each of Amazon, Goodreads and Yelp, with 20 candidates per task.",
+      "protocol": "Report all 300 tasks. The paper also identifies a 220-task subset with the history required by i²Agent. Keep that subset separate.",
+      "evidence": "The public benchmark replay archive includes saved predictions for the reported methods. See the benchmark guide for source data and scoring commands.",
+      "columns": [
+        {
+          "key": "hit5",
+          "label": "Hit@5 (%)",
+          "digits": 2,
+          "maximum": 100
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "hit5"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-waterfall",
+          "method": "Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 63.67
+          }
+        },
+        {
+          "id": "paper-generic-agent",
+          "method": "Generic agent",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 64.33
+          }
+        },
+        {
+          "id": "paper-clawrec",
+          "method": "ClawRec",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 64.0
+          }
+        },
+        {
+          "id": "paper-recagent",
+          "method": "RecAgent",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 64.0
+          }
+        },
+        {
+          "id": "paper-i2agent",
+          "method": "i²Agent",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 54.0
+          }
+        },
+        {
+          "id": "paper-mars",
+          "method": "MARS",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 57.33
+          }
+        },
+        {
+          "id": "paper-bm25-bge",
+          "method": "BM25+BGE",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 39.67
+          }
+        },
+        {
+          "id": "paper-tf-idf",
+          "method": "TF-IDF",
+          "origin": "reference",
+          "metrics": {
+            "hit5": 37.33
+          }
+        }
+      ]
+    },
+    {
+      "id": "kuairand",
+      "group": "public",
+      "title": "KuaiRand-1K",
+      "version": "kuairand-1k/window512-617",
+      "primary": "ndcg10",
+      "source": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md#kuairand-1k",
+      "cohort": "617 test tasks · 101 candidates",
+      "description": "Test tasks from April 29 to May 8, 2022, across standard and random exposure logs.",
+      "protocol": "Seed 42. Matched methods receive up to 512 events; i²Agent uses its native positive-history window. Missing or invalid full rankings score zero.",
+      "evidence": "The public benchmark replay archive includes saved predictions for the reported methods. See the benchmark guide for source data and scoring commands.",
+      "columns": [
+        {
+          "key": "hit10",
+          "label": "Hit@10 (%)",
+          "digits": 2,
+          "maximum": 100
+        },
+        {
+          "key": "ndcg10",
+          "label": "nDCG@10",
+          "digits": 4,
+          "maximum": 1
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "hit10",
+            "ndcg10"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-waterfall",
+          "method": "Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "hit10": 27.39,
+            "ndcg10": 0.1597
+          }
+        },
+        {
+          "id": "paper-generic-agent",
+          "method": "Generic agent",
+          "origin": "reference",
+          "metrics": {
+            "hit10": 28.04,
+            "ndcg10": 0.1461
+          }
+        },
+        {
+          "id": "paper-clawrec",
+          "method": "ClawRec",
+          "origin": "reference",
+          "metrics": {
+            "hit10": 30.47,
+            "ndcg10": 0.1595
+          }
+        },
+        {
+          "id": "paper-i2agent",
+          "method": "i²Agent",
+          "origin": "reference",
+          "metrics": {
+            "hit10": 20.42,
+            "ndcg10": 0.1056
+          }
+        },
+        {
+          "id": "paper-mars",
+          "method": "MARS",
+          "origin": "reference",
+          "metrics": {
+            "hit10": 32.58,
+            "ndcg10": 0.1799
+          }
+        },
+        {
+          "id": "paper-recbot-semantic",
+          "method": "RecBot (semantic)",
+          "origin": "reference",
+          "metrics": {
+            "hit10": 11.18,
+            "ndcg10": 0.0542
+          }
+        },
+        {
+          "id": "paper-tf-idf",
+          "method": "TF-IDF",
+          "origin": "reference",
+          "metrics": {
+            "hit10": 10.53,
+            "ndcg10": 0.0522
+          }
+        }
+      ]
+    },
+    {
+      "id": "kuairec",
+      "group": "public",
+      "title": "KuaiRec",
+      "version": "kuairec-2.0/test1129-seed42",
+      "primary": "ndcg10",
+      "source": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md#kuairec-20",
+      "cohort": "1,129 test users · 3,327 items",
+      "description": "Big-matrix histories and small-matrix evaluation, using the shared observed catalog.",
+      "protocol": "NumPy RandomState(42) splits 1,411 sorted users into 282 development and 1,129 test users. Watch ratio > 2 defines relevance. Empty or invalid rankings score zero.",
+      "evidence": "The public benchmark replay archive includes saved predictions for the reported methods. See the benchmark guide for source data and scoring commands.",
+      "columns": [
+        {
+          "key": "precision10",
+          "label": "P@10 (%)",
+          "digits": 2,
+          "maximum": 100
+        },
+        {
+          "key": "ndcg10",
+          "label": "nDCG@10",
+          "digits": 4,
+          "maximum": 1
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "precision10",
+            "ndcg10"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-waterfall",
+          "method": "Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "precision10": 9.3,
+            "ndcg10": 0.1092
+          }
+        },
+        {
+          "id": "paper-generic-agent",
+          "method": "Generic agent",
+          "origin": "reference",
+          "metrics": {
+            "precision10": 7.73,
+            "ndcg10": 0.0778
+          }
+        },
+        {
+          "id": "paper-clawrec",
+          "method": "ClawRec",
+          "origin": "reference",
+          "metrics": {
+            "precision10": 4.98,
+            "ndcg10": 0.0503
+          }
+        },
+        {
+          "id": "paper-bm25-bge",
+          "method": "BM25+BGE",
+          "origin": "reference",
+          "metrics": {
+            "precision10": 5.46,
+            "ndcg10": 0.0537
+          }
+        },
+        {
+          "id": "paper-tf-idf",
+          "method": "TF-IDF",
+          "origin": "reference",
+          "metrics": {
+            "precision10": 4.84,
+            "ndcg10": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "id": "simbench",
+      "group": "public",
+      "title": "ClawRec-SimBench",
+      "version": "clawrec-6eeb309/simbench-210",
+      "primary": "ndcg20",
+      "source": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md#clawrec-simbench",
+      "cohort": "210 events · 42 trajectories",
+      "description": "Recommendations are scored against one frozen set of model judgments per event.",
+      "protocol": "All 210 events remain in the denominator, including empty rankings. Match the pinned upstream revision and judge protocol when submitting.",
+      "evidence": "The public benchmark replay archive includes saved predictions for the reported methods. See the benchmark guide for source data and scoring commands.",
+      "columns": [
+        {
+          "key": "ndcg20",
+          "label": "nDCG@20",
+          "digits": 4,
+          "maximum": 1
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "ndcg20"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-waterfall",
+          "method": "Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "ndcg20": 0.779
+          }
+        },
+        {
+          "id": "paper-generic-agent",
+          "method": "Generic agent",
+          "origin": "reference",
+          "metrics": {
+            "ndcg20": 0.7084
+          }
+        },
+        {
+          "id": "paper-clawrec",
+          "method": "ClawRec",
+          "origin": "reference",
+          "metrics": {
+            "ndcg20": 0.345
+          }
+        },
+        {
+          "id": "paper-bm25-bge",
+          "method": "BM25+BGE",
+          "origin": "reference",
+          "metrics": {
+            "ndcg20": 0.6226
+          }
+        },
+        {
+          "id": "paper-tf-idf",
+          "method": "TF-IDF",
+          "origin": "reference",
+          "metrics": {
+            "ndcg20": 0.504
+          }
+        }
+      ]
+    },
+    {
+      "id": "mind",
+      "group": "public",
+      "title": "MIND-small",
+      "version": "mind-small/dev",
+      "primary": "auc",
+      "source": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md#mind-small",
+      "cohort": "Development split · see cohort notes",
+      "description": "Reported results from the paper. RecAgent and i²Agent use 69,861 impressions with at least two prior clicks.",
+      "protocol": "RecAgent returned 68,639 valid rankings; the 1,222 missing rankings stay in the denominator as tied predictions. Other entries are from separate runs; their exact cohort alignment is not established by this table.",
+      "evidence": "The replay archive includes RecAgent predictions. The other MIND scores are transcribed from the paper.",
+      "columns": [
+        {
+          "key": "auc",
+          "label": "AUC",
+          "digits": 4,
+          "maximum": 1
+        },
+        {
+          "key": "mrr",
+          "label": "MRR",
+          "digits": 4,
+          "maximum": 1
+        },
+        {
+          "key": "ndcg5",
+          "label": "nDCG@5",
+          "digits": 4,
+          "maximum": 1
+        },
+        {
+          "key": "ndcg10",
+          "label": "nDCG@10",
+          "digits": 4,
+          "maximum": 1
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "auc",
+            "mrr",
+            "ndcg5",
+            "ndcg10"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-waterfall",
+          "method": "Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.6592,
+            "mrr": 0.3298,
+            "ndcg5": 0.363,
+            "ndcg10": 0.4214
+          }
+        },
+        {
+          "id": "paper-generic-agent",
+          "method": "Generic agent",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.65,
+            "mrr": 0.3195,
+            "ndcg5": 0.3517,
+            "ndcg10": 0.411
+          }
+        },
+        {
+          "id": "paper-clawrec",
+          "method": "ClawRec",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.6391,
+            "mrr": 0.3112,
+            "ndcg5": 0.3427,
+            "ndcg10": 0.4015
+          }
+        },
+        {
+          "id": "paper-recagent",
+          "method": "RecAgent",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.6182,
+            "mrr": 0.3098,
+            "ndcg5": 0.3385,
+            "ndcg10": 0.3948
+          }
+        },
+        {
+          "id": "paper-i2agent",
+          "method": "i²Agent",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.5985,
+            "mrr": 0.2789,
+            "ndcg5": 0.3005,
+            "ndcg10": 0.3621
+          }
+        },
+        {
+          "id": "paper-mars",
+          "method": "MARS",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.637,
+            "mrr": 0.307,
+            "ndcg5": 0.337,
+            "ndcg10": 0.3967
+          }
+        },
+        {
+          "id": "paper-tf-idf",
+          "method": "TF-IDF",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.5646,
+            "mrr": 0.2681,
+            "ndcg5": 0.2845,
+            "ndcg10": 0.3438
+          }
+        },
+        {
+          "id": "paper-nrms",
+          "method": "NRMS",
+          "origin": "reference",
+          "metrics": {
+            "auc": 0.6636,
+            "mrr": 0.3202,
+            "ndcg5": 0.4156,
+            "ndcg10": 0.3522
+          }
+        }
+      ]
+    },
+    {
+      "id": "ablation",
+      "group": "ablation",
+      "title": "Waterfall ablations",
+      "version": "waterfall-dataset-v1/ablation",
+      "primary": "mean",
+      "source": "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1",
+      "cohort": "Full Waterfall · 299 scored lists",
+      "description": "Five variants remove an input or an action from Waterfall. Values are transcribed from the paper.",
+      "protocol": "Full carries state across checkpoints and has 299 scored lists overall, 101 for behavior ambiguity and 152 for interactive revision. The variants rebuild state and candidates at each checkpoint. State carryover may contribute to the differences.",
+      "evidence": "The paper reports means, medians and standard deviations. Per-checkpoint outputs for the five variants are not included in the replay archive.",
+      "columns": [
+        {
+          "key": "mean",
+          "label": "Mean DCG@5",
+          "digits": 3,
+          "maximum": 8.85
+        },
+        {
+          "key": "median",
+          "label": "Median",
+          "digits": 3,
+          "maximum": 8.85
+        },
+        {
+          "key": "sd",
+          "label": "Standard deviation",
+          "digits": 3
+        },
+        {
+          "key": "ambiguity_mean",
+          "label": "Mean DCG@5",
+          "digits": 3,
+          "maximum": 8.85
+        },
+        {
+          "key": "ambiguity_median",
+          "label": "Median",
+          "digits": 3,
+          "maximum": 8.85
+        },
+        {
+          "key": "ambiguity_sd",
+          "label": "Standard deviation",
+          "digits": 3
+        },
+        {
+          "key": "revision_mean",
+          "label": "Mean DCG@5",
+          "digits": 3,
+          "maximum": 8.85
+        },
+        {
+          "key": "revision_median",
+          "label": "Median",
+          "digits": 3,
+          "maximum": 8.85
+        },
+        {
+          "key": "revision_sd",
+          "label": "Standard deviation",
+          "digits": 3
+        }
+      ],
+      "views": [
+        {
+          "id": "overall",
+          "label": "Overall",
+          "columns": [
+            "mean",
+            "median",
+            "sd"
+          ]
+        },
+        {
+          "id": "ambiguity",
+          "label": "Behavior ambiguity",
+          "columns": [
+            "ambiguity_mean",
+            "ambiguity_median",
+            "ambiguity_sd"
+          ]
+        },
+        {
+          "id": "revision",
+          "label": "Interactive revision",
+          "columns": [
+            "revision_mean",
+            "revision_median",
+            "revision_sd"
+          ]
+        }
+      ],
+      "entries": [
+        {
+          "id": "paper-full-waterfall",
+          "method": "Full Waterfall",
+          "origin": "reference",
+          "metrics": {
+            "mean": 7.856,
+            "median": 8.415,
+            "sd": 1.542,
+            "ambiguity_mean": 7.198,
+            "ambiguity_median": 7.984,
+            "ambiguity_sd": 2.056,
+            "revision_mean": 8.396,
+            "revision_median": 8.845,
+            "revision_sd": 0.794
+          }
+        },
+        {
+          "id": "paper-no-expression",
+          "method": "no_expression",
+          "origin": "reference",
+          "metrics": {
+            "mean": 6.786,
+            "median": 7.528,
+            "sd": 2.171,
+            "ambiguity_mean": 6.259,
+            "ambiguity_median": 7.169,
+            "ambiguity_sd": 2.342,
+            "revision_mean": 6.959,
+            "revision_median": 7.678,
+            "revision_sd": 2.127
+          }
+        },
+        {
+          "id": "paper-no-behavior",
+          "method": "no_behavior",
+          "origin": "reference",
+          "metrics": {
+            "mean": 6.467,
+            "median": 7.528,
+            "sd": 2.447,
+            "ambiguity_mean": 4.414,
+            "ambiguity_median": 3.722,
+            "ambiguity_sd": 2.269,
+            "revision_mean": 8.345,
+            "revision_median": 8.459,
+            "revision_sd": 0.826
+          }
+        },
+        {
+          "id": "paper-fixed-workflow",
+          "method": "fixed_workflow",
+          "origin": "reference",
+          "metrics": {
+            "mean": 7.313,
+            "median": 8.214,
+            "sd": 2.05,
+            "ambiguity_mean": 5.952,
+            "ambiguity_median": 6.828,
+            "ambiguity_sd": 2.609,
+            "revision_mean": 8.231,
+            "revision_median": 8.845,
+            "revision_sd": 0.976
+          }
+        },
+        {
+          "id": "paper-no-acquire",
+          "method": "no_acquire",
+          "origin": "reference",
+          "metrics": {
+            "mean": 7.511,
+            "median": 8.214,
+            "sd": 1.753,
+            "ambiguity_mean": 6.539,
+            "ambiguity_median": 7.349,
+            "ambiguity_sd": 2.215,
+            "revision_mean": 8.313,
+            "revision_median": 8.459,
+            "revision_sd": 0.777
+          }
+        },
+        {
+          "id": "paper-frozen-state",
+          "method": "frozen_state",
+          "origin": "reference",
+          "metrics": {
+            "mean": 7.434,
+            "median": 8.072,
+            "sd": 1.82,
+            "ambiguity_mean": 6.25,
+            "ambiguity_median": 6.997,
+            "ambiguity_sd": 2.267,
+            "revision_mean": 8.325,
+            "revision_median": 8.459,
+            "revision_sd": 0.789
+          }
+        }
+      ]
+    }
+  ]
+}

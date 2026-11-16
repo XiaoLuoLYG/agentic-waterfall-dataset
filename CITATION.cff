@@ -1,12 +1,9 @@
 cff-version: 1.2.0
-message: "Please cite the repository version used; there is no released human dataset or effectiveness result."
-title: "Agentic Waterfall Dataset: collection format and tools"
-type: software
+message: "Cite Agentic Waterfall and the version of Waterfall Dataset you used."
+title: "Waterfall Dataset"
+type: dataset
 authors:
   - family-names: Luo
     given-names: Yige
-version: 0.1.0
-date-released: 2026-10-31
-license: MIT
 repository-code: "https://github.com/XiaoLuoLYG/agentic-waterfall-dataset"
-abstract: "Versioned lightweight content, interaction contexts, system traces and separate sparse evaluation labels. The repository contains fictional test data only; data licensing is pending."
+abstract: "Fifty simulated feed trajectories and 300 evaluation checkpoints with frozen catalogs, submitted rankings, and model judgments."

@@ -1,0 +1,53 @@
+name: Submit a leaderboard result
+description: Add a method with its evaluation setup and scoring evidence.
+title: "[Result] "
+body:
+  - type: input
+    id: method
+    attributes:
+      label: Method name
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Evaluation track
+      options:
+        - Waterfall Dataset / Shared shortlist
+        - Waterfall Dataset / Independent recall
+        - AgentRecBench
+        - KuaiRand-1K
+        - KuaiRec
+        - ClawRec-SimBench
+        - MIND-small
+        - Waterfall ablations
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Data version and evaluation setup
+      description: Give the release or revision, split, case IDs, allowed inputs, retrieval access, and judge configuration. Explain any difference from the published track.
+    validations:
+      required: true
+  - type: textarea
+    id: code
+    attributes:
+      label: Code and commands
+      description: Link the code, include its full commit hash, identify the model and configuration, and give the commands for inference and scoring.
+    validations:
+      required: true
+  - type: textarea
+    id: scores
+    attributes:
+      label: Metrics and coverage
+      description: Include the metrics, evaluated and expected case counts, and the treatment of failed or missing predictions. New methods cannot reuse the published blind-vote totals.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Outputs and scoring evidence
+      description: Link the per-case predictions, scoring logs, and judge outputs where applicable. Include checksums and omit credentials.
+    validations:
+      required: true
