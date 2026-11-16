@@ -2,6 +2,22 @@
 
 These are the five public benchmarks used in the Agentic Waterfall report. Keep the source downloads outside the dataset repository and follow the original providers' terms. Download `public-benchmark-replay-v1.zip` from the [Waterfall Dataset release](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1). It recomputes reported scores for the methods listed in its manifest without calling models. A fresh inference run additionally needs the matching model, retrieval environment, and method configuration.
 
+## Download files
+
+The public source files are available from the links below. The Waterfall replay ZIP is still pending publication. Sizes are compressed download sizes unless the file is a CSV.
+
+| Dataset | Files used in this work |
+| --- | --- |
+| AgentRecBench | [Pinned dataset](https://huggingface.co/datasets/SGJQovo/AgentRecBench/tree/288f7f09ca0387e5169a61b219047aea397e4b06). Fetch short-term tasks and labels, plus `output_data_all/item.json` (1.36 GB), `output_data_all/user.json` (1.43 GB), and `output_data_short/review.json` (21.9 MB) for inference. Commands below. |
+| KuaiRand-1K | [Logs and features](https://zenodo.org/records/10439422/files/KuaiRand-1K.tar.gz) (1.14 GB), [video captions](https://zenodo.org/records/18159199/files/kuairand_video_captions.csv) (3.22 GB) |
+| KuaiRec 2.0 | [KuaiRec.zip](https://zenodo.org/records/18164998/files/KuaiRec.zip) (432 MB) |
+| ClawRec-SimBench | [Pinned source archive](https://codeload.github.com/RUCAIBox/ClawRec/tar.gz/6eeb309c47430f91280e9845a98fb56a68dc0d90), containing `clawrec-simbench/cases/` |
+| MIND-small | [Development](https://huggingface.co/datasets/Recommenders/MIND/resolve/2115068f457b577f93a268fffe22373e45727d89/MINDsmall_dev.zip) (30.9 MB), [training](https://huggingface.co/datasets/Recommenders/MIND/resolve/2115068f457b577f93a268fffe22373e45727d89/MINDsmall_train.zip) (53 MB) |
+
+These downloads come from the providers or the pinned MIND mirror. They are not bundled inside the Waterfall Dataset ZIP. The paper's exact versions and evaluation subsets are listed below.
+
+## Evaluation splits
+
 | Benchmark | Source and version | Evaluation split |
 | --- | --- | --- |
 | AgentRecBench | [Official release at revision `288f7f0`](https://huggingface.co/datasets/SGJQovo/AgentRecBench/tree/288f7f09ca0387e5169a61b219047aea397e4b06/task/short_term) | `task/short_term`, tasks 0–99 each for Amazon, Goodreads, and Yelp. There are 20 fixed candidates per task. Report all 300 tasks and the 220 tasks with the history required by i²Agent. |
@@ -28,6 +44,15 @@ curl -fL https://codeload.github.com/tsinghua-fib-lab/AgentSocietyChallenge/tar.
 ```
 
 Each of `task/short_term/{amazon,goodreads,yelp}` should contain `tasks/task_0.json` through `task_99.json` and corresponding `groundtruth/groundtruth_*.json` files. For inference, also fetch the same revision's `output_data_all/item.json`, `output_data_all/user.json`, and `output_data_short/review.json`, and partition them by domain. Follow the [tool server and adapter instructions](https://github.com/XiaoLuoLYG/waterfall-anything/tree/research/experiments/agentic-waterfall).
+
+Fetch the corpus files into the same directory:
+
+```sh
+hf download SGJQovo/AgentRecBench --repo-type dataset \
+  --revision 288f7f09ca0387e5169a61b219047aea397e4b06 \
+  --include 'output_data_all/item.json' 'output_data_all/user.json' 'output_data_short/review.json' \
+  --local-dir "$cache/agentrecbench"
+```
 
 The official AgentRecBench repository on Hugging Face lists MIT. The source corpora have separate terms: the [Yelp dataset agreement](https://s3-media0.fl.yelpcdn.com/assets/srv0/engineering_pages/f64cb2d3efcc/assets/vendor/Dataset_User_Agreement.pdf) restricts sharing and sets conditions on public results; the [Goodreads release](https://sites.google.com/eng.ucsd.edu/ucsdbookgraph/%20home) asks users not to redistribute it; the [Amazon Reviews 2023 maintainers](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023/discussions/1) do not grant a license for the underlying content. Fetch the task files and corpora from the providers.
 

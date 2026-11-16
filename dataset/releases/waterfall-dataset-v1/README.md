@@ -1,5 +1,7 @@
 # Waterfall Dataset release
 
+The four ZIP files are prepared for review but are not uploaded yet. The `waterfall-dataset-v1` release and its download links become available when the files are published.
+
 | File | Contents |
 | --- | --- |
 | `waterfall-dataset-v1-full.zip` | The frozen trajectories, checkpoints, catalogs, submissions, and evaluation records for the paper's shared-shortlist run |
@@ -8,7 +10,7 @@
 | `tfidf-benchmarks-20261110-v1.zip` | Frozen TF-IDF inputs and SimBench judgments |
 | `SHA256SUMS` | Archive checksums |
 
-[Download the files](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1)
+[Repository releases](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases)
 
 Put the downloads and `SHA256SUMS` in the same directory. This checks the score replay file before you extract it.
 
