@@ -22,18 +22,17 @@
   <main>
     <section class="intro" aria-labelledby="title">
       <div>
-        <p class="eyebrow">Interactive recommendation</p>
-        <h1 id="title">Waterfall leaderboard<span class="title-dot">.</span></h1>
-        <p class="lede">How well can a feed keep up as a user's interests change?<br class="desktop-break"> Compare methods, inspect the evidence, and add your results.</p>
+        <h1 id="title"><span class="title-trophy" aria-hidden="true">🏆</span> Waterfall leaderboard</h1>
+        <p class="lede">Benchmark recommendations as interests change.<br class="desktop-break"> Compare methods on the same track, then add yours.</p>
         <div class="facts"><span><strong>50</strong> simulated trajectories</span><span><strong>300</strong> checkpoints</span><span><strong>5</strong> public benchmarks</span></div>
       </div>
-      <a class="button primary" href="#submit">Submit a result ↗</a>
+      <div class="intro-actions"><a class="button primary" href="#submit">Submit a result ↗</a><a class="text-link" href="#downloads">Download the datasets ↓</a></div>
     </section>
     <section id="leaderboard" aria-label="Leaderboard">
       <div class="board-tabs" role="group" aria-label="Result category">
-        <button type="button" data-group="waterfall" aria-pressed="true">Waterfall Dataset</button>
-        <button type="button" data-group="public" aria-pressed="false">Public benchmarks</button>
-        <button type="button" data-group="ablation" aria-pressed="false">Ablations</button>
+        <button type="button" data-group="waterfall" aria-pressed="true"><span aria-hidden="true">🌊</span> Waterfall Dataset</button>
+        <button type="button" data-group="public" aria-pressed="false"><span aria-hidden="true">📚</span> Public benchmarks</button>
+        <button type="button" data-group="ablation" aria-pressed="false"><span aria-hidden="true">🧪</span> Ablations</button>
       </div>
       <div class="board-content">
         <div class="board-heading">
@@ -57,7 +56,7 @@
       </div>
     </section>
     <section id="submit" class="contribute" aria-labelledby="submit-title">
-      <div class="section-lead"><p class="eyebrow">Add your method</p><h2 id="submit-title">A result others can check.</h2><p>Use the same data version and evaluation protocol. Include your code revision, configuration, per-case outputs, and the command that produces your scores.</p><a class="button primary" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/issues/new?template=leaderboard.yml">Open a submission ↗</a><a class="text-link" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/CONTRIBUTING.md">Submission guide ↗</a></div>
+      <div class="section-lead"><h2 id="submit-title"><span aria-hidden="true">🤗</span> Add your method</h2><p>Have a result to share? Use the same data version and evaluation protocol. Include your code revision, configuration, per-case outputs, and scoring command so others can check your run.</p><a class="button primary" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/issues/new?template=leaderboard.yml">Open a submission ↗</a><a class="text-link" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/CONTRIBUTING.md">Submission guide ↗</a></div>
       <ol class="steps">
         <li><span class="step-number">01</span><div><h3>Choose a track</h3><p>Match its dataset, split, allowed inputs, and scoring rule. Report failed and missing predictions.</p></div></li>
         <li><span class="step-number">02</span><div><h3>Share the run</h3><p>Open a submission issue or a pull request with results and evidence. Keep API keys out of logs.</p></div></li>
@@ -65,8 +64,8 @@
       </ol>
     </section>
     <section id="downloads" class="downloads" aria-labelledby="downloads-title">
-      <div class="section-heading"><div><p class="eyebrow">Data &amp; reproduction</p><h2 id="downloads-title">Start with the data.</h2></div><a class="text-link" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md">Versions &amp; setup commands ↗</a></div>
-      <div class="download-feature"><div><span class="release-state">Dataset v1 · downloads</span><h3>Waterfall Dataset</h3><p>50 complete trajectories, 300 checkpoints, and 60,674 frozen content cards. Saved rankings and model judgments are included. Cards contain archived metadata, not source video files.</p><p class="muted">Full dataset · 99.9 MB &nbsp; / &nbsp; Score replay · 12.7 MB</p></div><a class="button" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1">Release files ↗</a></div>
+      <div class="section-heading"><h2 id="downloads-title"><span aria-hidden="true">📦</span> Get the data</h2><a class="text-link" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/blob/main/dataset/docs/public-benchmarks.md">Versions &amp; setup commands ↗</a></div>
+      <div class="download-feature"><div><span class="release-state">Dataset v1</span><h3>Waterfall Dataset</h3><p>50 complete trajectories, 300 checkpoints, and 60,674 frozen content cards. Saved rankings and model judgments are included. Cards contain archived metadata, not source video files.</p><p class="muted">Full dataset · 99.9 MB ZIP</p></div><a class="button" href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/waterfall-dataset-v1-full.zip">Download dataset ↓</a></div>
       <div class="download-list">
         <div><h3>AgentRecBench</h3><p>Short-term tasks, item and user catalogs, reviews</p><a href="https://huggingface.co/datasets/SGJQovo/AgentRecBench/tree/288f7f09ca0387e5169a61b219047aea397e4b06">Hugging Face ↗</a></div>
         <div><h3>KuaiRand-1K</h3><p>1K archive · 1.14 GB &nbsp; / &nbsp; Captions · 3.22 GB</p><span><a href="https://zenodo.org/records/10439422/files/KuaiRand-1K.tar.gz">Download ↓</a><a href="https://zenodo.org/records/18159199/files/kuairand_video_captions.csv">Captions ↓</a></span></div>
@@ -74,7 +73,7 @@
         <div><h3>ClawRec-SimBench</h3><p>42 trajectories · pinned source archive</p><a href="https://codeload.github.com/RUCAIBox/ClawRec/tar.gz/6eeb309c47430f91280e9845a98fb56a68dc0d90">Download ↓</a></div>
         <div><h3>MIND-small</h3><p>Development · 30.9 MB &nbsp; / &nbsp; Train · 53 MB</p><span><a href="https://huggingface.co/datasets/Recommenders/MIND/resolve/2115068f457b577f93a268fffe22373e45727d89/MINDsmall_dev.zip">Dev ↓</a><a href="https://huggingface.co/datasets/Recommenders/MIND/resolve/2115068f457b577f93a268fffe22373e45727d89/MINDsmall_train.zip">Train ↓</a></span></div>
       </div>
-      <p class="download-note">Public datasets download from their original providers or the pinned mirror linked in the guide. The guide lists the files used in the paper and their checksums. The score replay package contains saved predictions, not copies of all five source datasets.</p>
+      <p class="download-note">Public datasets download separately from their original providers or the pinned mirror linked in the guide. The guide lists the files used in the paper and their checksums.</p>
     </section>
   </main>
   <footer><a class="brand" href="#title">Waterfall</a><p>Dataset, evaluation code, and results.</p><a href="https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/commits/main/docs/results.json">Result history ↗</a></footer>
