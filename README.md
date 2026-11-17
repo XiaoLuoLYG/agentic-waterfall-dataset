@@ -1,35 +1,56 @@
-# Waterfall Dataset
+# 🌊 Waterfall Dataset
 
 Waterfall Dataset records 50 simulated users browsing a feed. Each trajectory follows one user as they see cards, open items, and revise requests. We evaluate recommendations at 300 points along those trajectories.
 
-[Waterfall code and demo](https://github.com/XiaoLuoLYG/waterfall-anything) · [Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [Public benchmarks](dataset/docs/public-benchmarks.md)
+[Code & demo](https://github.com/XiaoLuoLYG/waterfall-anything) · [🏆 Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [Data card](dataset/docs/dataset-card.md) · [Citation](CITATION.cff)
 
 ![How the Waterfall Dataset freezes a browsing history and scores the cards returned at each checkpoint.](dataset/docs/images/waterfall-dataset.png)
 
-## Get the data
+## 📦 Get the data
 
-- [Download Waterfall Dataset v1](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/tag/waterfall-dataset-v1): the full dataset, saved predictions, and score replay packages. [File list and checksums](dataset/releases/waterfall-dataset-v1/README.md).
-- [Public benchmark downloads](dataset/docs/public-benchmarks.md) links to the original sources for AgentRecBench, KuaiRand-1K, KuaiRec, ClawRec-SimBench, and MIND-small.
-- [Results and replay](dataset/releases/waterfall-dataset-v1/README.md) shows how to recalculate scores from the saved outputs.
+- **[Waterfall Dataset v1 · 99.9 MB ZIP](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/waterfall-dataset-v1-full.zip)** contains the full trajectories, frozen catalogs, saved rankings, and model judgments. [Files & checksums](dataset/releases/waterfall-dataset-v1/README.md).
+- **[Public benchmark downloads](dataset/docs/public-benchmarks.md)** provides the exact versions and download commands for AgentRecBench, KuaiRand-1K, KuaiRec, ClawRec-SimBench, and MIND-small. Download these separately from their source providers.
 
-The full Waterfall Dataset package contains the 50 trajectories, 300 checkpoints, both frozen catalogs (60,674 cards), saved rankings, and model judgments. Cards include archived titles, summaries, and source URLs. Source videos and full article bodies are outside the dataset. Cloning this repository downloads the tools and an older snapshot; download the paper dataset from its release package.
+| Trajectories | Evaluation checkpoints | Content cards | Card exposures | User instructions |
+| ---: | ---: | ---: | ---: | ---: |
+| 50 | 300 | 60,674 | 9,383 | 80 |
 
-### Recalculate the Waterfall Dataset scores
+The trajectories are simulated on real content metadata. Cards contain titles, summaries, and source URLs; source videos and full article bodies are outside the dataset. **Cloning this repository gives you the tools. Download the ZIP above for the complete paper dataset.**
 
-Download `waterfall-dataset-v1-score-replay.zip` from the release and extract it.
+## Read your first trajectory
+
+Download the ZIP, then use Python 3. No packages are needed.
 
 ```sh
-unzip waterfall-dataset-v1-score-replay.zip
-cd waterfall-dataset-v1
-python3 replay.py
-python3 replay.py --protocol independent-recall
+unzip waterfall-dataset-v1-full.zip
+cd waterfall-dataset-v1-full
 ```
 
-The first command scores the shared-shortlist run in the paper. The second scores the independent-recall run. Both use saved rankings and model judgments.
+```python
+import json
 
-[Data card](dataset/docs/dataset-card.md) · [File format](dataset/docs/format.md) · [Tools](dataset/README.md) · [Cite this work](CITATION.cff)
+with open("user-index.jsonl", encoding="utf-8") as source:
+    user = json.loads(next(source))
+print(user["user_id"], user["group"], user["checkpoint_count"])
 
-## Add a result
+with open(user["trajectory_file"], encoding="utf-8") as source:
+    first_card = json.loads(next(source))
+print(first_card["title"], first_card["visible_ms"])
+```
+
+Paths below are relative to the extracted ZIP:
+
+| Path | What to use it for |
+| --- | --- |
+| `user-index.jsonl`, `full/users/` | Find a user and read their trajectory, events, and checkpoints. |
+| `dataset/main/` | Join the normalized event, content, context, and rating tables. |
+| `dataset/subsets/` | Select the general, behavior ambiguity, or interactive revision group. |
+| `content-pools/` | Load the base catalog (10,446 cards) and expansion catalog (50,228 cards). |
+| `evaluation/` | Inspect saved rankings, model judgments, and the evaluation protocol. |
+
+[Data card & limitations](dataset/docs/dataset-card.md) · [Field definitions](dataset/docs/format.md) · [Import and validation tools](dataset/README.md)
+
+## 🏆 Add a result
 
 The leaderboard has separate tracks for the two Waterfall Dataset protocols and the five public benchmarks. Search methods, sort the table, or export the current view as CSV. Ablations have their own view.
 
@@ -49,4 +70,4 @@ dataset/
 .github/              Result submission form and automatic checks
 ```
 
-Large dataset and replay files are release attachments. The companion [code repository](https://github.com/XiaoLuoLYG/waterfall-anything) contains the runnable demo, Waterfall core, and benchmark runners.
+Large data files live in [Releases](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases). The companion [code repository](https://github.com/XiaoLuoLYG/waterfall-anything) contains the runnable demo, Waterfall core, and benchmark runners.

@@ -81,7 +81,12 @@ export async function mountLeaderboard() {
       const body = document.createDocumentFragment();
       for (const entry of entries) {
         const row = el('tr');
-        row.append(el('td', ranked ? (entry.rank ?? '') : '', 'rank'));
+        const rank = el('td', ranked ? (entry.rank ?? '') : '', 'rank');
+        if (ranked && entry.rank >= 1 && entry.rank <= 3) {
+          const medal = el('span', ['🥇', '🥈', '🥉'][entry.rank - 1], 'medal');
+          medal.setAttribute('aria-hidden', 'true'); rank.prepend(medal);
+        }
+        row.append(rank);
         const name = el('th'); name.scope = 'row';
         const details = el('details', null, 'method-details');
         details.append(el('summary', entry.method));
