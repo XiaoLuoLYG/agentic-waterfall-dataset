@@ -28,21 +28,6 @@
 | MARS | `1106/mind-mars-small/runs/mind-small-4keys` |
 | TF-IDF | `nrms/predictions/tfidf-small-dev.jsonl` |
 
-## 其他切分和试跑
-
-这些不能和上表混用。文件在 [predictions/other](predictions/other)。
-
-| 文件 | 内容 |
-| --- | --- |
-| waterfall-mind-large-dev-1000.jsonl.gz | MIND-large 开发集前 1,000 条，全部提交 |
-| i2agent-2026-11-03_20-29-31.jsonl.gz | 同一前缀 1,000 条：962 提交，38 条历史点击不足 |
-| i2agent-2026-11-03_19-58-38.jsonl.gz | 20 条试跑：18 提交，2 失败 |
-| i2agent-2026-11-03_20-18-46.jsonl.gz | 20 条试跑，全部提交 |
-| i2agent-2026-11-03_19-44-00.jsonl.gz | 20 条试跑，全部失败 |
-| clawrec-2026-11-03T15-18-40-599.jsonl.gz | 50 条试跑，全部提交 |
-| clawrec-2026-11-03T12-03-12-920.jsonl.gz | 90 条有结果，另有 13 个目录没有 `result.json` |
-| clawrec-2026-11-05T10-53-00-105.jsonl.gz | 30 条有结果，另有 14 个目录没有 `result.json` |
-
 ## 没有预测文件的方法
 
 RecAgent 和 NRMS 在本机没有 MIND 排序文件。NRMS 只有 `1118/nrms/checkpoints` 里的检查点。这两行的分数只写在 [docs/results.json](../../../docs/results.json)。
