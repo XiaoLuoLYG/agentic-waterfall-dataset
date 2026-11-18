@@ -22,7 +22,7 @@ python3 replay.py
 python3 replay.py --protocol independent-recall
 ```
 
-The full archive keeps the historical record IDs. Six share-link parameter values were removed from stored content. The saved rankings, checkpoints, and accepted judgments retain their original bytes. `content-pools/expansion.manifest.json` maps the three affected content version IDs to their published hashes. To run new inference from the full package, follow the [code setup guide](https://github.com/XiaoLuoLYG/waterfall-anything/blob/research/docs/reproduce.md#run-a-new-waterfall-dataset-comparison).
+The full archive keeps the historical record IDs. Six share-link parameter values were removed from stored content. The saved rankings, checkpoints, and accepted judgments retain their original bytes. `content-pools/expansion.manifest.json` maps the three affected content version IDs to their published hashes. To run new inference from the full package, follow the [code setup guide](https://github.com/XiaoLuoLYG/Agentic-Waterfall/blob/research/docs/reproduce.md#run-a-new-waterfall-dataset-comparison).
 
 The paper's shared-shortlist run starts each method with 20 candidates at each of 300 checkpoints. Waterfall and ClawRec may search the expansion catalog. In the independent-recall run, those two methods start with an empty pool, BM25+BGE searches the full eligible base catalog, and RecAgent and i²Agent rank the prepared shortlist.
 

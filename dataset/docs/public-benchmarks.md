@@ -26,7 +26,7 @@ These downloads come from the providers or the pinned MIND mirror. They are not 
 | ClawRec-SimBench | [Official repository](https://github.com/RUCAIBox/ClawRec), [pinned archive at `6eeb309`](https://codeload.github.com/RUCAIBox/ClawRec/tar.gz/6eeb309c47430f91280e9845a98fb56a68dc0d90) | The 210 events from 42 trajectories under `clawrec-simbench/cases`. The replay uses the archived five-method rankings and one set of judge scores per event. |
 | MIND | [Microsoft official download](https://msnews.github.io/#download), [pinned Recommenders mirror](https://huggingface.co/datasets/Recommenders/MIND/tree/2115068f457b577f93a268fffe22373e45727d89) | MIND-small development. RecAgent uses the 69,861 impressions with at least two historical clicks. It returned 68,639 valid rankings; the remaining 1,222 stay in the denominator as all-ranks-tied predictions. Other MIND results are from separate runs. |
 
-Use the companion [research code](https://github.com/XiaoLuoLYG/waterfall-anything/tree/research) for the benchmark adapters and scorers. In the shell examples, set `code` to the absolute path to that checkout and `cache` to a scratch directory. The replay README gives the commands for scoring the frozen predictions. Keep labels and judge scores separate from model input.
+Use the companion [research code](https://github.com/XiaoLuoLYG/Agentic-Waterfall/tree/research) for the benchmark adapters and scorers. In the shell examples, set `code` to the absolute path to that checkout and `cache` to a scratch directory. The replay README gives the commands for scoring the frozen predictions. Keep labels and judge scores separate from model input.
 
 ## AgentRecBench
 
@@ -43,7 +43,7 @@ curl -fL https://codeload.github.com/tsinghua-fib-lab/AgentSocietyChallenge/tar.
   | tar -xz -C "$arb_source"
 ```
 
-Each of `task/short_term/{amazon,goodreads,yelp}` should contain `tasks/task_0.json` through `task_99.json` and corresponding `groundtruth/groundtruth_*.json` files. For inference, also fetch the same revision's `output_data_all/item.json`, `output_data_all/user.json`, and `output_data_short/review.json`, and partition them by domain. Follow the [tool server and adapter instructions](https://github.com/XiaoLuoLYG/waterfall-anything/tree/research/experiments/agentic-waterfall).
+Each of `task/short_term/{amazon,goodreads,yelp}` should contain `tasks/task_0.json` through `task_99.json` and corresponding `groundtruth/groundtruth_*.json` files. For inference, also fetch the same revision's `output_data_all/item.json`, `output_data_all/user.json`, and `output_data_short/review.json`, and partition them by domain. Follow the [tool server and adapter instructions](https://github.com/XiaoLuoLYG/Agentic-Waterfall/tree/research/experiments/agentic-waterfall).
 
 Fetch the corpus files into the same directory:
 
@@ -60,7 +60,7 @@ The official AgentRecBench repository on Hugging Face lists MIT. The source corp
 
 Get the [1K archive](https://zenodo.org/records/10439422/files/KuaiRand-1K.tar.gz), SHA-256 `dfaafbb5fd16e9e6d2f9a6adaa4ea25df20a14bc26a90961c136e26c00a7bb2c`. Extract it and use its `KuaiRand-1K/data/` directory for replay. The relevant files are `user_features_1k.csv`, `video_features_basic_1k.csv`, `log_standard_4_08_to_4_21_1k.csv`, `log_standard_4_22_to_5_08_1k.csv`, and `log_random_4_22_to_5_08_1k.csv`. The evaluation seed is 42; the training catalog uses only events with completion time earlier than `1650553294007` milliseconds. Unavailable or invalid full rankings score zero.
 
-To regenerate model input, put those five CSVs in `$cache/kuairand/raw`. Download [kuairand_video_captions.csv](https://zenodo.org/records/18159199/files/kuairand_video_captions.csv) (~3.2 GB, SHA-256 `0032ff2062abbcf10d6a1dfb033a65b0cdcd448f4fc56e19c75f8ff4494e4455`) before running the [full history preparation and 512-event window projection](https://github.com/XiaoLuoLYG/waterfall-anything/blob/research/docs/research/agentic-waterfall/results-20261111/REPRODUCE.md#kuairand). The replay uses the frozen case index and needs only the two original April 22–May 8 logs to recover the held-out labels. The downloaded 1K archive contains a CC BY-SA 4.0 notice; Zenodo's metadata lists CC BY 4.0 for both records.
+To regenerate model input, put those five CSVs in `$cache/kuairand/raw`. Download [kuairand_video_captions.csv](https://zenodo.org/records/18159199/files/kuairand_video_captions.csv) (~3.2 GB, SHA-256 `0032ff2062abbcf10d6a1dfb033a65b0cdcd448f4fc56e19c75f8ff4494e4455`) before running the [full history preparation and 512-event window projection](https://github.com/XiaoLuoLYG/Agentic-Waterfall/blob/research/docs/research/agentic-waterfall/results-20261111/REPRODUCE.md#kuairand). The replay uses the frozen case index and needs only the two original April 22–May 8 logs to recover the held-out labels. The downloaded 1K archive contains a CC BY-SA 4.0 notice; Zenodo's metadata lists CC BY 4.0 for both records.
 
 If you are regenerating inputs for inference, use fresh output directories and the verified caption archive:
 
@@ -108,7 +108,7 @@ The replay uses `data/processed/eligibility.npz` and `data/processed/evaluator_o
 
 ## ClawRec-SimBench
 
-Get the [pinned archive](https://codeload.github.com/RUCAIBox/ClawRec/tar.gz/6eeb309c47430f91280e9845a98fb56a68dc0d90), SHA-256 `3c94429840b033f072b2bfff71fee207a177943cda9ffcce3ff838c14593cb1f`. The official repository has an [MIT license](https://github.com/RUCAIBox/ClawRec/blob/6eeb309c47430f91280e9845a98fb56a68dc0d90/LICENSE). For score replay, the study archive already includes the anonymous event-local item indices, rankings, and judge scores. It uses all 210 events, including empty rankings. For fresh inference from the public event histories, start at the [benchmarks guide in the research code](https://github.com/XiaoLuoLYG/waterfall-anything/tree/research/experiments/agentic-waterfall).
+Get the [pinned archive](https://codeload.github.com/RUCAIBox/ClawRec/tar.gz/6eeb309c47430f91280e9845a98fb56a68dc0d90), SHA-256 `3c94429840b033f072b2bfff71fee207a177943cda9ffcce3ff838c14593cb1f`. The official repository has an [MIT license](https://github.com/RUCAIBox/ClawRec/blob/6eeb309c47430f91280e9845a98fb56a68dc0d90/LICENSE). For score replay, the study archive already includes the anonymous event-local item indices, rankings, and judge scores. It uses all 210 events, including empty rankings. For fresh inference from the public event histories, start at the [benchmarks guide in the research code](https://github.com/XiaoLuoLYG/Agentic-Waterfall/tree/research/experiments/agentic-waterfall).
 
 ## MIND-small
 

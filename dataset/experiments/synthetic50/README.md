@@ -21,4 +21,4 @@
 
 在线实验入口保留原工作区相对路径和归档依赖。原批次使用 Node.js 22、两套本地 Python 环境、BGE 权重、基线作者依赖、私有网关配置和冻结输入。这些需要从原工作区接入。仓库中的数据验证、逐卡复算和盲选计票可以单独运行。
 
-四个公开基准的实验入口位于 Waterfall 研究仓库。 [旧基准源码](https://github.com/XiaoLuoLYG/waterfall-anything/tree/research/experiments/agentic-waterfall)
+四个公开基准的实验入口位于 Waterfall 研究仓库。 [旧基准源码](https://github.com/XiaoLuoLYG/Agentic-Waterfall/tree/research/experiments/agentic-waterfall)
