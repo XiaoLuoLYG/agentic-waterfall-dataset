@@ -171,7 +171,7 @@
       "title": "Independent recall",
       "version": "waterfall-dataset-v1/independent-recall",
       "primary": "dcg",
-      "source": "https://github.com/XiaoLuoLYG/waterfall-anything/blob/cf8695c7a7dfddbe9ce2fa713ae93e50193c1023/docs/research/agentic-waterfall/synthetic-independent-recall/README.md",
+      "source": "https://github.com/XiaoLuoLYG/Agentic-Waterfall/blob/cf8695c7a7dfddbe9ce2fa713ae93e50193c1023/docs/research/agentic-waterfall/synthetic-independent-recall/README.md",
       "cohort": "50 trajectories · 300 checkpoints",
       "description": "Waterfall and ClawRec search the base catalog before using the expansion catalog. BM25+BGE searches the eligible base catalog. RecAgent and i²Agent use the prepared shortlist.",
       "protocol": "Retrieval access differs by method. Six i²Agent checkpoints lack the two earlier positive interactions its adapter requires. DCG@5 is computed on scored lists; vote credits belong to the archived comparison and cannot be reused with new opponents.",
