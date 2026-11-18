@@ -1,0 +1,274 @@
+{
+  "dataset": "MIND",
+  "contents": "Ranking predictions only. News text, click histories, prompts, and model traces were not copied.",
+  "runs": [
+    {
+      "file": "predictions/mind-small-dev/waterfall.jsonl.gz",
+      "records": 73152,
+      "bytes": 6208380,
+      "sha256": "9cc7bd9ce283cc09fcdbab41daac0832619cf5aa7a167bce892a1858059b1b66",
+      "status": {
+        "submitted": 73146,
+        "failed": 6
+      },
+      "decision_prefixes": {
+        "mind:test": 73152
+      },
+      "duplicate_decision_ids": [],
+      "duplicate_count": 0,
+      "sample_errors": [
+        {
+          "decision_id": "mind:test:674",
+          "status": "failed",
+          "error": "model_transport_error"
+        },
+        {
+          "decision_id": "mind:test:11240",
+          "status": "failed",
+          "error": "model_transport_error"
+        },
+        {
+          "decision_id": "mind:test:16652",
+          "status": "failed",
+          "error": "model_transport_error"
+        },
+        {
+          "decision_id": "mind:test:16880",
+          "status": "failed",
+          "error": "model_transport_error"
+        },
+        {
+          "decision_id": "mind:test:23691",
+          "status": "failed",
+          "error": "model_http_502"
+        }
+      ],
+      "sources": [
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/1106/mind-waterfall-small-16/runs/2026-11-06T18-11-46/results",
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/1106/mind-waterfall-small-10/runs/2026-11-06T18-12-07/results",
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/1106/mind-waterfall-small-10b/runs/2026-11-06T18-12-32/results"
+      ],
+      "source_files": 73152
+    },
+    {
+      "file": "predictions/mind-small-dev/generic-agent.jsonl.gz",
+      "records": 73152,
+      "bytes": 6127967,
+      "sha256": "305c20d050d26acb6e105392a852913d3180889d6a61c6167d292867918aad61",
+      "status": {
+        "submitted": 73125,
+        "failed": 27
+      },
+      "decision_prefixes": {
+        "mind:test": 73152
+      },
+      "duplicate_decision_ids": [],
+      "duplicate_count": 0,
+      "sample_errors": [
+        {
+          "decision_id": "mind:test:2384",
+          "status": "failed",
+          "error": "Unexpected end of JSON input"
+        },
+        {
+          "decision_id": "mind:test:5703",
+          "status": "failed",
+          "error": "Unexpected token '抱', \"抱歉，您的问题我无法识别。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:10060",
+          "status": "failed",
+          "error": "Unexpected token '抱', \"抱歉，您的问题我无法识别。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:14582",
+          "status": "failed",
+          "error": "invalid candidate permutation after retry"
+        },
+        {
+          "decision_id": "mind:test:17957",
+          "status": "failed",
+          "error": "Unexpected token '你', \"你好，我无法给到相关内容。\" is not valid JSON"
+        }
+      ],
+      "sources": [
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/1106/mind-generic-small/runs/mind-small-4keys"
+      ],
+      "source_files": 73152,
+      "directories_without_result": []
+    },
+    {
+      "file": "predictions/mind-small-dev/clawrec.jsonl.gz",
+      "records": 73152,
+      "bytes": 6128654,
+      "sha256": "a452b3934208886b4ca2b5edd1ce5aefda4ee975770219a690b37011fe502027",
+      "status": {
+        "submitted": 73131,
+        "failed": 21
+      },
+      "decision_prefixes": {
+        "mind:test": 73152
+      },
+      "duplicate_decision_ids": [],
+      "duplicate_count": 0,
+      "sample_errors": [
+        {
+          "decision_id": "mind:test:5703",
+          "status": "failed",
+          "error": "Unexpected token '您', \"您的问题我无法回答。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:10060",
+          "status": "failed",
+          "error": "Unexpected token '抱', \"抱歉，这个问题未找到相关结果。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:17957",
+          "status": "failed",
+          "error": "Unexpected token '您', \"您的问题我无法回答。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:19912",
+          "status": "failed",
+          "error": "Unexpected token '你', \"你好，这个问题我无法\"... is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:21013",
+          "status": "failed",
+          "error": "Unexpected token '你', \"你好，我无法给到相关内容。\" is not valid JSON"
+        }
+      ],
+      "sources": [
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/clawrec/experiments/agentic-waterfall/mind/mind-clawrec-results/2026-11-03T15-31-30-211"
+      ],
+      "source_files": 73152,
+      "directories_without_result": []
+    },
+    {
+      "file": "predictions/mind-small-dev/i2agent.jsonl.gz",
+      "records": 73152,
+      "bytes": 5910042,
+      "sha256": "3addadd4c07f351f0f1032fd29b83ecd87a0677e144baad23b601a12f90dbf33",
+      "status": {
+        "submitted": 69413,
+        "not_applicable": 3291,
+        "failed": 448
+      },
+      "decision_prefixes": {
+        "mind:test": 73152
+      },
+      "duplicate_decision_ids": [],
+      "duplicate_count": 0,
+      "sample_errors": [
+        {
+          "decision_id": "mind:test:22",
+          "status": "not_applicable",
+          "error": "fewer than two historical clicks"
+        },
+        {
+          "decision_id": "mind:test:38",
+          "status": "not_applicable",
+          "error": "fewer than two historical clicks"
+        },
+        {
+          "decision_id": "mind:test:40",
+          "status": "not_applicable",
+          "error": "fewer than two historical clicks"
+        },
+        {
+          "decision_id": "mind:test:49",
+          "status": "not_applicable",
+          "error": "fewer than two historical clicks"
+        },
+        {
+          "decision_id": "mind:test:69",
+          "status": "not_applicable",
+          "error": "fewer than two historical clicks"
+        }
+      ],
+      "sources": [
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/i2agent/experiments/agentic-waterfall/mind/i2agent-mind/2026-11-03_22-59-32"
+      ],
+      "source_files": 73152,
+      "directories_without_result": []
+    },
+    {
+      "file": "predictions/mind-small-dev/mars.jsonl.gz",
+      "records": 73151,
+      "bytes": 6561928,
+      "sha256": "4cd05a6e4b02a1d8e2a76527dc7d038c012a01afce7c60596322b0acaa0b8bfa",
+      "status": {
+        "submitted": 73126,
+        "failed": 25
+      },
+      "decision_prefixes": {
+        "mind:test": 73151
+      },
+      "duplicate_decision_ids": [],
+      "duplicate_count": 0,
+      "sample_errors": [
+        {
+          "decision_id": "mind:test:10060",
+          "status": "failed",
+          "error": "Unexpected token '您', \"您的问题我无法回答。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:17957",
+          "status": "failed",
+          "error": "Unexpected token '抱', \"抱歉，我无法回答这个问题。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:19912",
+          "status": "failed",
+          "error": "Unexpected token '你', \"你好，我无法给到相关内容。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:21013",
+          "status": "failed",
+          "error": "Unexpected token '抱', \"抱歉，我无法回答这个问题。\" is not valid JSON"
+        },
+        {
+          "decision_id": "mind:test:23177",
+          "status": "failed",
+          "error": "Unexpected end of JSON input"
+        }
+      ],
+      "sources": [
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/1106/mind-mars-small/runs/mind-small-4keys"
+      ],
+      "source_files": 73151,
+      "directories_without_result": [
+        "mind-019404"
+      ]
+    },
+    {
+      "file": "predictions/mind-small-dev/tf-idf.jsonl.gz",
+      "records": 73152,
+      "bytes": 6475177,
+      "sha256": "2da5bb13fd73470b342201e24fe4cab2b46aa5b8abf0c017b5fef6a317538c31",
+      "status": {
+        "submitted": 73152
+      },
+      "decision_prefixes": {
+        "mind:test": 73152
+      },
+      "duplicate_decision_ids": [],
+      "duplicate_count": 0,
+      "sample_errors": [],
+      "sources": [
+        "/Users/zhangshining/Desktop/Agentic-Waterfall/nrms/predictions/tfidf-small-dev.jsonl"
+      ],
+      "source_files": 73152
+    }
+  ],
+  "not_found": [
+    {
+      "method": "RecAgent",
+      "note": "No local MIND prediction files. The transcribed score is in docs/results.json."
+    },
+    {
+      "method": "NRMS",
+      "note": "1118/nrms has a checkpoint and training logs, but no prediction file."
+    }
+  ]
+}
