@@ -20,6 +20,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-This license covers original repository code/documentation and fictional test
-fixtures only. It does not grant rights to third-party source material or
-future human data exports. Data license: pending.
+The MIT license above covers the original repository code, documentation, and
+fictional test fixtures.
+
+Waterfall Dataset v1
+
+The contributors license their original simulated interaction records,
+annotations, and the selection and arrangement of Waterfall Dataset v1 under
+Creative Commons Attribution 4.0 International (CC BY 4.0).
+https://creativecommons.org/licenses/by/4.0/
+
+When sharing or adapting these materials, credit the Waterfall Dataset
+contributors, link to the license, and indicate any changes. Third-party card
+content and external benchmarks retain their source terms. This notice gives
+the release terms for v1 records whose frozen manifests say "pending".

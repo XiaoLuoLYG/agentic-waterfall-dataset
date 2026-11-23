@@ -2,7 +2,7 @@
 
 Waterfall Dataset records 50 simulated users browsing a feed. Each trajectory follows one user as they see cards, open items, and revise requests. We evaluate recommendations at 300 points along those trajectories.
 
-[Code & demo](https://github.com/XiaoLuoLYG/Agentic-Waterfall) · [🏆 Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [Data card](dataset/docs/dataset-card.md) · [Citation](CITATION.cff)
+[Code & demo](https://github.com/XiaoLuoLYG/Agentic-Waterfall) · [🏆 Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [Data card](dataset/docs/dataset-card.md) · [Citation](CITATION.cff) · [License](LICENSE)
 
 ![How the Waterfall Dataset freezes a browsing history and scores the cards returned at each checkpoint.](dataset/docs/images/waterfall-dataset.png)
 
