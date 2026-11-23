@@ -123,4 +123,4 @@ curl -fL https://raw.githubusercontent.com/msnews/MIND/47fb9852c97814d80ccf9c658
   -o "$mind_scorer/evaluate.py"
 ```
 
-The MIND entries for Waterfall, the generic agent, ClawRec, i²Agent, MARS, TF-IDF, and NRMS are reported in the paper. The replay archive contains scoring inputs for RecAgent.
+The MIND entries for Waterfall, the generic agent, ClawRec, i²Agent, MARS, TF-IDF, and NRMS are reported in the paper. The replay archive contains scoring inputs for RecAgent. The six full development rankings for Waterfall, the generic agent, ClawRec, i²Agent, MARS, and TF-IDF are in [mind-small-dev-predictions-v1.zip](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/mind-small-dev-predictions-v1.zip) on the Waterfall Dataset release. That archive contains rankings only. [File list and checksums](../releases/mind-small-dev-predictions-v1/README.md).
