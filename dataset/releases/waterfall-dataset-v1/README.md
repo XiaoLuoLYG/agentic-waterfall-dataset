@@ -8,7 +8,6 @@ Download the files from [Waterfall Dataset v1](https://github.com/XiaoLuoLYG/age
 | [waterfall-dataset-v1-score-replay.zip](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/waterfall-dataset-v1-score-replay.zip) | Ranking and judgment projections for recalculating the shared-shortlist and independent-recall scores |
 | [public-benchmark-replay-v1.zip](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/public-benchmark-replay-v1.zip) | Score inputs for 26 method and benchmark pairs |
 | [tfidf-benchmarks-20261110-v1.zip](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/tfidf-benchmarks-20261110-v1.zip) | Frozen TF-IDF inputs and SimBench judgments |
-| [mind-small-dev-predictions-v1.zip](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/mind-small-dev-predictions-v1.zip) | Rebuilt MIND-small development rankings for Waterfall, the generic agent, ClawRec, i²Agent, MARS, and TF-IDF |
 | [SHA256SUMS](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/SHA256SUMS) | Archive checksums |
 
 [Repository releases](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases)
@@ -27,4 +26,4 @@ The full archive keeps the historical record IDs. Six share-link parameter value
 
 The paper's shared-shortlist run starts each method with 20 candidates at each of 300 checkpoints. Waterfall and ClawRec may search the expansion catalog. In the independent-recall run, those two methods start with an empty pool, BM25+BGE searches the full eligible base catalog, and RecAgent and i²Agent rank the prepared shortlist.
 
-The leaderboard has the public benchmark and ablation tables. Use the benchmark guide and the README in `public-benchmark-replay-v1.zip` to recalculate archived scores. `mind-small-dev-predictions-v1.zip` has the rebuilt MIND-small development rankings. The five ablation variants and the MIND methods without a per-case file come from the paper. [Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [Benchmark guide](../../docs/public-benchmarks.md)
+The leaderboard has the public benchmark and ablation tables. Use the benchmark guide and the README in `public-benchmark-replay-v1.zip` to recalculate archived scores. The five ablation variants and the remaining MIND scores come from the paper. [Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [Benchmark guide](../../docs/public-benchmarks.md)
