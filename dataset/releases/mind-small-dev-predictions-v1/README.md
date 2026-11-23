@@ -16,7 +16,7 @@ grep "  mind-small-dev-predictions-v1.zip$" SHA256SUMS | shasum -a 256 -c -
 unzip mind-small-dev-predictions-v1.zip
 ```
 
-解压后是 `mind-small-dev-predictions-v1/`。每行一条曝光，字段是 `source_id`、`decision_id`、`status`、`ordered_item_ids`，失败时另有 `error`。新闻正文、点击历史、提示词和模型调用记录没有放进压缩包。各文件的条数、来源和 SHA-256 在压缩包里的 `manifest.json`。仓库里不保存这份压缩包。
+解压后是 `mind-small-dev-predictions-v1/`。每行一条曝光，字段是 `source_id`、`decision_id`、`status`、`ordered_item_ids`，失败时另有 `error`。新闻正文、点击历史、提示词和模型调用记录没有放进压缩包。各文件的条数和来源见包内的 `manifest.json`。其中的文件大小和部分 SHA-256 沿用旧版，请用上面的 `SHA256SUMS` 校验整个 ZIP。仓库里不保存这份压缩包。
 
 73,152 条曝光。文件在压缩包的 `predictions/mind-small-dev/`。
 
@@ -42,4 +42,4 @@ unzip mind-small-dev-predictions-v1.zip
 | MARS | `1106/mind-mars-small/runs/mind-small-4keys` |
 | TF-IDF | `nrms/predictions/tfidf-small-dev.jsonl` |
 
-RecAgent 和 NRMS 没有预测文件。这两行的分数只写在 [docs/results.json](../../../docs/results.json)。
+RecAgent 的逐条排名在另一个发布包的 `public-benchmark-replay/mind-recagent-prediction.txt.gz` 里。NRMS 目前只公布了汇总分数。[下载 RecAgent 排名包](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases/download/waterfall-dataset-v1/public-benchmark-replay-v1.zip) · [查看 NRMS 分数](../../../docs/results.json)
