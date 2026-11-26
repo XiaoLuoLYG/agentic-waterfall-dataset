@@ -2,7 +2,7 @@
 
 Waterfall Dataset records 50 simulated users browsing a feed. Each trajectory follows one user as they see cards, open items, and revise requests. We evaluate recommendations at 300 points along those trajectories.
 
-[Code & demo](https://github.com/XiaoLuoLYG/Agentic-Waterfall) · [🏆 Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [Data card](dataset/docs/dataset-card.md) · [Citation](CITATION.cff) · [License](LICENSE)
+[📄 Paper (arXiv)](https://arxiv.org/abs/2611.34407) · [💻 Code & demo](https://github.com/XiaoLuoLYG/Agentic-Waterfall) · [🏆 Leaderboard](https://xiaoluolyg.github.io/agentic-waterfall-dataset/) · [🗂️ Data card](dataset/docs/dataset-card.md) · [📚 Citation](#citation) · [⚖️ License](LICENSE)
 
 ![How the Waterfall Dataset freezes a browsing history and scores the cards returned at each checkpoint.](dataset/docs/images/waterfall-dataset.png)
 
@@ -48,7 +48,7 @@ Paths below are relative to the extracted ZIP:
 | `content-pools/` | Load the base catalog (10,446 cards) and expansion catalog (50,228 cards). |
 | `evaluation/` | Inspect saved rankings, model judgments, and the evaluation protocol. |
 
-[Data card & limitations](dataset/docs/dataset-card.md) · [Field definitions](dataset/docs/format.md) · [Import and validation tools](dataset/README.md)
+[🗂️ Data card & limitations](dataset/docs/dataset-card.md) · [📖 Field definitions](dataset/docs/format.md) · [🛠️ Import and validation tools](dataset/README.md)
 
 ## 🏆 Add a result
 
@@ -71,3 +71,20 @@ dataset/
 ```
 
 Large data files live in [Releases](https://github.com/XiaoLuoLYG/agentic-waterfall-dataset/releases). The companion [code repository](https://github.com/XiaoLuoLYG/Agentic-Waterfall) contains the runnable demo, Waterfall core, and benchmark runners.
+
+## Citation
+
+```bibtex
+@misc{luo2026agenticwaterfallintentdriveninformation,
+  title={Agentic Waterfall: An Intent-Driven Information Discovery Framework
+         for Reclaiming User Control in the Attention Economy},
+  author={Yige Luo and Shining Zhang and Jikun Liu and Hongjiao Qiang and Ran Guan},
+  year={2026},
+  eprint={2611.34407},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2611.34407},
+}
+```
+
+When citing the dataset, include the release tag you used. [Dataset citation metadata](CITATION.cff)
